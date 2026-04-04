@@ -1,33 +1,23 @@
 <section id="blog" class="section-block reveal" aria-labelledby="blog-title">
-  <h2 id="blog-title" class="section-block__title">Blog</h2>
-  <div class="blog-posts-list">
-    {% for post in posts_landing %}
-    <div class="blog-post-item">
-      <a href="{{ post.url }}">
-        {% if post.banner %}
-        <div class="blog-banner-box">
-          <img src="{{ post.banner }}" alt="{{ post.title }}">
-        </div>
-        {% endif %}
-        <div class="blog-content">
-          <div class="blog-meta">
-            {% if post.category %}
-            <span class="blog-category">{{ post.category }}</span>
-            <span class="dot"></span>
-            {% endif %}
-            <time datetime="{{ post.published }}">{{ post.published }}</time>
-          </div>
-          <h3 class="blog-item-title">{{ post.title }}</h3>
-          {% if post.excerpt %}
-          <p class="blog-text">{{ post.excerpt }}</p>
-          {% endif %}
-        </div>
-      </a>
-    </div>
-    {% endfor %}
-  </div>
+  <h2 id="blog-title" class="section-block__title">{{ blog.HEADER.label | default('Blog') }}</h2>
 
   {% if blog_has_more %}
-  <p class="section-view-all"><a href="{{ page_urls.blog }}" class="section-view-all__link">All blog posts →</a></p>
+  <p class="section-block__deck section-block__deck--landing-note">
+    Showing {{ posts_landing | length }} of {{ posts_all | length }} — see the full list for filters.
+  </p>
   {% endif %}
+
+  <section class="blog-section blog-section--landing">
+    <ul class="blog-list">
+      {% for post in posts_landing %}
+        {% include 'site/_blog_card.j2' %}
+      {% endfor %}
+    </ul>
+
+    {% if blog_has_more %}
+    <p class="section-view-all">
+      <a href="{{ page_urls.blog }}" class="section-view-all__link">All blog posts →</a>
+    </p>
+    {% endif %}
+  </section>
 </section>

@@ -144,27 +144,10 @@
           </button>
         </div>
       </section>
-
-      {% if show_blog_on_home %}
-      {% include 'site/blog_landing.j2' %}
-      {% endif %}
-
-      <section id="blog" class="section-block reveal" aria-labelledby="blog-title">
-        <h2 id="blog-title" class="section-block__title">Blog</h2>
-        <ul class="blog-list">
-          {% for post in posts_landing %}
-            <li class="blog-item">
-              <a href="{{ post.url }}" class="blog-item__link">
-                <h3 class="blog-item__title">{{ post.title }}</h3>
-                <p class="blog-item__date">{{ post.published }}</p>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-        {% if blog_has_more %}
-          <p class="section-view-all"><a href="{{ page_urls.blog }}" class="section-view-all__link">All blog posts →</a></p>
-        {% endif %}
-      </section>
+    {% if show_blog_on_home %}
+    {% include 'site/blog_landing.j2' %}
+    {% endif %}
+    
 
     
 

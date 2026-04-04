@@ -13,7 +13,10 @@
         {% endif %}
         <a href="{{ hp }}#cv"{% if nav_current == 'cv' %} class="is-active"{% endif %}>CV</a>
         {% if show_blog_nav %}
-          <a href="{{ hp }}#blog"{% if nav_current == 'blog' %} class="is-active"{% endif %}>Blog</a>
+        <a href="{% if is_subpage %}blog.html{% elif show_blog_on_home %}#blog{% else %}blog.html{% endif %}"
+          {% if nav_current == 'blog' %} class="is-active"{% endif %}>
+          Blog
+        </a>
         {% endif %}
       </nav>
       <button type="button" class="theme-toggle" data-theme-toggle aria-label="Use light theme" title="Theme">

@@ -19,7 +19,7 @@ SHOW_BLOG_ON_HOME: false
 # Show "Work" in the header (links to work.html when on a subpage, #portfolio on home).
 SHOW_WORK_NAV: false
 
-SHOW_BLOG_NAV: true
+SHOW_BLOG_NAV: false # not working
 
 # Filenames for full-list pages (relative to site root)
 PAGES:

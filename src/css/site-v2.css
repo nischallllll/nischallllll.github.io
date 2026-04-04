@@ -1218,3 +1218,41 @@ main.site-single {
 .section-view-all__link:hover {
   border-bottom-color: var(--site-accent);
 }
+
+.blog-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.blog-posts-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.blog-post-item a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-banner-box img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.blog-content {
+  padding-top: 0.8rem;
+}
+
+.blog-meta {
+  font-size: 0.85rem;
+  color: #666;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

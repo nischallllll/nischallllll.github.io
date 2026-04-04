@@ -105,6 +105,9 @@ class Portfolio:
         show_portfolio = bool(site.get("SHOW_PORTFOLIO_ON_HOME", False))
         show_work_nav = bool(site.get("SHOW_WORK_NAV", True))
 
+        show_blog_on_home = bool(site.get("SHOW_BLOG_ON_HOME", False))
+        show_blog_nav = bool(site.get("SHOW_BLOG_NAV", True))
+
         context.update(
             {
                 "pubs_landing": pubs_landing,
@@ -114,6 +117,7 @@ class Portfolio:
                 "projects_landing": projects_landing,
                 "projects_has_more": projects_more,
                 "posts_landing": posts_landing,
+                "posts_all": posts_all,
                 "blog_has_more": posts_more,
                 "publication_categories": collect_categories(pubs_all),
                 "talk_categories": collect_categories(talks_all),
@@ -121,6 +125,8 @@ class Portfolio:
                 "page_urls": page_urls,
                 "show_portfolio_on_home": show_portfolio,
                 "show_work_nav": show_work_nav,
+                "show_blog_on_home": show_blog_on_home,
+                "show_blog_nav": show_blog_nav,
                 "is_subpage": False,
                 "nav_current": None,
                 "page_title": f"{context['profile'].get('USER', {}).get('name', 'Portfolio')} · Computational biology",
