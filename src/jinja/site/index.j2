@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{% include 'site/head_assets.j2' %}
+  <title>{{ page_title | e }}</title>
+</head>
+<body>
+{% include 'site/header_nav.j2' %}
+
+  <main class="site-single" id="top">
+    <section class="hero-mountain reveal" aria-label="Introduction">
+      <div class="hero-mountain__layer hero-mountain__layer--peony" aria-hidden="true"></div>
+      <div class="hero-mountain__layer hero-mountain__range" aria-hidden="true">
+        <svg class="hero-mountain__svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidMax slice"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" opacity="0.14"
+            d="M0 320 L0 220 L180 80 L340 200 L520 40 L700 180 L880 60 L1040 200 L1200 100 L1200 320 Z" />
+          <path fill="currentColor" opacity="0.22"
+            d="M0 320 L0 260 L220 140 L400 240 L580 120 L760 260 L940 150 L1100 240 L1200 180 L1200 320 Z" />
+        </svg>
+      </div>
+      <div class="hero-mountain__strand" aria-hidden="true">
+        <svg class="strand-hero" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="strand-hero__a" d="M8 160 C 72 168, 96 32, 160 48 S 248 192, 312 88 S 360 24, 392 56"
+            stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+          <path class="strand-hero__b" d="M8 48 C 80 40, 112 176, 176 152 S 264 40, 328 120 S 368 176, 392 144"
+            stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.42" />
+          <path d="M52 148 Q 120 100 188 130 T 324 90" stroke="currentColor" stroke-width="0.45" opacity="0.2"
+            stroke-dasharray="3 6" />
+        </svg>
+      </div>
+      <div class="hero-mountain__content">
+        <p class="hero-mountain__eyebrow">Nepal --> USA</p>
+        <h1 class="hero-mountain__title">Genes, cells, and computational biology</h1>
+        <p class="hero-mountain__lede">Computational biologist at Cold Spring Harbor Laboratory. I study cancer genomics
+          with single-cell and spatial transcriptomics.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section-block section-block--lab reveal" aria-labelledby="lab-title">
+      <h2 id="lab-title" class="section-block__title">Current</h2>
+      <p class="section-block__deck">Westcott Lab · Cold Spring Harbor Laboratory</p>
+      <div class="lab-card">
+        <img src="config/assets/icons/cshl_logo_alternate-RGB.png" height="40" alt="" class="lab-card__logo">
+        <div class="lab-card__body">
+          <p class="lab-card__role">Computational Biologist</p>
+          <ul class="lab-card__list">
+            <li>Genomic basis of colon cancer and tumor heterogeneity</li>
+            <li>Transcriptomic and cellular drivers of progression</li>
+            <li>Developing computational tools for spatial analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {% include 'site/publications_landing.j2' %}
+
+    {% include 'site/talks_landing.j2' %}
+    <!--{% include 'site/blog_landing.j2' %}-->
+
+    <section id="training" class="section-block section-block--training reveal" aria-labelledby="training-title">
+      <div class="training-layout">
+        <div class="training-spine" aria-hidden="true">
+          <svg class="strand-wind" viewBox="0 0 120 500" preserveAspectRatio="xMidYMin slice"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="strand-wind__a"
+              d="M58 0 C 108 48 12 112 62 168 C 8 232 104 292 58 352 C 14 416 106 472 60 532 C 6 596 102 652 58 712 C 16 772 98 828 60 888 L 60 920"
+              fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" />
+            <path class="strand-wind__b"
+              d="M62 0 C 12 56 108 120 58 176 C 112 236 16 300 62 360 C 116 420 22 480 62 540 C 114 600 20 660 62 720 C 104 780 24 836 62 896 L 62 920"
+              fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round"
+              opacity="0.36" />
+            <line x1="36" y1="118" x2="84" y2="142" stroke="currentColor" stroke-width="0.55" opacity="0.22" />
+            <line x1="88" y1="268" x2="32" y2="292" stroke="currentColor" stroke-width="0.55" opacity="0.2" />
+            <line x1="34" y1="418" x2="86" y2="444" stroke="currentColor" stroke-width="0.55" opacity="0.18" />
+            <line x1="90" y1="568" x2="30" y2="598" stroke="currentColor" stroke-width="0.55" opacity="0.16" />
+            <line x1="38" y1="718" x2="82" y2="748" stroke="currentColor" stroke-width="0.55" opacity="0.14" />
+          </svg>
+        </div>
+        <div class="training-main">
+          <h2 id="training-title" class="section-block__title">Training</h2>
+          <ol class="training-steps">
+            <li class="training-step reveal">
+              <span class="training-step__meta">Jun 2024 – Present</span>
+              <h3 class="training-step__h">Cold Spring Harbor Laboratory</h3>
+              <p class="training-step__p">Computational biologist, Westcott Lab—cancer genomics, single-cell, spatial,
+                integrative modeling.</p>
+            </li>
+            <li class="training-step reveal">
+              <span class="training-step__meta">Jun – Aug 2023</span>
+              <h3 class="training-step__h">New York Genome Center</h3>
+              <p class="training-step__p">Bioinformatics intern in computational biology—pipelines, QC, collaborative
+                analysis.</p>
+            </li>
+            <li class="training-step reveal">
+              <span class="training-step__meta">2020 – 2024</span>
+              <h3 class="training-step__h">Ramapo College of New Jersey</h3>
+              <p class="training-step__p">Bioinformatics; Data Science</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="section-block reveal" aria-labelledby="focus-title">
+      <h2 id="focus-title" class="section-block__title">Research threads</h2>
+      <ul class="focus-grid">
+        <li class="focus-item"><span class="focus-item__tag">Genomics</span> Cancer progression and heterogeneity from
+          high-throughput data.</li>
+        <li class="focus-item"><span class="focus-item__tag">Single-cell</span> RNA-seq and cellular state in disease
+          context.</li>
+        <li class="focus-item"><span class="focus-item__tag">Spatial</span> Tissue organization and neighborhood-level
+          transcriptomics.</li>
+        <li class="focus-item"><span class="focus-item__tag">Tools</span> Pipelines and software for reproducible
+          analysis.</li>
+      </ul>
+    </section>
+
+    {% if show_portfolio_on_home %}
+    {% include 'site/projects_landing.j2' %}
+    {% endif %}
+
+    <section id="tools" class="section-block reveal" aria-labelledby="tools-title">
+      <h2 id="tools-title" class="section-block__title">Stack</h2>
+      <ul class="tools-row">
+        <li><img src="config/assets/icons/python.svg" alt="Python" width="44" height="44" loading="lazy"></li>
+        <li><img src="config/assets/icons/pandas.svg" alt="Pandas" width="44" height="44" loading="lazy"></li>
+        <li><img src="config/assets/icons/jupyter.svg" alt="Jupyter" width="44" height="44" loading="lazy"></li>
+        <li><img src="config/assets/icons/git.svg" alt="Git" width="44" height="44" loading="lazy"></li>
+        <li><img src="config/assets/icons/linux.svg" alt="Linux" width="44" height="44" loading="lazy"></li>
+      </ul>
+    </section>
+
+    <section id="cv" class="section-block reveal" aria-labelledby="cv-title">
+        <h2 id="cv-title" class="section-block__title">Curriculum vitae</h2>
+        <div class="pdf-cv-button-container pdf-cv-button-container--single">
+          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download PDF</span>
+          </a>
+          <button type="button" class="pdf-cv-button pdf-view-btn" aria-haspopup="dialog" aria-controls="pdf-modal">
+            <ion-icon name="eye-outline"></ion-icon>
+            <span>View</span>
+          </button>
+        </div>
+      </section>
+
+      <!--<section id="blog" class="section-block reveal" aria-labelledby="blog-title">
+        <h2 id="blog-title" class="section-block__title">Blog</h2>
+        <ul class="blog-list">
+          {% for post in posts_landing %}
+            <li class="blog-item">
+              <a href="{{ post.url }}" class="blog-item__link">
+                <h3 class="blog-item__title">{{ post.title }}</h3>
+                <p class="blog-item__date">{{ post.published }}</p>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        {% if blog_has_more %}
+          <p class="section-view-all"><a href="{{ page_urls.blog }}" class="section-view-all__link">All blog posts →</a></p>
+        {% endif %}
+      </section>-->
+
+    
+
+  </main>
+
+{% include 'site/footer_block.j2' %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Site-wide settings for the static generator (python main.py)
+#
+# LANDING: how many items to show on index.html per block.
+#   Use 0 to show every item on the homepage (no "View all" link).
+#
+# Full lists live on separate HTML pages (same layout/CSS).
+
+LANDING:
+  publications_max: 3
+  talks_max: 3
+  blog_max: 3
+  projects_max: 2
+
+# If false, the portfolio / "Selected work" block is omitted from the homepage
+# (you can still open work.html for the full list).
+SHOW_PORTFOLIO_ON_HOME: false
+
+# Show "Work" in the header (links to work.html when on a subpage, #portfolio on home).
+SHOW_WORK_NAV: false
+
+# Filenames for full-list pages (relative to site root)
+PAGES:
+  publications: publications.html
+  talks: talks.html
+  work: work.html

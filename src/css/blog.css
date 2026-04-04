@@ -1,4 +1,12 @@
 /* Minimal, modern article styling for standalone blog posts */
+main.post-container {
+    all: unset;
+    display: block;
+    max-width: 760px;
+    margin: 64px auto;
+    padding: 0 20px;
+}
+
 :root {
     /* Force a clean light theme for standalone posts */
     color-scheme: light;
@@ -18,6 +26,7 @@ body {
 }
 
 /* Container */
+
 .post-container {
     max-width: 760px;
     margin: 64px auto;
@@ -25,14 +34,6 @@ body {
 }
 
 /* Title at top, centered */
-.post-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(32px, 6vw, 48px);
-    line-height: 1.2;
-    margin: 0 0 12px 0;
-    text-align: center;
-    font-weight: 700;
-}
 
 .post-title {
     display: block;

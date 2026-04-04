@@ -1,0 +1,12 @@
+<li class="publication-item active">
+  <a href="/{{ post.url }}">
+    <div class="publication-content">
+      <h3 class="publication-title">{{ post.title }}</h3>
+      <p class="publication-journal">{{ post.published | format_date }}</p>
+
+      {% if post.summary %}
+        <p class="publication-authors">{{ post.summary }}</p>
+      {% endif %}
+    </div>
+  </a>
+</li>

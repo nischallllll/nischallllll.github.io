@@ -1,0 +1,22 @@
+{# is_subpage, nav_current, profile #}
+{% set hp = 'index.html' if is_subpage else '' %}
+  <header class="site-header" data-site-header>
+    <div class="site-header__inner">
+      <a class="site-brand" href="{{ hp }}#top">{{ profile.USER.name }}</a>
+      <nav class="site-nav" aria-label="Page sections">
+        <a href="{{ hp }}#about"{% if nav_current == 'about' %} class="is-active"{% endif %}>About</a>
+        <a href="{% if is_subpage %}publications.html{% else %}#publications{% endif %}"{% if nav_current == 'publications' %} class="is-active"{% endif %}>Publications</a>
+        <a href="{% if is_subpage %}talks.html{% else %}#talks{% endif %}"{% if nav_current == 'talks' %} class="is-active"{% endif %}>Talks</a>
+        <a href="{{ hp }}#training"{% if nav_current == 'training' %} class="is-active"{% endif %}>Training</a>
+        {% if show_work_nav %}
+        <a href="{% if is_subpage %}work.html{% elif show_portfolio_on_home %}#portfolio{% else %}work.html{% endif %}"{% if nav_current == 'work' %} class="is-active"{% endif %}>Work</a>
+        {% endif %}
+        <a href="{{ hp }}#cv"{% if nav_current == 'cv' %} class="is-active"{% endif %}>CV</a>
+        <a href="{{ hp }}#blog"{% if nav_current == 'blog' %} class="is-active"{% endif %}>Blog</a>
+      </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Use light theme" title="Theme">
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"></span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>

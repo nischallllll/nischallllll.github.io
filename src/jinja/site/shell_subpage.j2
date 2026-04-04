@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{% include 'site/head_assets.j2' %}
+  <title>{{ page_title | e }}</title>
+</head>
+<body class="site-body--subpage">
+{% include 'site/header_nav.j2' %}
+<main class="site-single site-single--subpage" id="top">
+{% block submain %}{% endblock %}
+</main>
+{% include 'site/footer_block.j2' %}
+</body>
+</html>

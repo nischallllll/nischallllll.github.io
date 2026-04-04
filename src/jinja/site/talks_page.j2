@@ -1,0 +1,9 @@
+{% extends "site/shell_subpage.j2" %}
+{% block submain %}
+<section class="section-block reveal subpage-section" aria-labelledby="talks-h1">
+  <p class="subpage-back"><a href="index.html#talks">← Back to home</a></p>
+  <h1 id="talks-h1" class="subpage-h1">{{ talks.HEADER.label | default('Talks') }}</h1>
+  <p class="section-block__deck">Full list with category filters.</p>
+  {% include 'site/talks_full_block.j2' %}
+</section>
+{% endblock %}

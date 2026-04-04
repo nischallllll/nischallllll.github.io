@@ -1,0 +1,16 @@
+<section id="portfolio" class="section-block reveal" aria-labelledby="work-title">
+  <h2 id="work-title" class="section-block__title">{{ projects.HEADER.label | default('Selected work') }}</h2>
+  {% if projects_has_more %}
+  <p class="section-block__deck section-block__deck--landing-note">Showing {{ projects_landing | length }} of {{ projects.PROJECTS | length }}.</p>
+  {% endif %}
+  <section class="projects projects--landing">
+    <ul class="project-list">
+      {% for item in projects_landing %}
+        {% include 'site/_project_card.j2' %}
+      {% endfor %}
+    </ul>
+    {% if projects_has_more %}
+    <p class="section-view-all"><a href="{{ page_urls.work }}" class="section-view-all__link">All projects →</a></p>
+    {% endif %}
+  </section>
+</section>

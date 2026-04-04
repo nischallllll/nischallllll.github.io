@@ -1,0 +1,31 @@
+{% from 'site/_helpers.j2' import pub_data_category %}
+<li class="publication-item active" data-filter-item data-category="{{ pub_data_category(item) }}">
+  {% if item.url %}
+  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+  {% else %}
+  <div class="publication-item-inner">
+  {% endif %}
+    <figure class="publication-img">
+      <div class="publication-item-icon-box"><ion-icon name="document-text-outline"></ion-icon></div>
+      <img src="{{ item.image }}" alt="{{ item.alt | default('', true) }}" loading="lazy">
+    </figure>
+    <div class="publication-content">
+      <h3 class="publication-title">{{ item.title }}</h3>
+      <p class="publication-authors">{{ item.authors }}</p>
+      <p class="publication-journal">{{ item.journal }} ({{ item.year }})</p>
+      <div class="publication-categories">
+        {% if item.category is string %}
+          <span class="publication-category">{{ item.category }}</span>
+        {% else %}
+          {% for cat in item.category %}
+            <span class="publication-category">{{ cat }}</span>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  {% if item.url %}
+  </a>
+  {% else %}
+  </div>
+  {% endif %}
+</li>

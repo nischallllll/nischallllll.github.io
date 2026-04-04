@@ -1,0 +1,22 @@
+{# Build data-category="a b c" for filter JS #}
+{% macro pub_data_category(item) -%}
+  {%- if item.category is string -%}
+    {{- item.category | lower -}}
+  {%- else -%}
+    {%- for cat in item.category -%}
+      {{- cat | lower -}}
+      {%- if not loop.last %} {% endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro project_data_category(item) -%}
+  {%- if item.category is string -%}
+    {{- item.category | lower -}}
+  {%- else -%}
+    {%- for cat in item.category -%}
+      {{- cat | lower -}}
+      {%- if not loop.last %} {% endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endmacro %}

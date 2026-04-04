@@ -1,1053 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <!--- META --->
-  <!-- meta.j2 -->
-<title>Nischal Bhandari | Portfolio</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="I am a Computational Biologist at Cold Spring Harbor Laboratory working in Dr. Peter Westcott's Laboratory. My research focuses on understanding the genomic basis of cancer through advanced computational approaches and cutting-edge sequencing technologies.
-
-My work centers on cancer genomics and disease heterogeneity, where I leverage diverse bioinformatics pipelines to dissect the transcriptomic and cellular factors driving disease progression.
-
-By integrating high-resolution genomic data with robust computational analysis, I aim to uncover the governing principles of human diseases, identify novel therapeutic targets, contribute to precision medicine approaches, and develop computational tools for genomic analysis.
-">
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="product">
-<meta property="og:url" content="https://nischallllll.github.io">
-<meta property="og:title" content="Nischal Bhandari | Cancer | Genetics | Immunology | Computational Biology | Portfolio">
-<meta property="og:description" content="I am a Computational Biologist at Cold Spring Harbor Laboratory working in Dr. Peter Westcott's Laboratory. My research focuses on understanding the genomic basis of cancer through advanced computational approaches and cutting-edge sequencing technologies.
-
-My work centers on cancer genomics and disease heterogeneity, where I leverage diverse bioinformatics pipelines to dissect the transcriptomic and cellular factors driving disease progression.
-
-By integrating high-resolution genomic data with robust computational analysis, I aim to uncover the governing principles of human diseases, identify novel therapeutic targets, contribute to precision medicine approaches, and develop computational tools for genomic analysis.
-">
-<meta property="og:image" content="config/assets/icons/user.svg">
-<meta property="og:image:secure_url" content="config/assets/icons/user.svg">
-<meta property="og:site_name" content="Nischal Bhandari | Cancer | Genetics | Immunology | Computational Biology | Portfolio">
-<meta name="twitter:card" content="photo">
-<meta name="twitter:creator" content="@nischallllll">
-<meta name="twitter:title" content="Nischal Bhandari | Cancer | Genetics | Immunology | Computational Biology | Portfolio">
-<meta name="twitter:description" content="I am a Computational Biologist at Cold Spring Harbor Laboratory working in Dr. Peter Westcott's Laboratory. My research focuses on understanding the genomic basis of cancer through advanced computational approaches and cutting-edge sequencing technologies.
-
-My work centers on cancer genomics and disease heterogeneity, where I leverage diverse bioinformatics pipelines to dissect the transcriptomic and cellular factors driving disease progression.
-
-By integrating high-resolution genomic data with robust computational analysis, I aim to uncover the governing principles of human diseases, identify novel therapeutic targets, contribute to precision medicine approaches, and develop computational tools for genomic analysis.
-">
-<meta name="twitter:image" content="config/assets/icons/user.svg">
-<meta name="twitter:image:width" content="200">
-<meta name="twitter:image:height" content="200">
-<meta name="keywords" content="Nischal Bhandari, Python, Flutter, Git, Figma, Firebase, Pandas, MongoDB, Dart, HTML, AI, Jupyter, Linux" />
-<link href="https://nischallllll.github.io" rel="canonical">
-  <!--- FAVICON -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('nb-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Computational biologist at Cold Spring Harbor Laboratory (Westcott Lab). Cancer genomics, single-cell and spatial analysis">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nischallllll.github.io">
+  <meta property="og:title" content="Nischal Bhandari">
+  <meta property="og:description"
+    content="Computational biologist at Cold Spring Harbor Laboratory. Cancer genomics, single-cell and spatial methods.">
+  <meta property="og:image" content="config/assets/icons/user.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@nischallllll">
+  <link href="https://nischallllll.github.io" rel="canonical">
   <link rel="shortcut icon" href="./src/images/logo.svg" type="image/x-icon">
-  <!--- CSS --->
   <link rel="stylesheet" href="./src/css/style.css">
-  <!--- GOOGLE FONT --->
+  <link rel="stylesheet" href="./src/css/site-v2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
+    rel="stylesheet">
+  <title>Nischal Bhandari · Computational biology</title>
 </head>
 <body>
-  <main>
-    <!--- SIDEBAR-->
-    <!-- sidebar.j2 -->
-<aside class="sidebar" data-sidebar>
-  <div class="sidebar-info">
-    <figure class="avatar-box">
-      <img src="config/assets/icons/user.svg" alt="Nischal Bhandari" width="80">
-    </figure>
-    <div class="info-content">
-      <h1 class="name" title="Nischal Bhandari">Nischal Bhandari</h1>
-      <p class="title">Cancer | Genetics | Immunology | Computational Biology</p>
-    </div>
-    <button class="info_more-btn" data-sidebar-btn>
-      <span>Show Contacts</span>
-      <ion-icon name="chevron-down"></ion-icon>
-    </button>
-  </div>
-  <div class="sidebar-info_more">
-    <div class="separator"></div>
-    <ul class="contacts-list">
-      
-      <li class="contact-item">
-        <div class="icon-box">
-          <ion-icon name="mail-outline"></ion-icon>
-        </div>
-        <div class="contact-info">
-          <p class="contact-title">Email</p>
-          
-            <a href="mailto:nbhandar@cshl.edu" class="contact-link">nbhandar@cshl.edu</a>
-          
-        </div>
-      </li>
-      
-      <li class="contact-item">
-        <div class="icon-box">
-          <ion-icon name="location-outline"></ion-icon>
-        </div>
-        <div class="contact-info">
-          <p class="contact-title">Location</p>
-          
-            <a href="#" class="contact-link">New York, NY, USA</a>
-          
-        </div>
-      </li>
-      
-    </ul>
-    <div class="separator"></div>
-    <ul class="social-list">
-      
-      <li class="social-item">
-        <a href="https://x.com/" class="social-link" , target="_blank">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
-      </li>
-      
-      <li class="social-item">
-        <a href="https://www.linkedin.com/in/nishbh" class="social-link" , target="_blank">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </li>
-      
-      <li class="social-item">
-        <a href="https://github.com/nischallllll" class="social-link" , target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-      </li>
-      
-    </ul>
-  </div>
-</aside>
-    <div class="main-content">
-      <!-- NAVBAR -->
-      <!-- navbar.j2 -->
-<nav class="navbar">
-  <ul class="navbar-list">
-    
-      <li class="navbar-item">
+
+
+  <header class="site-header" data-site-header>
+    <div class="site-header__inner">
+      <a class="site-brand" href="#top">Nischal Bhandari</a>
+      <nav class="site-nav" aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#training">Training</a>
         
-          <button class="navbar-link active" data-nav-link data-page="about">About</button>
-        
-      </li>
-    
-      <li class="navbar-item">
-        
-          <button class="navbar-link " data-nav-link data-page="publications">Publications</button>
-        
-      </li>
-    
-      <li class="navbar-item">
-        
-          <button class="navbar-link " data-nav-link data-page="talks">Talks</button>
-        
-      </li>
-    
-      <li class="navbar-item">
-        
-          <button class="navbar-link " data-nav-link data-page="portfolio">Portfolio</button>
-        
-      </li>
-    
-      <li class="navbar-item">
-        
-              
-              <button class="navbar-link" data-nav-link data-page="resume">CV</button>
-            
-      </li>
-    
-  </ul>
-</nav>
-      <!--- ABOUT -->
-      <!-- about.j2 -->
-<article class="about  active" data-page="about">
-  <header>
-    <h2 class="h2 article-title">About me</h2>
-    <div class="about-toggle-row">
-      <!-- Toggle switch for short/long version (placed under the title, left-aligned) -->
-      <label class="toggle-switch" aria-label="Toggle short/long presentation">
-        <input type="checkbox" id="about-toggle" class="toggle-checkbox" checked>
-        <span class="toggle-slider" aria-hidden="true"></span>
-      </label>
+        <a href="#cv">CV</a>
+        <a href="#blog">Blog</a>
+      </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Use light theme" title="Theme">
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"></span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
-  <section class="about-text">
-
-    
-    
-    
-      
-    
-
-    
-    <!-- Long version (hidden by default) -->
-    <div id="long-version" style="display: none;">
-      
-      
-        
-          
-            <p class="lead">I am a Computational Biologist at Cold Spring Harbor Laboratory working in Dr. Peter Westcott's Laboratory. My research focuses on understanding the genomic basis of cancer through advanced computational approaches and cutting-edge sequencing technologies.</p>
-            
-          
-        
-      
-        
-      
-        
-          
-            <p>My work centers on cancer genomics and disease heterogeneity, where I leverage diverse bioinformatics pipelines to dissect the transcriptomic and cellular factors driving disease progression.</p>
-          
-        
-      
-        
-      
-        
-          
-            <p>By integrating high-resolution genomic data with robust computational analysis, I aim to uncover the governing principles of human diseases, identify novel therapeutic targets, contribute to precision medicine approaches, and develop computational tools for genomic analysis.</p>
-          
-        
-      
-        
-      
-    </div>
-
-    <!-- Short version -->
-    <div id="short-version">
-      
-      
-        
-          
-            <p class="lead">I am a Computational Biologist at Cold Spring Harbor Laboratory working in Dr. Peter Westcott's Laboratory. My research focuses on understanding the genomic basis of cancer through advanced computational approaches and cutting-edge sequencing technologies.</p>
-            
-          
-        
-      
-        
-      
-    </div>
-
-  
-
-  </section>
-
-  <!--- DOING -->
-  
-  <section class="service">
-    <h3 class="h3 service-title">🧬 Research Focus</h3>
-    <ul class="service-list">
-      
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="config/assets/icons/cancer.svg" alt="design icon" width="30" height="30">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">Cancer Genomics Research</h4>
-          <p class="service-item-text">
-            Analyzing high-throughput genomic data to understand cancer progression and disease heterogeneity.
-          </p>
-        </div>
-      </li>
-      
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="config/assets/icons/cell.svg" alt="design icon" width="30" height="30">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">Single-cell Analysis</h4>
-          <p class="service-item-text">
-            Processing and analyzing single-cell RNA sequencing data to uncover cellular dynamics.
-          </p>
-        </div>
-      </li>
-      
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="config/assets/icons/laptop-code.svg" alt="design icon" width="30" height="30">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">Bioinformatics Pipeline Development</h4>
-          <p class="service-item-text">
-            Developing computational tools and pipelines for genomic data analysis.
-          </p>
-        </div>
-      </li>
-      
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="config/assets/icons/colon.svg" alt="design icon" width="30" height="30">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">Spatial Transcriptomics</h4>
-          <p class="service-item-text">
-            Analyzing spatial transcriptomic data to understand tissue organization and cell interactions.
-          </p>
-        </div>
-      </li>
-      
-    </ul>
-  </section>
-  
-
-  <!--- CURRENT -->
-  
-  <section class="testimonials">
-    <h3 class="h3 testimonials-title">📍 Current Position</h3>
-    <ul class="testimonials-list has-scrollbar">
-      
-      <li class="testimonials-item">
-        <div class="content-card" data-testimonials-item>
-          <figure class="testimonials-avatar-box">
-            <img src="config/assets/icons/cshl_logo_alternate-RGB_KO.png" alt="Computational Biologist" width="60" data-testimonials-avatar>
-          </figure>
-          <h4 class="h4 testimonials-item-title" data-testimonials-title>Computational Biologist</h4>
-          <div class="testimonials-text" data-testimonials-text>
-            <p>
-              Westcott Laboratory, Cold Spring Harbor Laboratory
-            </p>
-          </div>
-        </div>
-      </li>
-      
-    </ul>
-  </section>
-
-  <!--- popup modal -->
-  <div class="modal-container" data-modal-container>
-    <div class="overlay" data-overlay></div>
-    <section class="testimonials-modal">
-      <button class="modal-close-btn" data-modal-close-btn>
-        <ion-icon name="close-outline"></ion-icon>
-      </button>
-      <div class="modal-img-wrapper">
-        <figure class="modal-avatar-box">
-          <img src="config/assets/avatars/avatar-1.png" alt="Nischal Bhandari" width="80" data-modal-img>
-        </figure>
-        <img src="./src/images/icon-quote.svg" alt="quote icon">
+  <main class="site-single" id="top">
+    <section class="hero-mountain reveal" aria-label="Introduction">
+      <div class="hero-mountain__layer hero-mountain__layer--peony" aria-hidden="true"></div>
+      <div class="hero-mountain__layer hero-mountain__range" aria-hidden="true">
+        <svg class="hero-mountain__svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidMax slice"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" opacity="0.14"
+            d="M0 320 L0 220 L180 80 L340 200 L520 40 L700 180 L880 60 L1040 200 L1200 100 L1200 320 Z" />
+          <path fill="currentColor" opacity="0.22"
+            d="M0 320 L0 260 L220 140 L400 240 L580 120 L760 260 L940 150 L1100 240 L1200 180 L1200 320 Z" />
+        </svg>
       </div>
-      <div class="modal-content">
-        <h4 class="h3 modal-title" data-modal-title>Nischal Bhandari</h4>
-        <div data-modal-text>
-          <p>
-          </p>
+      <div class="hero-mountain__strand" aria-hidden="true">
+        <svg class="strand-hero" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="strand-hero__a" d="M8 160 C 72 168, 96 32, 160 48 S 248 192, 312 88 S 360 24, 392 56"
+            stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+          <path class="strand-hero__b" d="M8 48 C 80 40, 112 176, 176 152 S 264 40, 328 120 S 368 176, 392 144"
+            stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.42" />
+          <path d="M52 148 Q 120 100 188 130 T 324 90" stroke="currentColor" stroke-width="0.45" opacity="0.2"
+            stroke-dasharray="3 6" />
+        </svg>
+      </div>
+      <div class="hero-mountain__content">
+        <p class="hero-mountain__eyebrow">Nepal --> USA</p>
+        <h1 class="hero-mountain__title">Genes, cells, and computational biology</h1>
+        <p class="hero-mountain__lede">Computational biologist at Cold Spring Harbor Laboratory. I study cancer genomics
+          with single-cell and spatial transcriptomics.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section-block section-block--lab reveal" aria-labelledby="lab-title">
+      <h2 id="lab-title" class="section-block__title">Current</h2>
+      <p class="section-block__deck">Westcott Lab · Cold Spring Harbor Laboratory</p>
+      <div class="lab-card">
+        <img src="config/assets/icons/cshl_logo_alternate-RGB.png" height="40" alt="" class="lab-card__logo">
+        <div class="lab-card__body">
+          <p class="lab-card__role">Computational Biologist</p>
+          <ul class="lab-card__list">
+            <li>Genomic basis of colon cancer and tumor heterogeneity</li>
+            <li>Transcriptomic and cellular drivers of progression</li>
+            <li>Developing computational tools for spatial analysis</li>
+          </ul>
         </div>
       </div>
     </section>
-  </div>
+
+    <section id="publications" class="section-block reveal" aria-labelledby="pub-title">
+  <h2 id="pub-title" class="section-block__title">Publications</h2>
   
-
-  <!--- TECHNOLOGIES-->
-  
-  <section class="clients">
-    <h3 class="h3 clients-title">Tech Experience</h3>
-    <ul class="clients-list has-scrollbar">
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/python.svg" alt="Python" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/flutter.svg" alt="Flutter" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/git.svg" alt="Git" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/figma.svg" alt="Figma" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/firebase.svg" alt="Firebase" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/pandas.svg" alt="Pandas" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/mongodb.svg" alt="MongoDB" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/dart.svg" alt="Dart" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/html.svg" alt="HTML" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/ai.svg" alt="AI" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/jupyter.svg" alt="Jupyter" width="50" height="50">
-        </a>
-      </li>
-      
-      <li class="clients-item">
-        <a href="#">
-          <img src="config/assets/icons/linux.svg" alt="Linux" width="50" height="50">
-        </a>
-      </li>
-      
-    </ul>
-  </section>
-  
-
-  
-  <script>
-    (function(){
-      const toggle = document.getElementById('about-toggle');
-      const longVersion = document.getElementById('long-version');
-      const shortVersion = document.getElementById('short-version');
-      const storageKey = 'aboutPresentationIsShort_v1';
-
-      function showWithAnimation(showEl, hideEl) {
-        try {
-          if (!showEl || !hideEl) return;
-          // Prepare
-          showEl.classList.remove('fade-slide-exit-active', 'fade-slide-exit');
-          hideEl.classList.remove('fade-slide-enter-active', 'fade-slide-enter');
-
-          // Start hiding old
-          hideEl.classList.add('fade-slide-exit');
-          // allow a frame
-          requestAnimationFrame(() => {
-            hideEl.classList.add('fade-slide-exit-active');
-            hideEl.addEventListener('transitionend', function onEnd() {
-              hideEl.removeEventListener('transitionend', onEnd);
-              hideEl.style.display = 'none';
-              // show new
-              showEl.style.display = '';
-              showEl.classList.add('fade-slide-enter');
-              requestAnimationFrame(() => showEl.classList.add('fade-slide-enter-active'));
-            });
-          });
-        } catch (e) {
-          // fallback
-          hideEl.style.display = 'none';
-          showEl.style.display = '';
-        }
-      }
-
-      function setView(isShort) {
-        if (!longVersion || !shortVersion) return;
-        try { localStorage.setItem(storageKey, isShort ? '1' : '0'); } catch(e){}
-        if (toggle) toggle.checked = isShort;
-        if (isShort) {
-          showWithAnimation(shortVersion, longVersion);
-        } else {
-          showWithAnimation(longVersion, shortVersion);
-        }
-      }
-
-      // initialize from storage if available; otherwise default to short when toggle exists
-      try {
-        const saved = localStorage.getItem(storageKey);
-        if (saved !== null) {
-          setView(saved === '1');
-        } else if (toggle) {
-          setView(toggle.checked);
-        }
-      } catch(e) {}
-
-      if (toggle) {
-        toggle.addEventListener('change', function() {
-          setView(this.checked);
-        });
-      }
-    })();
-  </script>
-
-</article>
-      <!-- RESUME --> 
-      <!-- resume.j2 -->
-<article class="resume" data-page="resume">
-  <header>
-    <h2 class="h2 article-title">CV</h2>
-  </header>
-
-  
-
-  <!-- EDUCATION -->
-  
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
-      </div>
-      <h3 class="h3">Education</h3>
-    </div>
-    <ol class="timeline-list">
-      
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Ramapo College of New Jersey, Mahwah, NJ</h4>
-        <span>2020 - 2024</span>
-        
-        <p class="timeline-text">
-          Capstone Project: Investigating the Role of Relative Usage of Synonymous Codons in Breast Cancer Metastasis: tRNA and miRNA perspective
-        </p>
-        
-      </li>
-      
-    </ol>
-  </section>
-  
-
-  <!-- EXPERIENCE -->
-  
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
-      </div>
-      <h3 class="h3">Research Experience</h3>
-    </div>
-    <ol class="timeline-list">
-      
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Computational Biologist, Westcott Lab, Cold Spring Harbor Laboratory</h4>
-        <span>Jun 2024 – Present</span>
-        
-        <ul class="timeline-text timeline-text-list">
-          
-        </ul>
-        
-      </li>
-      
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Bioinformatics Intern, Computational Biology Lab, New York Genome Center</h4>
-        <span>Jun – Aug 2023</span>
-        
-        <ul class="timeline-text timeline-text-list">
-          
-        </ul>
-        
-      </li>
-      
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Research Assistant, Molecular Biology Lab, Ramapo College of New Jersey</h4>
-        <span>Aug 2022 – May 2023</span>
-        
-        <ul class="timeline-text timeline-text-list">
-          
-        </ul>
-        
-      </li>
-      
-    </ol>
-  </section>
-  
-
-  <!-- LANGUAGES -->
-  
-
-  <!-- SKILLS -->
-  
-
-  
-  <section class="pdf-cv-section">
-    <div class="pdf-cv-container">
-      <div class="pdf-cv-content">
-        <h3 class="h3 pdf-cv-title"></h3>
-        <p class="pdf-cv-description"></p>
-        <div class="pdf-cv-button-container">
-          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Download CV (PDF)</span>
-          </a>
-          <button class="pdf-cv-button pdf-view-btn" type="button" aria-haspopup="dialog" aria-controls="pdf-modal">
-            <ion-icon name="eye-outline"></ion-icon>
-            <span>View CV</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-</article>
-<!-- PDF Modal Viewer -->
-<div id="pdf-modal" class="pdf-modal" role="dialog" aria-modal="true" aria-hidden="true" data-pdf-url="config/assets/Nischal_Bhandari_CV.pdf">
-  <div class="pdf-modal-overlay" data-pdf-overlay></div>
-  <div class="pdf-modal-panel" role="document">
-    <button class="pdf-modal-close" aria-label="Close CV viewer">&times;</button>
-    <div class="pdf-modal-body">
-      <div class="pdf-modal-mobile-message">
-        <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download style="margin-bottom:8px;">
-          <ion-icon name="download-outline"></ion-icon>
-          <span>Download CV (PDF)</span>
-        </a>
-        <div class="pdf-cv-mobile-note">
-          <strong>Note:</strong> In-browser PDF viewing is limited on many mobile browsers. For the full CV, please use the download button above.
-        </div>
-      </div>
-      <iframe id="pdf-modal-object" src="" frameborder="0" width="100%" height="100%" title="CV preview">
-        <p>Your browser doesn't support embedded PDFs. <a href="config/assets/Nischal_Bhandari_CV.pdf" target="_blank">Click here to view the PDF</a>.</p>
-      </iframe>
-    </div>
-  </div>
-</div>
-
-<script>
-  (function(){
-    const openBtn = document.querySelector('.pdf-view-btn');
-    const modal = document.getElementById('pdf-modal');
-    const overlay = modal && modal.querySelector('[data-pdf-overlay]');
-    const closeBtn = modal && modal.querySelector('.pdf-modal-close');
-    const pdfFrame = modal && modal.querySelector('#pdf-modal-object');
-    const pdfUrl = modal ? modal.getAttribute('data-pdf-url') : null;
-    let previouslyFocused = null;
-    let focusableElements = [];
-
-    function updateFocusableElements(){
-      if(!modal) return;
-      focusableElements = Array.from(modal.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
-      focusableElements = focusableElements.filter(el => el.offsetWidth > 0 || el.offsetHeight > 0 || el.getClientRects().length);
-    }
-
-    function trapTabKey(e){
-      if(e.key !== 'Tab') return;
-      updateFocusableElements();
-      if(focusableElements.length === 0){ e.preventDefault(); return; }
-      const firstEl = focusableElements[0];
-      const lastEl = focusableElements[focusableElements.length - 1];
-      if(e.shiftKey){ if(document.activeElement === firstEl || document.activeElement === modal){ e.preventDefault(); lastEl.focus(); } }
-      else { if(document.activeElement === lastEl){ e.preventDefault(); firstEl.focus(); } }
-    }
-
-    function openModal(){
-      if(!modal) return;
-      previouslyFocused = document.activeElement;
-      // set iframe src to load the PDF (more consistent across Safari/Brave mobile)
-      if(pdfFrame && pdfUrl){ try { pdfFrame.src = pdfUrl; } catch(e){} }
-      modal.setAttribute('aria-hidden','false');
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-      updateFocusableElements();
-      const toFocus = closeBtn || focusableElements[0] || modal;
-      toFocus && toFocus.focus();
-      document.addEventListener('keydown', handleKeydown);
-    }
-
-    function closeModal(){
-      if(!modal) return;
-      modal.setAttribute('aria-hidden','true');
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-      // clear iframe src so next open will refresh the content
-      if(pdfFrame){ try { pdfFrame.src = ''; } catch(e){} }
-      document.removeEventListener('keydown', handleKeydown);
-      if(previouslyFocused && previouslyFocused.focus) previouslyFocused.focus();
-    }
-
-    function handleKeydown(e){ if(e.key === 'Escape'){ e.preventDefault(); closeModal(); return; } trapTabKey(e); }
-
-    if(openBtn) openBtn.addEventListener('click', function(e){ e.preventDefault(); openModal(); });
-    if(overlay) overlay.addEventListener('click', function(){ closeModal(); });
-    if(closeBtn) closeBtn.addEventListener('click', function(){ closeModal(); });
-
-  })();
-</script>
-      <!-- PROJECTS -->
-      <!-- portfolio.j2 -->
-<article class="portfolio" data-page="portfolio">
-  <header>
-    <h2 class="h2 article-title">Portfolio</h2>
-  </header>
-  <section class="projects">
-    <ul class="filter-list">
-      <li class="filter-item">
-        <button class="active" data-filter-btn>All</button>
-      </li>
-      
-      
-      
-        
-          
-            
-          
-            
-          
-            
-          
-        
-      
-        
-          
-            
-          
-            
-          
-        
-      
-      
-      
-      <li class="filter-item">
-        <button data-filter-btn>Bioinformatics</button>
-      </li>
-      
-      <li class="filter-item">
-        <button data-filter-btn>R</button>
-      </li>
-      
-      <li class="filter-item">
-        <button data-filter-btn>Package</button>
-      </li>
-      
-      <li class="filter-item">
-        <button data-filter-btn>Python</button>
-      </li>
-      
-      <li class="filter-item">
-        <button data-filter-btn>Data Analysis</button>
-      </li>
-      
-    </ul>
-    <div class="filter-select-box">
-      <button class="filter-select" data-select>
-        <div class="select-value" data-selecct-value>Select category</div>
-        <div class="select-icon">
-          <ion-icon name="chevron-down"></ion-icon>
-        </div>
-      </button>
-      <ul class="select-list">
-        <li class="select-item">
-          <button data-select-item>All</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Bioinformatics</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>R</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Package</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Python</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Data Analysis</button>
-        </li>
-        
-      </ul>
-    </div>
-      <ul class="project-list">
-        
-          
-          <li class="project-item  active" data-filter-item data-category="bioinformatics r package">
-            
-            <a href="https://github.com/nishcomp/STING" target="_blank">
-            
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </div>
-                <img src="https://github.com/nishcomp/STING/blob/main/images/p1_crc_CXCR4_hotspot_neighbors.png?raw=true" alt="STING: Segmenting Transcriptomics in Neighborhoods of Genes" loading="lazy">
-              </figure>
-              <h3 class="project-title">STING: Segmenting Transcriptomics in Neighborhoods of Genes</h3>
-              <p class="project-category">Bioinformatics, R, Package</p>
-            
-            </a>
-            
-          </li>
-        
-          
-          <li class="project-item  active" data-filter-item data-category="python data analysis">
-            
-            <a href="https://1nishbh.github.io/Migration-Our-Story-as-a-Mobile-Species/blog.html" target="_blank">
-            
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </div>
-                <img src="https://1nishbh.github.io/Migration-Our-Story-as-a-Mobile-Species/villagers_migrating_bangladesh.jpg" alt="Where Are We Going? Tracing the Ever-Evolving Tale of Human Migration" loading="lazy">
-              </figure>
-              <h3 class="project-title">Where Are We Going? Tracing the Ever-Evolving Tale of Human Migration</h3>
-              <p class="project-category">Python, Data Analysis</p>
-            
-            </a>
-            
-          </li>
-        
-      </ul>
-  </section>
-</article>
-      <!-- PUBLICATIONS -->
-  <!-- publications.j2 -->
-<article class="publications" data-page="publications">
-  <header>
-    <h2 class="h2 article-title">Publications</h2>
-  </header>
-  <section class="publications-section">
-    <ul class="filter-list">
-      <li class="filter-item">
-        <button class="active" data-filter-btn>All</button>
-      </li>
-      
-      
-        
-          
-            
-          
-            
-          
-            
-          
-        
-      
-      
-      
-      <li class="filter-item">
-        <button data-filter-btn>Pre-print</button>
-      </li>
-      
-      <li class="filter-item">
-        <button data-filter-btn>Cancer Genomics</button>
-      </li>
-      
-      <li class="filter-item">
-        <button data-filter-btn>Spatial Transcriptomics</button>
-      </li>
-      
-    </ul>
-    <div class="filter-select-box">
-      <button class="filter-select" data-select>
-        <div class="select-value" data-selecct-value>Select category</div>
-        <div class="select-icon">
-          <ion-icon name="chevron-down"></ion-icon>
-        </div>
-      </button>
-      <ul class="select-list">
-        <li class="select-item">
-          <button data-select-item>All</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Pre-print</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Cancer Genomics</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Spatial Transcriptomics</button>
-        </li>
-        
-      </ul>
-    </div>
+  <section class="publications-section publications-section--landing">
     <ul class="publication-list">
       
-      <li class="publication-item active" 
-          data-filter-item 
-          
-            data-category="pre-print cancer genomics spatial transcriptomics"
-          >
         
-        <a href="https://www.biorxiv.org/content/10.1101/2025.05.30.657122v2.abstract" target="_blank">
-        
-          <figure class="publication-img">
-            <div class="publication-item-icon-box">
-              <ion-icon name="document-text-outline"></ion-icon>
-            </div>
-            <img src="https://media.gettyimages.com/id/1701193275/photo/cancer-malignant-cells.jpg?s=2048x2048&w=gi&k=20&c=RsbSGy5WBeS-uYWvb1RSkCnQjMdMOS4DeKHVA81hTdQ=" alt="Targeting Neutrophil Extracellular Traps to inhibit Colon Cancer Tumor Necrosis and Metastasis" loading="lazy">
-          </figure>
-          <div class="publication-content">
-            <h3 class="publication-title">Targeting Neutrophil Extracellular Traps to inhibit Colon Cancer Tumor Necrosis and Metastasis</h3>
-            <p class="publication-authors">E Gazzara, et al.</p>
-            <p class="publication-journal">TBD (2024)</p>
-            <div class="publication-categories">
-              
-                
-                  <span class="publication-category">Pre-print</span>
-                
-                  <span class="publication-category">Cancer Genomics</span>
-                
-                  <span class="publication-category">Spatial Transcriptomics</span>
-                
-              
-            </div>
-          </div>
-        
-        </a>
-        
-      </li>
-      
-    </ul>
-  </section>
-</article>
-  <!-- talks.j2 -->
-<article class="talks" data-page="talks">
-  <header>
-    <h2 class="h2 article-title">Talks</h2>
-  </header>
-  <section class="talks">
-    <ul class="filter-list">
-      <li class="filter-item">
-        <button class="active" data-filter-btn>All</button>
-      </li>
-      
-      
-      
-        
-          
-            
-          
-            
-          
-        
-      
-      
-      
-      <li class="filter-item">
-        <button data-filter-btn>Oral Presentation</button>
-      </li>
-      
-      <li class="filter-item">
-        <button data-filter-btn>Invited</button>
-      </li>
-      
-    </ul>
-    <div class="filter-select-box">
-      <button class="filter-select" data-select>
-        <div class="select-value" data-selecct-value>Select category</div>
-        <div class="select-icon">
-          <ion-icon name="chevron-down"></ion-icon>
-        </div>
-      </button>
-      <ul class="select-list">
-        <li class="select-item">
-          <button data-select-item>All</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Oral Presentation</button>
-        </li>
-        
-        <li class="select-item">
-          <button data-select-item>Invited</button>
-        </li>
-        
-      </ul>
-    </div>
-      <ul class="project-list">
-        
-          
-          <li class="project-item  active" data-filter-item data-category="oral presentation invited">
-            
-            <a href="https://www.singlecellbio.org/space-club" target="_blank">
-            
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </div>
-                <img src="config/assets/icons/images/NB_spaceclubjuly25.png" alt="Resolving the Spatial Dynamics of Early Cancer Progression" loading="lazy">
-              </figure>
-              <h3 class="project-title">Resolving the Spatial Dynamics of Early Cancer Progression</h3>
-              <p class="project-category">Oral Presentation, Invited</p>
-            
-            </a>
-            
-          </li>
-        
-      </ul>
-  </section>
-</article>
-      <!-- BLOG (kept off navbar; accessible via #blog hash) -->
-      <!-- blog.j2 -->
-<article class="blog" data-page="blog">
-  <header>
-    <h2 class="h2 article-title">Blog</h2>
-  </header>
-  <section class="blog-posts">
-    <ul class="blog-posts-list">
-      
-      <li class="blog-post-item">
-        
-        
-        <a href="posts/grad-school.html" >
-          
-          <div class="blog-content">
-            <div class="blog-meta">
-              <p class="blog-category">Notes to self</p>
-              <span class="dot"></span>
-              <time datetime="2025-09-29">Sep 29, 2025</time>
-            </div>
-            <h3 class="h3 blog-item-title">What, you want to got to a grad school?</h3>
-            <p class="blog-text">
-              Why trouble yourself with grad school?
-            </p>
-          </div>
-        </a>
-      </li>
-      
-    </ul>
-  </section>
-</article>
-      <!-- CONTACT -->
-      <!-- contact.j2 -->
-<article class="contact" data-page="contact">
-  <header>
-    <h2 class="h2 article-title">Contact</h2>
-  </header>
-  <section class="mapbox" data-mapbox>
-    <figure>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.711865180165!2d-73.98565448469727!3d40.74843130577657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1f0be18197%3A0x4a84c06d9c4c3e9b!2sRichard+Hendricks+House%2C+100+East+18th+Street%2C+New+York%2C+NY+10013!5e0!3m2!1sen!2sus!4v1649492302859!5m2!1sen!2sus"
-        width="400" height="300" loading="lazy"></iframe>
+<li class="publication-item active" data-filter-item data-category="pre-print cancer genomics spatial transcriptomics">
+  
+  <a href="https://www.biorxiv.org/content/10.1101/2025.05.30.657122v2.abstract" target="_blank" rel="noopener noreferrer">
+  
+    <figure class="publication-img">
+      <div class="publication-item-icon-box"><ion-icon name="document-text-outline"></ion-icon></div>
+      <img src="https://media.gettyimages.com/id/1701193275/photo/cancer-malignant-cells.jpg?s=2048x2048&w=gi&k=20&c=RsbSGy5WBeS-uYWvb1RSkCnQjMdMOS4DeKHVA81hTdQ=" alt="" loading="lazy">
     </figure>
-  </section>
-  <section class="contact-form">
-    <h3 class="h3 form-title">Contact Form</h3>
-    <form action="mailto:" method="POST" class="form" data-form>
-      <div class="input-wrapper">
-        <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-        <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+    <div class="publication-content">
+      <h3 class="publication-title">Targeting Neutrophil Extracellular Traps to inhibit Colon Cancer Tumor Necrosis and Metastasis</h3>
+      <p class="publication-authors">E Gazzara, et al.</p>
+      <p class="publication-journal">TBD (2024)</p>
+      <div class="publication-categories">
+        
+          
+            <span class="publication-category">Pre-print</span>
+          
+            <span class="publication-category">Cancer Genomics</span>
+          
+            <span class="publication-category">Spatial Transcriptomics</span>
+          
+        
       </div>
-      <textarea name="message" class="form-input" placeholder="Your message" required data-form-input></textarea>
-      <button class="form-btn" type="submit" disabled data-form-btn>
-        <ion-icon name="paper-plane"></ion-icon>
-        <span>Send message</span>
-      </button>
-    </form>
-  </section>
-</article>
     </div>
+  
+  </a>
+  
+</li>
+      
+    </ul>
+    
+  </section>
+</section>
+
+    <section id="talks" class="section-block reveal" aria-labelledby="talks-title">
+  <h2 id="talks-title" class="section-block__title">Talks</h2>
+  
+  <section class="talks talks--landing">
+    <ul class="project-list">
+      
+        
+<li class="project-item active" data-filter-item data-category="oral presentation invited">
+  <a href="https://www.singlecellbio.org/space-club" target="_blank" rel="noopener noreferrer">
+    <figure class="project-img">
+      <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+      <img src="config/assets/icons/images/NB_spaceclubjuly25.png" alt="Resolving the Spatial Dynamics of Early Cancer Progression" loading="lazy">
+    </figure>
+    <h3 class="project-title">Resolving the Spatial Dynamics of Early Cancer Progression</h3>
+    <p class="project-category">Oral Presentation, Invited</p>
+  </a>
+</li>
+      
+    </ul>
+    
+  </section>
+</section>
+    <!--<section id="blog" class="section-block reveal" aria-labelledby="blog-title">
+  <h2 id="blog-title" class="section-block__title">Blog</h2>
+  <div class="blog-posts-list">
+    
+    <div class="blog-post-item">
+      <a href="posts/grad-school.html">
+        
+        <div class="blog-content">
+          <div class="blog-meta">
+            
+            <span class="blog-category">Notes to self</span>
+            <span class="dot"></span>
+            
+            <time datetime="2025-09-29">2025-09-29</time>
+          </div>
+          <h3 class="blog-item-title">What, you want to got to a grad school?</h3>
+          
+        </div>
+      </a>
+    </div>
+    
+  </div>
+
+  
+</section>-->
+
+    <section id="training" class="section-block section-block--training reveal" aria-labelledby="training-title">
+      <div class="training-layout">
+        <div class="training-spine" aria-hidden="true">
+          <svg class="strand-wind" viewBox="0 0 120 500" preserveAspectRatio="xMidYMin slice"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="strand-wind__a"
+              d="M58 0 C 108 48 12 112 62 168 C 8 232 104 292 58 352 C 14 416 106 472 60 532 C 6 596 102 652 58 712 C 16 772 98 828 60 888 L 60 920"
+              fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" />
+            <path class="strand-wind__b"
+              d="M62 0 C 12 56 108 120 58 176 C 112 236 16 300 62 360 C 116 420 22 480 62 540 C 114 600 20 660 62 720 C 104 780 24 836 62 896 L 62 920"
+              fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round"
+              opacity="0.36" />
+            <line x1="36" y1="118" x2="84" y2="142" stroke="currentColor" stroke-width="0.55" opacity="0.22" />
+            <line x1="88" y1="268" x2="32" y2="292" stroke="currentColor" stroke-width="0.55" opacity="0.2" />
+            <line x1="34" y1="418" x2="86" y2="444" stroke="currentColor" stroke-width="0.55" opacity="0.18" />
+            <line x1="90" y1="568" x2="30" y2="598" stroke="currentColor" stroke-width="0.55" opacity="0.16" />
+            <line x1="38" y1="718" x2="82" y2="748" stroke="currentColor" stroke-width="0.55" opacity="0.14" />
+          </svg>
+        </div>
+        <div class="training-main">
+          <h2 id="training-title" class="section-block__title">Training</h2>
+          <ol class="training-steps">
+            <li class="training-step reveal">
+              <span class="training-step__meta">Jun 2024 – Present</span>
+              <h3 class="training-step__h">Cold Spring Harbor Laboratory</h3>
+              <p class="training-step__p">Computational biologist, Westcott Lab—cancer genomics, single-cell, spatial,
+                integrative modeling.</p>
+            </li>
+            <li class="training-step reveal">
+              <span class="training-step__meta">Jun – Aug 2023</span>
+              <h3 class="training-step__h">New York Genome Center</h3>
+              <p class="training-step__p">Bioinformatics intern in computational biology—pipelines, QC, collaborative
+                analysis.</p>
+            </li>
+            <li class="training-step reveal">
+              <span class="training-step__meta">2020 – 2024</span>
+              <h3 class="training-step__h">Ramapo College of New Jersey</h3>
+              <p class="training-step__p">Bioinformatics; Data Science</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="section-block reveal" aria-labelledby="focus-title">
+      <h2 id="focus-title" class="section-block__title">Research threads</h2>
+      <ul class="focus-grid">
+        <li class="focus-item"><span class="focus-item__tag">Genomics</span> Cancer progression and heterogeneity from
+          high-throughput data.</li>
+        <li class="focus-item"><span class="focus-item__tag">Single-cell</span> RNA-seq and cellular state in disease
+          context.</li>
+        <li class="focus-item"><span class="focus-item__tag">Spatial</span> Tissue organization and neighborhood-level
+          transcriptomics.</li>
+        <li class="focus-item"><span class="focus-item__tag">Tools</span> Pipelines and software for reproducible
+          analysis.</li>
+      </ul>
+    </section>
+
+    
+
+    <section id="tools" class="section-block reveal" aria-labelledby="tools-title">
+      <h2 id="tools-title" class="section-block__title">Stack</h2>
+      <ul class="tools-row">
+        <li><img src="config/assets/icons/python.svg" alt="Python" width="44" height="44" loading="lazy"></li>
+        <li><img src="config/assets/icons/pandas.svg" alt="Pandas" width="44" height="44" loading="lazy"></li>
+        <li><img src="config/assets/icons/jupyter.svg" alt="Jupyter" width="44" height="44" loading="lazy"></li>
+        <li><img src="config/assets/icons/git.svg" alt="Git" width="44" height="44" loading="lazy"></li>
+        <li><img src="config/assets/icons/linux.svg" alt="Linux" width="44" height="44" loading="lazy"></li>
+      </ul>
+    </section>
+
+    <section id="cv" class="section-block reveal" aria-labelledby="cv-title">
+        <h2 id="cv-title" class="section-block__title">Curriculum vitae</h2>
+        <div class="pdf-cv-button-container pdf-cv-button-container--single">
+          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download PDF</span>
+          </a>
+          <button type="button" class="pdf-cv-button pdf-view-btn" aria-haspopup="dialog" aria-controls="pdf-modal">
+            <ion-icon name="eye-outline"></ion-icon>
+            <span>View</span>
+          </button>
+        </div>
+      </section>
+
+      <!--<section id="blog" class="section-block reveal" aria-labelledby="blog-title">
+        <h2 id="blog-title" class="section-block__title">Blog</h2>
+        <ul class="blog-list">
+          
+            <li class="blog-item">
+              <a href="posts/grad-school.html" class="blog-item__link">
+                <h3 class="blog-item__title">What, you want to got to a grad school?</h3>
+                <p class="blog-item__date">2025-09-29</p>
+              </a>
+            </li>
+          
+        </ul>
+        
+      </section>-->
+
+    
+
   </main>
-  <!--- JS --->
+
+  <footer class="site-footer reveal">
+    <div class="site-footer__peony" aria-hidden="true"></div>
+    <div class="site-footer__inner">
+      <p class="site-footer__name">Nischal Bhandari</p>
+      <p class="site-footer__meta">New York, USA ·</p>
+      <p class="site-footer__contact">
+        
+        
+        <a href="mailto:nbhandar@cshl.edu">nbhandar@cshl.edu</a>
+        
+        
+        
+        
+      </p>
+      <ul class="site-footer__social">
+        <li><a href="https://www.linkedin.com/in/nishbh" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/nischallllll" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google scholar</a></li>
+        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+      </ul>
+      <p class="site-footer__copy">© <span data-year></span></p>
+    </div>
+  </footer>
+
+  <div id="pdf-modal" class="pdf-modal" role="dialog" aria-modal="true" aria-hidden="true"
+    data-pdf-url="config/assets/Nischal_Bhandari_CV.pdf">
+    <div class="pdf-modal-overlay" data-pdf-overlay></div>
+    <div class="pdf-modal-panel" role="document">
+      <button type="button" class="pdf-modal-close" aria-label="Close CV viewer">&times;</button>
+      <div class="pdf-modal-body">
+        <div class="pdf-modal-mobile-message">
+          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download PDF</span>
+          </a>
+          <p class="pdf-cv-mobile-note">On many phones, in-browser PDF is limited—download for the full file.</p>
+        </div>
+        <iframe id="pdf-modal-object" src="" title="CV preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var y = document.querySelector('[data-year]');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script>
+    (function () {
+      var openBtn = document.querySelector('.pdf-view-btn');
+      var modal = document.getElementById('pdf-modal');
+      if (!modal) return;
+      var overlay = modal.querySelector('[data-pdf-overlay]');
+      var closeBtn = modal.querySelector('.pdf-modal-close');
+      var pdfFrame = modal.querySelector('#pdf-modal-object');
+      var pdfUrl = modal.getAttribute('data-pdf-url');
+      function openModal() {
+        if (pdfFrame && pdfUrl) try { pdfFrame.src = pdfUrl; } catch (e) { }
+        modal.setAttribute('aria-hidden', 'false');
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        if (closeBtn) closeBtn.focus();
+      }
+      function closeModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        if (pdfFrame) try { pdfFrame.src = ''; } catch (e) { }
+      }
+      function onKey(e) { if (e.key === 'Escape') { e.preventDefault(); closeModal(); } }
+      if (openBtn) openBtn.addEventListener('click', function (e) { e.preventDefault(); openModal(); document.addEventListener('keydown', onKey); });
+      if (overlay) overlay.addEventListener('click', closeModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    })();
+  </script>
   <script src="./src/js/script.js"></script>
-  <!--- IONICONS --->
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

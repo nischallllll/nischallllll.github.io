@@ -1,0 +1,25 @@
+<section class="publications-section">
+  <ul class="filter-list">
+    <li class="filter-item"><button type="button" class="active" data-filter-btn>All</button></li>
+    {% for category in publication_categories %}
+    <li class="filter-item"><button type="button" data-filter-btn>{{ category }}</button></li>
+    {% endfor %}
+  </ul>
+  <div class="filter-select-box">
+    <button type="button" class="filter-select" data-select>
+      <div class="select-value" data-selecct-value>Category</div>
+      <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+    </button>
+    <ul class="select-list">
+      <li class="select-item"><button type="button" data-select-item>All</button></li>
+      {% for category in publication_categories %}
+      <li class="select-item"><button type="button" data-select-item>{{ category }}</button></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <ul class="publication-list">
+    {% for item in publications.PUBLICATIONS %}
+      {% include 'site/_publication_card.j2' %}
+    {% endfor %}
+  </ul>
+</section>

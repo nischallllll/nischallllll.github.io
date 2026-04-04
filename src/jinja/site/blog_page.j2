@@ -1,0 +1,7 @@
+<section class="publications-section">
+  <ul class="publication-list">
+    {% for post in blog.POSTS %}
+      {% include 'site/_blog_card.j2' %}
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,9 @@
+{% extends "site/shell_subpage.j2" %}
+{% block submain %}
+<section class="section-block reveal subpage-section" aria-labelledby="work-h1">
+  <p class="subpage-back"><a href="index.html">← Back to home</a></p>
+  <h1 id="work-h1" class="subpage-h1">{{ projects.HEADER.label | default('Selected work') }}</h1>
+  <p class="section-block__deck">Full list with category filters.</p>
+  {% include 'site/projects_full_block.j2' %}
+</section>
+{% endblock %}

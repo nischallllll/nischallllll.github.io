@@ -1,0 +1,11 @@
+{% from 'site/_helpers.j2' import project_data_category %}
+<li class="project-item active" data-filter-item data-category="{{ project_data_category(item) }}">
+  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+    <figure class="project-img">
+      <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+      <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+    </figure>
+    <h3 class="project-title">{{ item.title }}</h3>
+    <p class="project-category">{% if item.category is string %}{{ item.category }}{% else %}{{ item.category | join(', ') }}{% endif %}</p>
+  </a>
+</li>

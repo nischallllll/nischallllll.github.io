@@ -1,0 +1,16 @@
+<section id="talks" class="section-block reveal" aria-labelledby="talks-title">
+  <h2 id="talks-title" class="section-block__title">{{ talks.HEADER.label | default('Talks') }}</h2>
+  {% if talks_has_more %}
+  <p class="section-block__deck section-block__deck--landing-note">Showing {{ talks_landing | length }} of {{ talks.TALKS | length }}.</p>
+  {% endif %}
+  <section class="talks talks--landing">
+    <ul class="project-list">
+      {% for item in talks_landing %}
+        {% include 'site/_talk_card.j2' %}
+      {% endfor %}
+    </ul>
+    {% if talks_has_more %}
+    <p class="section-view-all"><a href="{{ page_urls.talks }}" class="section-view-all__link">All talks →</a></p>
+    {% endif %}
+  </section>
+</section>

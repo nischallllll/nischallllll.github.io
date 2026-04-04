@@ -1,0 +1,16 @@
+<section id="publications" class="section-block reveal" aria-labelledby="pub-title">
+  <h2 id="pub-title" class="section-block__title">{{ publications.HEADER.label | default('Publications') }}</h2>
+  {% if publications_has_more %}
+  <p class="section-block__deck section-block__deck--landing-note">Showing {{ pubs_landing | length }} of {{ publications.PUBLICATIONS | length }} — see the full list for filters.</p>
+  {% endif %}
+  <section class="publications-section publications-section--landing">
+    <ul class="publication-list">
+      {% for item in pubs_landing %}
+        {% include 'site/_publication_card.j2' %}
+      {% endfor %}
+    </ul>
+    {% if publications_has_more %}
+    <p class="section-view-all"><a href="{{ page_urls.publications }}" class="section-view-all__link">All publications →</a></p>
+    {% endif %}
+  </section>
+</section>

@@ -1,0 +1,77 @@
+  <footer class="site-footer reveal">
+    <div class="site-footer__peony" aria-hidden="true"></div>
+    <div class="site-footer__inner">
+      <p class="site-footer__name">{{ profile.USER.name }}</p>
+      <p class="site-footer__meta">New York, USA ·</p>
+      <p class="site-footer__contact">
+        {% for row in profile.INFO %}
+        {% if row.label == 'Email' %}
+        <a href="mailto:{{ row.value | e }}">{{ row.value | e }}</a>
+        {% endif %}
+        {% endfor %}
+      </p>
+      <ul class="site-footer__social">
+        <li><a href="https://www.linkedin.com/in/nishbh" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/nischallllll" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google scholar</a></li>
+        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+      </ul>
+      <p class="site-footer__copy">© <span data-year></span></p>
+    </div>
+  </footer>
+
+  <div id="pdf-modal" class="pdf-modal" role="dialog" aria-modal="true" aria-hidden="true"
+    data-pdf-url="config/assets/Nischal_Bhandari_CV.pdf">
+    <div class="pdf-modal-overlay" data-pdf-overlay></div>
+    <div class="pdf-modal-panel" role="document">
+      <button type="button" class="pdf-modal-close" aria-label="Close CV viewer">&times;</button>
+      <div class="pdf-modal-body">
+        <div class="pdf-modal-mobile-message">
+          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download PDF</span>
+          </a>
+          <p class="pdf-cv-mobile-note">On many phones, in-browser PDF is limited—download for the full file.</p>
+        </div>
+        <iframe id="pdf-modal-object" src="" title="CV preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var y = document.querySelector('[data-year]');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script>
+    (function () {
+      var openBtn = document.querySelector('.pdf-view-btn');
+      var modal = document.getElementById('pdf-modal');
+      if (!modal) return;
+      var overlay = modal.querySelector('[data-pdf-overlay]');
+      var closeBtn = modal.querySelector('.pdf-modal-close');
+      var pdfFrame = modal.querySelector('#pdf-modal-object');
+      var pdfUrl = modal.getAttribute('data-pdf-url');
+      function openModal() {
+        if (pdfFrame && pdfUrl) try { pdfFrame.src = pdfUrl; } catch (e) { }
+        modal.setAttribute('aria-hidden', 'false');
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        if (closeBtn) closeBtn.focus();
+      }
+      function closeModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        if (pdfFrame) try { pdfFrame.src = ''; } catch (e) { }
+      }
+      function onKey(e) { if (e.key === 'Escape') { e.preventDefault(); closeModal(); } }
+      if (openBtn) openBtn.addEventListener('click', function (e) { e.preventDefault(); openModal(); document.addEventListener('keydown', onKey); });
+      if (overlay) overlay.addEventListener('click', closeModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    })();
+  </script>
+  <script src="./src/js/script.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

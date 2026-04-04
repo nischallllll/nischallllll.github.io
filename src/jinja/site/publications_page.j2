@@ -1,0 +1,9 @@
+{% extends "site/shell_subpage.j2" %}
+{% block submain %}
+<section class="section-block reveal subpage-section" aria-labelledby="pub-h1">
+  <p class="subpage-back"><a href="index.html#publications">← Back to home</a></p>
+  <h1 id="pub-h1" class="subpage-h1">{{ publications.HEADER.label | default('Publications') }}</h1>
+  <p class="section-block__deck">Full list with category filters.</p>
+  {% include 'site/publications_full_block.j2' %}
+</section>
+{% endblock %}
