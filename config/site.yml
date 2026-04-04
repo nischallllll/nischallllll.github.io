@@ -14,9 +14,12 @@ LANDING:
 # If false, the portfolio / "Selected work" block is omitted from the homepage
 # (you can still open work.html for the full list).
 SHOW_PORTFOLIO_ON_HOME: false
+SHOW_BLOG_ON_HOME: false
 
 # Show "Work" in the header (links to work.html when on a subpage, #portfolio on home).
 SHOW_WORK_NAV: false
+
+SHOW_BLOG_NAV: true
 
 # Filenames for full-list pages (relative to site root)
 PAGES:

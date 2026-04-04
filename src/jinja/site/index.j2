@@ -56,7 +56,7 @@
     {% include 'site/publications_landing.j2' %}
 
     {% include 'site/talks_landing.j2' %}
-    <!--{% include 'site/blog_landing.j2' %}-->
+    
 
     <section id="training" class="section-block section-block--training reveal" aria-labelledby="training-title">
       <div class="training-layout">
@@ -145,7 +145,11 @@
         </div>
       </section>
 
-      <!--<section id="blog" class="section-block reveal" aria-labelledby="blog-title">
+      {% if show_blog_on_home %}
+      {% include 'site/blog_landing.j2' %}
+      {% endif %}
+
+      <section id="blog" class="section-block reveal" aria-labelledby="blog-title">
         <h2 id="blog-title" class="section-block__title">Blog</h2>
         <ul class="blog-list">
           {% for post in posts_landing %}
@@ -160,7 +164,7 @@
         {% if blog_has_more %}
           <p class="section-view-all"><a href="{{ page_urls.blog }}" class="section-view-all__link">All blog posts →</a></p>
         {% endif %}
-      </section>-->
+      </section>
 
     
 
