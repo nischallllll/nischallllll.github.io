@@ -184,6 +184,20 @@
       </div>
     </section>
 
+    <section id="cv" class="section-block reveal" aria-labelledby="cv-title">
+        <h2 id="cv-title" class="section-block__title">Curriculum vitae</h2>
+        <div class="pdf-cv-button-container pdf-cv-button-container--single">
+          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download PDF</span>
+          </a>
+          <button type="button" class="pdf-cv-button pdf-view-btn" aria-haspopup="dialog" aria-controls="pdf-modal">
+            <ion-icon name="eye-outline"></ion-icon>
+            <span>View</span>
+          </button>
+        </div>
+      </section>
+
     <section id="focus" class="section-block section-block--ornamented section-block--ornamented-network reveal" aria-labelledby="focus-title">
       <div class="section-ornament section-ornament--network" aria-hidden="true">
         <svg viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -225,19 +239,6 @@
       </ul>
     </section>
 
-    <section id="cv" class="section-block reveal" aria-labelledby="cv-title">
-        <h2 id="cv-title" class="section-block__title">Curriculum vitae</h2>
-        <div class="pdf-cv-button-container pdf-cv-button-container--single">
-          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Download PDF</span>
-          </a>
-          <button type="button" class="pdf-cv-button pdf-view-btn" aria-haspopup="dialog" aria-controls="pdf-modal">
-            <ion-icon name="eye-outline"></ion-icon>
-            <span>View</span>
-          </button>
-        </div>
-      </section>
     {% if show_blog_on_home %}
     {% include 'site/blog_landing.j2' %}
     {% endif %}

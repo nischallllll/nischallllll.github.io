@@ -50,10 +50,3 @@ date: 2026-01-27
 6.  [Roberto Bolaño recommends](https://rateyourmusic.com/list/respirateur/roberto-bolano-recommends/)
 7.  [Paul Graham's Essays](https://paulgraham.com/articles.html)
 
-
-<script>
-  document.querySelectorAll('a[href^="http"]').forEach(link => {
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener');
-  });
-</script>

@@ -1,8 +1,9 @@
 {% from 'site/_helpers.j2' import pub_data_category %}
 {% set has_image = item.image | default('', true) %}
+{% set is_external = is_external_url(item.url) %}
 <li class="publication-item active{% if not has_image %} publication-item--text{% endif %}" data-filter-item data-category="{{ pub_data_category(item) }}">
   {% if item.url %}
-  <a class="publication-link{% if not has_image %} publication-link--text{% endif %}" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+  <a class="publication-link{% if not has_image %} publication-link--text{% endif %}" href="{{ item.url }}"{% if is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>
   {% else %}
   <div class="publication-item-inner{% if not has_image %} publication-item-inner--text{% endif %}">
   {% endif %}

@@ -29,3 +29,4 @@ Let's go over some of the costs and benefits of choosing graduate study.
 3. [You and Your Research](https://fs.blog/great-talks/richard-hamming-your-research/) by Richard Hamming
 4. [Modest Advice for New Graduate Students](https://dorsaamir.medium.com/modest-advice-for-new-graduate-students-b0be6b8dbc22) by Dorsa Amir
 5. [All about PhD Applications](https://lily-gebhart.github.io/posts/2025/11/2025-11-12-grad-school/) by Lily Gebhart
+6. [A curated list of tips on various topics](https://github.com/jbhuang0604/awesome-tips?tab=readme-ov-file) by awesome-tips

@@ -1,4 +1,4 @@
-{% set is_external = post.url and post.url.startswith('http') %}
+{% set is_external = is_external_url(post.url) %}
 <li class="blog-card reveal">
   <a class="blog-card__link" href="{{ post.url if is_external else '/' ~ post.url }}"
     {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>

@@ -33,13 +33,3 @@ categories: [reading-list, books]
 5. Reread wuthering heights
 6. the unberable lightness of being by Milan Kundera
 7. anna karenina tolstoy - maybe
-
-
-```{=html}
-<script>
-  document.querySelectorAll('a[href^="http"]').forEach(link => {
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener');
-  });
-</script>
-```

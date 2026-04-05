@@ -1,7 +1,8 @@
 {% from 'site/_helpers.j2' import project_data_category %}
 {% set has_image = item.image | default('', true) %}
+{% set is_external = is_external_url(item.url) %}
 <li class="project-item active{% if not has_image %} project-item--text{% endif %}" data-filter-item data-category="{{ project_data_category(item) }}">
-  <a class="project-link{% if not has_image %} project-link--text{% endif %}" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+  <a class="project-link{% if not has_image %} project-link--text{% endif %}" href="{{ item.url }}"{% if is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>
     {% if has_image %}
     <figure class="project-img">
       <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>

@@ -3,6 +3,7 @@ from datetime import datetime
 from html import escape
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+from urllib.parse import urlparse
 
 import yaml  # type: ignore
 from jinja2 import Environment, FileSystemLoader
@@ -41,6 +42,26 @@ OL_ITEM_RE = re.compile(r"^\s*\d+\.\s+(.*)$")
 BLOCKQUOTE_RE = re.compile(r"^\s*>\s?(.*)$")
 HR_RE = re.compile(r"^\s*([-*_])(?:\s*\1){2,}\s*$")
 
+INTERNAL_HOSTS = {"", "nischallllll.github.io", "www.nischallllll.github.io"}
+
+
+def is_external_url(url: Any) -> bool:
+    if not isinstance(url, str):
+        return False
+
+    raw = url.strip()
+    if not raw or raw.startswith(("#", "/", "./", "../")):
+        return False
+
+    parsed = urlparse(raw)
+    if parsed.scheme in {"", "mailto", "tel", "javascript"}:
+        return False
+
+    if parsed.scheme in {"http", "https"}:
+        return parsed.netloc.lower() not in INTERNAL_HOSTS
+
+    return False
+
 
 def parse_front_matter(content: str) -> Tuple[Dict[str, Any], str]:
     match = FRONT_MATTER_RE.match(content)
@@ -56,23 +77,38 @@ def render_inline_markdown(text: str) -> str:
     placeholders: Dict[str, str] = {}
     escaped = escape(text, quote=False)
 
-    def stash_code(match: re.Match[str]) -> str:
-        key = f"__CODE_{len(placeholders)}__"
-        placeholders[key] = f"<code>{escape(match.group(1))}</code>"
+    def stash_html(value: str) -> str:
+        key = f"HTMLTOKEN{len(placeholders)}END"
+        placeholders[key] = value
         return key
 
+    def stash_code(match: re.Match[str]) -> str:
+        return stash_html(f"<code>{escape(match.group(1))}</code>")
+
     escaped = re.sub(r"`([^`]+)`", stash_code, escaped)
+
+    def render_image(match: re.Match[str]) -> str:
+        return stash_html(
+            f'<img src="{escape(match.group(2), quote=True)}" '
+            f'alt="{escape(match.group(1), quote=True)}" loading="lazy">'
+        )
+
     escaped = re.sub(
         r"!\[([^\]]*)\]\(([^)]+)\)",
-        lambda m: (
-            f'<img src="{escape(m.group(2), quote=True)}" '
-            f'alt="{escape(m.group(1), quote=True)}" loading="lazy">'
-        ),
+        render_image,
         escaped,
     )
+
+    def render_link(match: re.Match[str]) -> str:
+        href = match.group(2)
+        attrs = ""
+        if is_external_url(href):
+            attrs = ' target="_blank" rel="noopener noreferrer"'
+        return stash_html(f'<a href="{escape(href, quote=True)}"{attrs}>{match.group(1)}</a>')
+
     escaped = re.sub(
         r"\[([^\]]+)\]\(([^)]+)\)",
-        lambda m: f'<a href="{escape(m.group(2), quote=True)}">{m.group(1)}</a>',
+        render_link,
         escaped,
     )
     escaped = re.sub(
@@ -236,6 +272,7 @@ class Portfolio:
         }
         self.env = Environment(loader=FileSystemLoader("src/jinja"))
         self.env.filters["format_date"] = self.format_date
+        self.env.globals["is_external_url"] = is_external_url
 
     def read_file(self, file_path: str) -> str:
         with open(file_path, "r", encoding="utf-8") as file:
