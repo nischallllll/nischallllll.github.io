@@ -18,6 +18,19 @@ def collect_categories(items: Optional[List[Dict[str, Any]]], field: str = "cate
     return sorted(out, key=lambda s: s.lower())
 
 
+def sort_posts_by_published(posts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def published_key(post: Dict[str, Any]) -> datetime:
+        raw = post.get("published")
+        if isinstance(raw, str):
+            try:
+                return datetime.strptime(raw, "%Y-%m-%d")
+            except ValueError:
+                pass
+        return datetime.min
+
+    return sorted(posts, key=published_key, reverse=True)
+
+
 class Portfolio:
     def __init__(self):
         self.config_files = {
@@ -79,7 +92,7 @@ class Portfolio:
         talks_all = list(talks_cfg.get("TALKS") or [])
         projects_all = list(projects.get("PROJECTS") or [])
         blog_cfg = context.get("blog") or {}
-        posts_all = list(blog_cfg.get("POSTS") or [])
+        posts_all = sort_posts_by_published(list(blog_cfg.get("POSTS") or []))
 
         def landing_slice(all_items: List[Any], max_key: str) -> Tuple[List[Any], bool]:
             raw = landing.get(max_key)
@@ -100,6 +113,7 @@ class Portfolio:
             "publications": pages.get("publications", "publications.html"),
             "talks": pages.get("talks", "talks.html"),
             "work": pages.get("work", "work.html"),
+            "blog": pages.get("blog", "blog.html"),
         }
 
         show_portfolio = bool(site.get("SHOW_PORTFOLIO_ON_HOME", False))
@@ -165,20 +179,3 @@ if __name__ == "__main__":
     blog_ctx["page_title"] = f"Blog · {name}"
 
     portfolio.render_template("site/blog_page.j2", "blog.html", blog_ctx)
-
-    try:
-        blog_cfg = context.get("blog", {})
-        posts = blog_cfg.get("POSTS", []) if isinstance(blog_cfg, dict) else []
-        for post in posts:
-            url = post.get("url")
-            title = post.get("title", "")
-            published = post.get("published", "")
-            if isinstance(url, str) and not url.startswith("http") and url.endswith(".html"):
-                import os
-
-                os.makedirs(os.path.dirname(url), exist_ok=True)
-                if not os.path.exists(url):
-                    html = f"""<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>{title}</title>\n  <link rel=\"stylesheet\" href=\"/src/css/style.css\">\n  <link rel=\"stylesheet\" href=\"/src/css/blog.css\">\n</head>\n<body>\n  <main class=\"post-container\">\n    <h1 class=\"post-title\">{title}</h1>\n    <p class=\"post-meta\">{published}</p>\n    <section class=\"post-body\">\n      <p>Start writing your post content here. You can replace this file with your full article.</p>\n    </section>\n    <div class=\"post-divider\"></div>\n    <p class=\"post-back\"><a href=\"../index.html#blog\">← Back to Blog</a></p>\n  </main>\n</body>\n</html>\n"""
-                    portfolio.write_file(url, html)
-    except Exception:
-        pass

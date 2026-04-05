@@ -1,7 +1,30 @@
-<section class="publications-section">
-  <ul class="publication-list">
+{% extends "site/shell_subpage.j2" %}
+{% block submain %}
+<section class="section-block reveal subpage-section blog-page" aria-labelledby="blog-h1">
+  <p class="subpage-back"><a href="index.html#blog">← Back to home</a></p>
+  <div class="blog-page__hero">
+    <p class="blog-page__eyebrow">Field notes</p>
+    <h1 id="blog-h1" class="subpage-h1">{{ blog.HEADER.label | default('Blog') }}</h1>
+    <p class="section-block__deck blog-page__deck">
+      Writing about research interests, tools, tips, and recent discoveries.
+    </p>
+    <div class="blog-page__pulse" aria-hidden="true">
+      <span>{{ blog.POSTS | length }}</span>
+      <small>published notes</small>
+    </div>
+  </div>
+
+  {% if blog.POSTS %}
+  <ul class="blog-list blog-list--page">
     {% for post in blog.POSTS %}
       {% include 'site/_blog_card.j2' %}
     {% endfor %}
   </ul>
+  {% else %}
+  <div class="blog-empty">
+    <p class="blog-empty__title">No posts published yet.</p>
+    <p class="blog-empty__copy">This space is ready for essays, lab notes, reading lists, and experiments in public.</p>
+  </div>
+  {% endif %}
 </section>
+{% endblock %}

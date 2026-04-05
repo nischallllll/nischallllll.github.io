@@ -161,27 +161,41 @@ flushRevealsInViewport();
   var navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
   if (!navLinks.length) return;
 
-  var ids = ['about', 'lab', 'publications', 'talks', 'training', 'focus', 'portfolio', 'tools', 'cv'];
+  var groups = [
+    { id: 'about', start: 'about', end: 'publications' },
+    { id: 'publications', start: 'publications', end: 'talks' },
+    { id: 'talks', start: 'talks', end: 'training' },
+    { id: 'training', start: 'training', end: 'cv' },
+    { id: 'cv', start: 'cv', end: 'blog' },
+    { id: 'blog', start: 'blog', end: null }
+  ];
 
   function update() {
-    var probe = window.innerHeight * 0.28;
-    var best = null;
-    var bestScore = -1;
-    ids.forEach(function (id) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      var r = el.getBoundingClientRect();
-      if (r.bottom <= 80 || r.top >= window.innerHeight) return;
-      var visible = Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0);
-      if (visible > bestScore) {
-        bestScore = visible;
-        best = id;
+    var header = document.querySelector('[data-site-header]');
+    var headerHeight = header ? header.offsetHeight : 72;
+    var probeY = headerHeight + 24;
+    var active = 'about';
+
+    groups.forEach(function (group) {
+      var startEl = document.getElementById(group.start);
+      if (!startEl) return;
+
+      var startTop = startEl.getBoundingClientRect().top;
+      var endTop = Infinity;
+
+      if (group.end) {
+        var endEl = document.getElementById(group.end);
+        if (endEl) endTop = endEl.getBoundingClientRect().top;
+      }
+
+      if (startTop <= probeY && endTop > probeY) {
+        active = group.id;
       }
     });
-    if (!best) best = 'about';
+
     navLinks.forEach(function (a) {
       var href = a.getAttribute('href') || '';
-      a.classList.toggle('is-active', href === '#' + best);
+      a.classList.toggle('is-active', href === '#' + active);
     });
   }
 

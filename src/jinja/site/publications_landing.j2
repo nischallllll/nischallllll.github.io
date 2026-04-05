@@ -1,9 +1,30 @@
-<section id="publications" class="section-block reveal" aria-labelledby="pub-title">
-  <h2 id="pub-title" class="section-block__title">{{ publications.HEADER.label | default('Publications') }}</h2>
+<section id="publications" class="section-block section-block--ornamented section-block--ornamented-translation reveal" aria-labelledby="pub-title">
+  <div class="section-ornament section-ornament--translation" aria-hidden="true">
+    <svg viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="section-ornament__trail" d="M14 92 H140" />
+      <path class="section-ornament__trail" d="M14 108 H140" />
+      <g class="section-ornament__ribosome">
+        <ellipse cx="126" cy="106" rx="34" ry="20" />
+        <ellipse cx="126" cy="90" rx="22" ry="12" />
+      </g>
+      <path class="section-ornament__chain" d="M148 96 C 164 80, 180 120, 198 94 S 228 82, 246 106" />
+      <circle class="section-ornament__bead" cx="170" cy="90" r="6" />
+      <circle class="section-ornament__bead" cx="192" cy="104" r="6" />
+      <circle class="section-ornament__bead" cx="214" cy="86" r="6" />
+      <circle class="section-ornament__bead" cx="238" cy="102" r="6" />
+    </svg>
+  </div>
+  <div class="section-block__head section-block__head--editorial">
+    <div>
+      <p class="section-block__kicker">Research output</p>
+      <h2 id="pub-title" class="section-block__title">{{ publications.HEADER.label | default('Publications') }}</h2>
+    </div>
+    <!--<p class="section-block__aside">From tumor progression to spatial structure, each paper is part atlas, part hypothesis.</p>-->
+  </div>
   {% if publications_has_more %}
   <p class="section-block__deck section-block__deck--landing-note">Showing {{ pubs_landing | length }} of {{ publications.PUBLICATIONS | length }} — see the full list for filters.</p>
   {% endif %}
-  <section class="publications-section publications-section--landing">
+  <section class="publications-section publications-section--landing publications-section--feature">
     <ul class="publication-list">
       {% for item in pubs_landing %}
         {% include 'site/_publication_card.j2' %}

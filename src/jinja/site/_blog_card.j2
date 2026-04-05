@@ -1,12 +1,19 @@
-<li class="publication-item active">
-  <a href="/{{ post.url }}">
-    <div class="publication-content">
-      <h3 class="publication-title">{{ post.title }}</h3>
-      <p class="publication-journal">{{ post.published | format_date }}</p>
-
-      {% if post.summary %}
-        <p class="publication-authors">{{ post.summary }}</p>
+{% set is_external = post.url and post.url.startswith('http') %}
+<li class="blog-card reveal">
+  <a class="blog-card__link" href="{{ post.url if is_external else '/' ~ post.url }}"
+    {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+    <div class="blog-card__eyebrow">
+      {% if post.category %}
+      <span class="blog-card__category">{{ post.category }}</span>
+      {% endif %}
+      {% if post.published %}
+      <time class="blog-card__date" datetime="{{ post.published }}">{{ post.published | format_date }}</time>
       {% endif %}
     </div>
+    <h3 class="blog-card__title">{{ post.title }}</h3>
+    {% if post.subtitle %}
+    <p class="blog-card__subtitle">{{ post.subtitle }}</p>
+    {% endif %}
+    <span class="blog-card__cta">{{ 'Read article' if not is_external else 'Open article' }}</span>
   </a>
 </li>

@@ -1,4 +1,15 @@
-<section id="blog" class="section-block reveal" aria-labelledby="blog-title">
+<section id="blog" class="section-block section-block--ornamented section-block--ornamented-notes reveal" aria-labelledby="blog-title">
+  <div class="section-ornament section-ornament--notes" aria-hidden="true">
+    <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="28" y="34" width="150" height="92" rx="18" />
+      <path class="section-ornament__trail" d="M54 64 H150" />
+      <path class="section-ornament__trail" d="M54 82 H144" />
+      <path class="section-ornament__trail" d="M54 100 H128" />
+      <path class="section-ornament__trace section-ornament__trace--b" d="M172 116 C 188 96, 202 88, 222 92" />
+      <circle class="section-ornament__node" cx="186" cy="76" r="7" />
+      <circle class="section-ornament__node" cx="208" cy="96" r="9" />
+    </svg>
+  </div>
   <h2 id="blog-title" class="section-block__title">{{ blog.HEADER.label | default('Blog') }}</h2>
 
   {% if blog_has_more %}

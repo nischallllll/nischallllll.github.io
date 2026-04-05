@@ -12,6 +12,19 @@ POSTS:
   - title: "What, you want to got to a grad school?"
     category: "Notes to self"
     subtitle: "Why trouble yourself with grad school?"
-    published: "2025-09-29"
+    published: "2025-05-28"
     #image: "config/assets/posts/blog-2.jpg"
     url: "posts/grad-school.html"
+
+  - title: "Essays to Read - 2026"
+    category: "Reading list"
+    published: "2026-01-27"
+    #image: "config/assets/posts/blog-2.jpg"
+    url: "https://1nishbh.github.io/readings/Essays_to_read.html"
+
+  - title: "Books to Read - 2026"
+    category: "Reading list"
+    published: "2026-03-1"
+    #image: "config/assets/posts/blog-2.jpg"
+    url: "https://1nishbh.github.io/readings/books_2026.html"
+  

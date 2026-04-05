@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <script>
     (function () {
@@ -25,8 +25,8 @@
   <meta name="twitter:creator" content="@nischallllll">
   <link href="https://nischallllll.github.io" rel="canonical">
   <link rel="shortcut icon" href="./src/images/logo.svg" type="image/x-icon">
-  <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/site-v2.css">
+  <link rel="stylesheet" href="./src/css/style.css?v=20260404c">
+  <link rel="stylesheet" href="./src/css/site-v2.css?v=20260404c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -46,7 +46,12 @@
         <a href="#talks">Talks</a>
         <a href="#training">Training</a>
         
-        <a href="#cv">CV</a>
+        <!--<a href="#cv">CV</a>-->
+        
+        <a href="#blog"
+          >
+          Blog
+        </a>
         
       </nav>
       <button type="button" class="theme-toggle" data-theme-toggle aria-label="Use light theme" title="Theme">
@@ -57,7 +62,7 @@
   </header>
 
   <main class="site-single" id="top">
-    <section class="hero-mountain reveal" aria-label="Introduction">
+    <section id="about" class="hero-mountain reveal" aria-label="Introduction">
       <div class="hero-mountain__layer hero-mountain__layer--peony" aria-hidden="true"></div>
       <div class="hero-mountain__layer hero-mountain__range" aria-hidden="true">
         <svg class="hero-mountain__svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidMax slice"
@@ -78,15 +83,78 @@
             stroke-dasharray="3 6" />
         </svg>
       </div>
+      <div class="hero-mountain__cells" aria-hidden="true">
+        <svg class="cell-cluster" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="cell-cluster__links">
+            <path class="cell-cluster__link cell-cluster__link--1" d="M107 106 C 122 94, 132 92, 146 90" />
+            <path class="cell-cluster__link cell-cluster__link--2" d="M193 108 C 214 108, 226 114, 240 121" />
+            <path class="cell-cluster__link cell-cluster__link--3" d="M194 154 C 226 170, 258 174, 288 160" />
+          </g>
+          <g class="cell-cluster__orb cell-cluster__orb--1">
+            <circle cx="74" cy="118" r="38" />
+            <circle cx="74" cy="118" r="10" class="cell-cluster__nucleus" />
+          </g>
+          <g class="cell-cluster__orb cell-cluster__orb--2">
+            <circle cx="154" cy="84" r="26" />
+            <circle cx="154" cy="84" r="7" class="cell-cluster__nucleus" />
+          </g>
+          <g class="cell-cluster__orb cell-cluster__orb--3">
+            <circle cx="168" cy="158" r="48" />
+            <circle cx="168" cy="158" r="13" class="cell-cluster__nucleus" />
+          </g>
+          <g class="cell-cluster__orb cell-cluster__orb--4">
+            <circle cx="254" cy="126" r="34" />
+            <circle cx="254" cy="126" r="9" class="cell-cluster__nucleus" />
+          </g>
+          <g class="cell-cluster__orb cell-cluster__orb--5">
+            <circle cx="310" cy="78" r="18" />
+          </g>
+        </svg>
+      </div>
       <div class="hero-mountain__content">
         <p class="hero-mountain__eyebrow">Nepal --> USA</p>
         <h1 class="hero-mountain__title">Genes, cells, and computational biology</h1>
         <p class="hero-mountain__lede">Computational biologist at Cold Spring Harbor Laboratory. I study cancer genomics
           with single-cell and spatial transcriptomics.</p>
+        <div class="hero-mountain__markers" aria-label="Research themes">
+          <span>Disease mechanisms</span>
+          <span>Single-cell states</span>
+          <span>Spatial tissue maps</span>
+        </div>
+        <div class="hero-mountain__tableau" aria-hidden="true">
+          <div class="hero-mountain__panel hero-mountain__panel--ridge">
+            <small>Cellular dynamics</small>
+            <strong>steep gradients</strong>
+          </div>
+          <div class="hero-mountain__panel hero-mountain__panel--cell">
+            <small>Networks</small>
+            <strong>cell-cell, gene-gene ...</strong>
+          </div>
+          <div class="hero-mountain__panel hero-mountain__panel--signal">
+            <small>Method</small>
+            <strong>interdisciplinary</strong>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="section-block section-block--lab reveal" aria-labelledby="lab-title">
+    <section class="section-block section-block--lab section-block--ornamented section-block--ornamented-rna reveal" aria-labelledby="lab-title">
+      <div class="section-ornament section-ornament--rna" aria-hidden="true">
+        <svg viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="section-ornament__trace section-ornament__trace--a" d="M12 104 C 40 30, 82 176, 116 96 S 184 32, 228 108" />
+          <path class="section-ornament__trace section-ornament__trace--b" d="M20 126 C 60 74, 92 118, 126 78 S 188 66, 222 122" />
+          <line x1="38" y1="86" x2="58" y2="98" />
+          <line x1="78" y1="126" x2="96" y2="114" />
+          <line x1="116" y1="96" x2="134" y2="106" />
+          <line x1="156" y1="76" x2="173" y2="90" />
+          <line x1="194" y1="78" x2="211" y2="92" />
+          <circle class="section-ornament__bead" cx="38" cy="86" r="4" />
+          <circle class="section-ornament__bead" cx="78" cy="126" r="3.5" />
+          <circle class="section-ornament__bead" cx="116" cy="96" r="4" />
+          <circle class="section-ornament__bead" cx="156" cy="76" r="3.5" />
+          <circle class="section-ornament__bead" cx="194" cy="78" r="4" />
+        </svg>
+      </div>
       <h2 id="lab-title" class="section-block__title">Current</h2>
       <p class="section-block__deck">Westcott Lab · Cold Spring Harbor Laboratory</p>
       <div class="lab-card">
@@ -102,10 +170,31 @@
       </div>
     </section>
 
-    <section id="publications" class="section-block reveal" aria-labelledby="pub-title">
-  <h2 id="pub-title" class="section-block__title">Publications</h2>
+    <section id="publications" class="section-block section-block--ornamented section-block--ornamented-translation reveal" aria-labelledby="pub-title">
+  <div class="section-ornament section-ornament--translation" aria-hidden="true">
+    <svg viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="section-ornament__trail" d="M14 92 H140" />
+      <path class="section-ornament__trail" d="M14 108 H140" />
+      <g class="section-ornament__ribosome">
+        <ellipse cx="126" cy="106" rx="34" ry="20" />
+        <ellipse cx="126" cy="90" rx="22" ry="12" />
+      </g>
+      <path class="section-ornament__chain" d="M148 96 C 164 80, 180 120, 198 94 S 228 82, 246 106" />
+      <circle class="section-ornament__bead" cx="170" cy="90" r="6" />
+      <circle class="section-ornament__bead" cx="192" cy="104" r="6" />
+      <circle class="section-ornament__bead" cx="214" cy="86" r="6" />
+      <circle class="section-ornament__bead" cx="238" cy="102" r="6" />
+    </svg>
+  </div>
+  <div class="section-block__head section-block__head--editorial">
+    <div>
+      <p class="section-block__kicker">Research output</p>
+      <h2 id="pub-title" class="section-block__title">Publications</h2>
+    </div>
+    <!--<p class="section-block__aside">From tumor progression to spatial structure, each paper is part atlas, part hypothesis.</p>-->
+  </div>
   
-  <section class="publications-section publications-section--landing">
+  <section class="publications-section publications-section--landing publications-section--feature">
     <ul class="publication-list">
       
         
@@ -115,7 +204,7 @@
   
     <figure class="publication-img">
       <div class="publication-item-icon-box"><ion-icon name="document-text-outline"></ion-icon></div>
-      <img src="https://media.gettyimages.com/id/1701193275/photo/cancer-malignant-cells.jpg?s=2048x2048&w=gi&k=20&c=RsbSGy5WBeS-uYWvb1RSkCnQjMdMOS4DeKHVA81hTdQ=" alt="" loading="lazy">
+      <img src="" alt="" loading="lazy">
     </figure>
     <div class="publication-content">
       <h3 class="publication-title">Targeting Neutrophil Extracellular Traps to inhibit Colon Cancer Tumor Necrosis and Metastasis</h3>
@@ -144,9 +233,15 @@
 </section>
 
     <section id="talks" class="section-block reveal" aria-labelledby="talks-title">
-  <h2 id="talks-title" class="section-block__title">Talks</h2>
+  <div class="section-block__head section-block__head--editorial">
+    <div>
+      <p class="section-block__kicker">Speaking</p>
+      <h2 id="talks-title" class="section-block__title">Talks</h2>
+    </div>
+    <!--<p class="section-block__aside">Talks as field reports: what the tissue is doing, what the data suggests, and what still feels unresolved.</p>-->
+  </div>
   
-  <section class="talks talks--landing">
+  <section class="talks talks--landing talks--feature">
     <ul class="project-list">
       
         
@@ -167,7 +262,26 @@
 </section>
     
 
-    <section id="training" class="section-block section-block--training reveal" aria-labelledby="training-title">
+    <section id="training" class="section-block section-block--training section-block--ornamented section-block--ornamented-mod reveal" aria-labelledby="training-title">
+      <div class="section-ornament section-ornament--mod" aria-hidden="true">
+        <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="section-ornament__chain" d="M30 34 C 70 60, 84 74, 116 112 S 158 150, 192 188" />
+          <circle class="section-ornament__bead" cx="42" cy="42" r="8" />
+          <circle class="section-ornament__bead" cx="80" cy="72" r="8" />
+          <circle class="section-ornament__bead" cx="116" cy="112" r="9" />
+          <circle class="section-ornament__bead" cx="154" cy="150" r="8" />
+          <circle class="section-ornament__bead" cx="188" cy="186" r="8" />
+          <g class="section-ornament__spark section-ornament__spark--1">
+            <path d="M92 54 V70 M84 62 H100 M87 57 L97 67 M97 57 L87 67" />
+          </g>
+          <g class="section-ornament__spark section-ornament__spark--2">
+            <path d="M142 112 V128 M134 120 H150 M137 115 L147 125 M147 115 L137 125" />
+          </g>
+          <g class="section-ornament__spark section-ornament__spark--3">
+            <path d="M174 154 V170 M166 162 H182 M169 157 L179 167 M179 157 L169 167" />
+          </g>
+        </svg>
+      </div>
       <div class="training-layout">
         <div class="training-spine" aria-hidden="true">
           <svg class="strand-wind" viewBox="0 0 120 500" preserveAspectRatio="xMidYMin slice"
@@ -211,7 +325,19 @@
       </div>
     </section>
 
-    <section id="focus" class="section-block reveal" aria-labelledby="focus-title">
+    <section id="focus" class="section-block section-block--ornamented section-block--ornamented-network reveal" aria-labelledby="focus-title">
+      <div class="section-ornament section-ornament--network" aria-hidden="true">
+        <svg viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="section-ornament__trace" d="M34 40 L92 78 L148 50 L204 98 L128 142 L70 118 Z" />
+          <path class="section-ornament__trace section-ornament__trace--b" d="M92 78 L128 142 M92 78 L70 118 M148 50 L128 142" />
+          <circle class="section-ornament__node" cx="34" cy="40" r="7" />
+          <circle class="section-ornament__node" cx="92" cy="78" r="7" />
+          <circle class="section-ornament__node" cx="148" cy="50" r="7" />
+          <circle class="section-ornament__node" cx="204" cy="98" r="7" />
+          <circle class="section-ornament__node" cx="128" cy="142" r="7" />
+          <circle class="section-ornament__node" cx="70" cy="118" r="7" />
+        </svg>
+      </div>
       <h2 id="focus-title" class="section-block__title">Research threads</h2>
       <ul class="focus-grid">
         <li class="focus-item"><span class="focus-item__tag">Genomics</span> Cancer progression and heterogeneity from
@@ -251,6 +377,75 @@
           </button>
         </div>
       </section>
+    
+    <section id="blog" class="section-block section-block--ornamented section-block--ornamented-notes reveal" aria-labelledby="blog-title">
+  <div class="section-ornament section-ornament--notes" aria-hidden="true">
+    <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="28" y="34" width="150" height="92" rx="18" />
+      <path class="section-ornament__trail" d="M54 64 H150" />
+      <path class="section-ornament__trail" d="M54 82 H144" />
+      <path class="section-ornament__trail" d="M54 100 H128" />
+      <path class="section-ornament__trace section-ornament__trace--b" d="M172 116 C 188 96, 202 88, 222 92" />
+      <circle class="section-ornament__node" cx="186" cy="76" r="7" />
+      <circle class="section-ornament__node" cx="208" cy="96" r="9" />
+    </svg>
+  </div>
+  <h2 id="blog-title" class="section-block__title">Blog</h2>
+
+  
+  <p class="section-block__deck section-block__deck--landing-note">
+    Showing 2 of 3 — see the full list for filters.
+  </p>
+  
+
+  <section class="blog-section blog-section--landing">
+    <ul class="blog-list">
+      
+        
+<li class="blog-card reveal">
+  <a class="blog-card__link" href="https://1nishbh.github.io/readings/books_2026.html"
+    target="_blank" rel="noopener noreferrer">
+    <div class="blog-card__eyebrow">
+      
+      <span class="blog-card__category">Reading list</span>
+      
+      
+      <time class="blog-card__date" datetime="2026-03-1">Mar 01, 2026</time>
+      
+    </div>
+    <h3 class="blog-card__title">Books to Read - 2026</h3>
+    
+    <span class="blog-card__cta">Open article</span>
+  </a>
+</li>
+      
+        
+<li class="blog-card reveal">
+  <a class="blog-card__link" href="https://1nishbh.github.io/readings/Essays_to_read.html"
+    target="_blank" rel="noopener noreferrer">
+    <div class="blog-card__eyebrow">
+      
+      <span class="blog-card__category">Reading list</span>
+      
+      
+      <time class="blog-card__date" datetime="2026-01-27">Jan 27, 2026</time>
+      
+    </div>
+    <h3 class="blog-card__title">Essays to Read - 2026</h3>
+    
+    <span class="blog-card__cta">Open article</span>
+  </a>
+</li>
+      
+    </ul>
+
+    
+    <p class="section-view-all">
+      <a href="blog.html" class="section-view-all__link">All blog posts →</a>
+    </p>
+    
+  </section>
+</section>
     
     
 
@@ -334,7 +529,7 @@
       if (closeBtn) closeBtn.addEventListener('click', closeModal);
     })();
   </script>
-  <script src="./src/js/script.js"></script>
+  <script src="./src/js/script.js?v=20260404c"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

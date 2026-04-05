@@ -4,7 +4,7 @@ HEADER:
 PUBLICATIONS:
   - title: "Targeting Neutrophil Extracellular Traps to inhibit Colon Cancer Tumor Necrosis and Metastasis"
     category: ["Pre-print", "Cancer Genomics", "Spatial Transcriptomics"]
-    image: "https://media.gettyimages.com/id/1701193275/photo/cancer-malignant-cells.jpg?s=2048x2048&w=gi&k=20&c=RsbSGy5WBeS-uYWvb1RSkCnQjMdMOS4DeKHVA81hTdQ="
+    #image: "https://media.gettyimages.com/id/1701193275/photo/cancer-malignant-cells.jpg?s=2048x2048&w=gi&k=20&c=RsbSGy5WBeS-uYWvb1RSkCnQjMdMOS4DeKHVA81hTdQ="
     url: "https://www.biorxiv.org/content/10.1101/2025.05.30.657122v2.abstract"
     authors: "E Gazzara, et al."
     journal: "TBD"

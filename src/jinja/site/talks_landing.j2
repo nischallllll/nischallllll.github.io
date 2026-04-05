@@ -1,9 +1,15 @@
 <section id="talks" class="section-block reveal" aria-labelledby="talks-title">
-  <h2 id="talks-title" class="section-block__title">{{ talks.HEADER.label | default('Talks') }}</h2>
+  <div class="section-block__head section-block__head--editorial">
+    <div>
+      <p class="section-block__kicker">Speaking</p>
+      <h2 id="talks-title" class="section-block__title">{{ talks.HEADER.label | default('Talks') }}</h2>
+    </div>
+    <!--<p class="section-block__aside">Talks as field reports: what the tissue is doing, what the data suggests, and what still feels unresolved.</p>-->
+  </div>
   {% if talks_has_more %}
   <p class="section-block__deck section-block__deck--landing-note">Showing {{ talks_landing | length }} of {{ talks.TALKS | length }}.</p>
   {% endif %}
-  <section class="talks talks--landing">
+  <section class="talks talks--landing talks--feature">
     <ul class="project-list">
       {% for item in talks_landing %}
         {% include 'site/_talk_card.j2' %}
