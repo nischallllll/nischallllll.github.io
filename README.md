@@ -7,7 +7,7 @@
 
 ## Build (generate HTML)
 
-The live pages **`index.html`**, **`publications.html`**, **`talks.html`**, and **`work.html`** are produced by Jinja from YAML + templates. **Do not hand-edit those four files** if you use the generator—your changes will be overwritten.
+The live pages **`index.html`**, **`blog.html`**, **`publications.html`**, **`talks.html`**, and **`work.html`** are produced by Jinja from YAML + templates. **Do not hand-edit those files** if you use the generator—your changes will be overwritten.
 
 1. Python 3.9+ recommended.
 2. `pip install -r requirements.txt` (or use the project `.venv`).
@@ -31,7 +31,6 @@ python main.py
 | Whole homepage shell (hero, training, etc.) | `src/jinja/site/index.j2` |
 | Profile / footer email | `config/profile.yml` (footer social links are in `src/jinja/site/footer_block.j2` for now) |
 
-Full lists with category filters: **`publications.html`**, **`talks.html`**, **`work.html`**. The home page shows only the first *N* items (per `site.yml`) when *N* &gt; 0 and there are more than *N* entries.
+Full lists with category filters: **`blog.html`**, **`publications.html`**, **`talks.html`**, **`work.html`**. The home page shows only the first *N* items (per `site.yml`) when *N* &gt; 0 and there are more than *N* entries.
 
 **Note:** `src/jinja/index.j2` is an older multi-tab layout and is **not** used by `main.py` anymore.
-

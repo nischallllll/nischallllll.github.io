@@ -3,6 +3,10 @@
 # Ignore HTML by default, but keep site entry points and posts
 *.html
 !index.html
+!blog.html
+!publications.html
+!talks.html
+!work.html
 !posts/*.html
 !posts/**/*.html
 
