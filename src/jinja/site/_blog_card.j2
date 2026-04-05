@@ -6,13 +6,13 @@
       {% if post.category %}
       <span class="blog-card__category">{{ post.category }}</span>
       {% endif %}
-      {% if post.published %}
-      <time class="blog-card__date" datetime="{{ post.published }}">{{ post.published | format_date }}</time>
+      {% if post.date %}
+      <time class="blog-card__date" datetime="{{ post.date }}">{{ post.date | format_date }}</time>
       {% endif %}
     </div>
     <h3 class="blog-card__title">{{ post.title }}</h3>
-    {% if post.subtitle %}
-    <p class="blog-card__subtitle">{{ post.subtitle }}</p>
+    {% if post.description %}
+    <p class="blog-card__description">{{ post.description }}</p>
     {% endif %}
     <span class="blog-card__cta">{{ 'Read article' if not is_external else 'Open article' }}</span>
   </a>

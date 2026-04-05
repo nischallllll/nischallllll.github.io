@@ -9,20 +9,20 @@
       Writing about research interests, tools, tips, and recent discoveries.
     </p>
     <div class="blog-page__pulse" aria-hidden="true">
-      <span>{{ blog.POSTS | length }}</span>
-      <small>published notes</small>
+      <span>{{ posts_all | length }}</span>
+      <small>date notes</small>
     </div>
   </div>
 
-  {% if blog.POSTS %}
+  {% if posts_all %}
   <ul class="blog-list blog-list--page">
-    {% for post in blog.POSTS %}
+    {% for post in posts_all %}
       {% include 'site/_blog_card.j2' %}
     {% endfor %}
   </ul>
   {% else %}
   <div class="blog-empty">
-    <p class="blog-empty__title">No posts published yet.</p>
+    <p class="blog-empty__title">No posts date yet.</p>
     <p class="blog-empty__copy">This space is ready for essays, lab notes, reading lists, and experiments in public.</p>
   </div>
   {% endif %}

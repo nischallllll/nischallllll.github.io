@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title | e }}</title>
+  <link rel="stylesheet" href="/src/css/blog.css?v=20260404c">
+</head>
+<body>
+  <main class="post-container">
+    <a class="post-kicker" href="/blog.html">Notebook</a>
+    <header class="post-header">
+      {% if post.category %}
+      <p class="post-eyebrow">{{ post.category }}</p>
+      {% endif %}
+      <h1 class="post-title">{{ post.title }}</h1>
+      {% if post.date %}
+      <p class="post-meta">{{ post.date | format_date }}</p>
+      {% endif %}
+      {% if post.description %}
+      <p class="post-summary">{{ post.description }}</p>
+      {% endif %}
+    </header>
+
+    <section class="post-body">
+      {{ post.body_html }}
+    </section>
+
+    <div class="post-divider"></div>
+    <p class="post-back"><a href="/blog.html">← Back to Blog</a></p>
+  </main>
+</body>
+</html>

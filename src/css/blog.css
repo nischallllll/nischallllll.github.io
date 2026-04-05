@@ -99,6 +99,14 @@ body {
     color: var(--blog-muted);
 }
 
+.post-summary {
+    width: min(34rem, 100%);
+    margin: 16px auto 0;
+    color: var(--blog-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
 .post-body {
     font-size: 1.13rem;
 }

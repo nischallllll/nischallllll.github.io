@@ -19,11 +19,11 @@
             <div class="blog-meta">
               <p class="blog-category">{{post.category}}</p>
               <span class="dot"></span>
-              <time datetime="{{post.published}}">{{post.published | format_date}}</time>
+              <time datetime="{{post.date}}">{{post.date | format_date}}</time>
             </div>
             <h3 class="h3 blog-item-title">{{post.title}}</h3>
             <p class="blog-text">
-              {{post.subtitle}}
+              {{post.description}}
             </p>
           </div>
         </a>

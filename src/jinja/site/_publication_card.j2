@@ -1,15 +1,18 @@
 {% from 'site/_helpers.j2' import pub_data_category %}
-<li class="publication-item active" data-filter-item data-category="{{ pub_data_category(item) }}">
+{% set has_image = item.image | default('', true) %}
+<li class="publication-item active{% if not has_image %} publication-item--text{% endif %}" data-filter-item data-category="{{ pub_data_category(item) }}">
   {% if item.url %}
-  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+  <a class="publication-link{% if not has_image %} publication-link--text{% endif %}" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
   {% else %}
-  <div class="publication-item-inner">
+  <div class="publication-item-inner{% if not has_image %} publication-item-inner--text{% endif %}">
   {% endif %}
+    {% if has_image %}
     <figure class="publication-img">
       <div class="publication-item-icon-box"><ion-icon name="document-text-outline"></ion-icon></div>
       <img src="{{ item.image }}" alt="{{ item.alt | default('', true) }}" loading="lazy">
     </figure>
-    <div class="publication-content">
+    {% endif %}
+    <div class="publication-content{% if not has_image %} publication-content--text{% endif %}">
       <h3 class="publication-title">{{ item.title }}</h3>
       <p class="publication-authors">{{ item.authors }}</p>
       <p class="publication-journal">{{ item.journal }} ({{ item.year }})</p>

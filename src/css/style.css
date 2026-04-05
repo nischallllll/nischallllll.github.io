@@ -2900,19 +2900,19 @@ html {
   transform: none;
 }
 
-.dna-path__list > .dna-rung.reveal:nth-child(1) {
+.dna-path__list>.dna-rung.reveal:nth-child(1) {
   --reveal-delay: 0ms;
 }
 
-.dna-path__list > .dna-rung.reveal:nth-child(2) {
+.dna-path__list>.dna-rung.reveal:nth-child(2) {
   --reveal-delay: 70ms;
 }
 
-.dna-path__list > .dna-rung.reveal:nth-child(3) {
+.dna-path__list>.dna-rung.reveal:nth-child(3) {
   --reveal-delay: 140ms;
 }
 
-.dna-path__list > .dna-rung.reveal:nth-child(4) {
+.dna-path__list>.dna-rung.reveal:nth-child(4) {
   --reveal-delay: 210ms;
 }
 
@@ -3013,6 +3013,7 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .about-hero__strand--a,
   .about-hero__strand--b {
     animation: none;
@@ -3051,7 +3052,7 @@ html {
   opacity: 0.85;
 }
 
-.about .about-bio-head + .about-text {
+.about .about-bio-head+.about-text {
   margin-top: 0.5rem;
 }
 
@@ -3072,7 +3073,7 @@ html {
   margin-bottom: 8px;
 }
 
-.dna-path__subtitle {
+.dna-path__description {
   font-family: var(--ff-ui-about);
   font-size: var(--fs-6);
   color: var(--light-gray-70);
@@ -3094,13 +3095,11 @@ html {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    var(--lab-edge) 8%,
-    var(--lab-edge) 92%,
-    transparent
-  );
+  background: linear-gradient(180deg,
+      transparent,
+      var(--lab-edge) 8%,
+      var(--lab-edge) 92%,
+      transparent);
   transform: translateX(-50%);
   pointer-events: none;
 }
@@ -3429,7 +3428,7 @@ html {
 }
 
 .about .service-item-text,
-.about .clients-title + .clients-list {
+.about .clients-title+.clients-list {
   font-family: var(--ff-ui-about);
 }
 
