@@ -1,7 +1,7 @@
+import re
 from datetime import datetime
 from html import escape
 from pathlib import Path
-import re
 from typing import Any, Dict, List, Optional, Tuple
 
 import yaml  # type: ignore
