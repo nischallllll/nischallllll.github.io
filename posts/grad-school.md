@@ -22,11 +22,15 @@ Let's go over some of the costs and benefits of choosing graduate study.
 - **Field**: some fields are more "hot" than others at a given moment, and that affects funding, citations, and attention. You have to separate noise from signal, but the reputation and future of a field matter. If a field keeps attracting talent, money, and energy, it probably has solid problems worth solving.
 - **PI**: the lab, its past record, the mentoring style, and the overall culture matter a lot. Your experience will be shaped heavily by the PI and the lab you join, so it is worth probing the culture before committing. It is also wise to make sure there are at least two or three PIs at the institution whose work genuinely interests you. Things can go wrong with a primary mentor, and it is always better to have options.
 
-## Some sources
+# Useful sources
 
+### Advice
 1. [A Survival Guide to a PhD](https://karpathy.github.io/2016/09/07/phd/) by Andrej Karpathy
 2. [So You Want to Be an Academic?](https://anandbhattad.github.io/blogs/jr_grads.html) by Anand Bhattad
 3. [You and Your Research](https://fs.blog/great-talks/richard-hamming-your-research/) by Richard Hamming
 4. [Modest Advice for New Graduate Students](https://dorsaamir.medium.com/modest-advice-for-new-graduate-students-b0be6b8dbc22) by Dorsa Amir
 5. [All about PhD Applications](https://lily-gebhart.github.io/posts/2025/11/2025-11-12-grad-school/) by Lily Gebhart
 6. [A curated list of tips on various topics](https://github.com/jbhuang0604/awesome-tips?tab=readme-ov-file) by awesome-tips
+
+## Resources
+1. [Navigating the HHMI Gilliam Fellowship Application](https://www.yaelcourtney.com/resources-and-guides/gilliamguide) by Ya'el Courtney
