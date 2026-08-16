@@ -38,27 +38,12 @@ html[data-theme="dark"] {
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  background:
-    radial-gradient(circle at top left, rgba(124, 175, 165, 0.12), transparent 25rem),
-    radial-gradient(circle at bottom right, rgba(194, 159, 92, 0.08), transparent 20rem),
-    var(--background);
+  background: var(--background);
   color: var(--text);
   font: 400 clamp(1rem, 0.84rem + 0.28vw, 1.125rem)/1.75 var(--sans);
   margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-body::before {
-  background-image: linear-gradient(rgba(18, 35, 41, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(18, 35, 41, 0.03) 1px, transparent 1px);
-  background-size: 24px 24px;
-  content: "";
-  inset: 0;
-  mask-image: radial-gradient(circle at center, black 18%, transparent 100%);
-  opacity: 0.42;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
 }
 
 ::selection { background: var(--accent-soft); }
@@ -333,63 +318,41 @@ html[data-theme="dark"] .theme-toggle span {
   margin: 0.55rem 0 0 1.12rem;
   max-width: 43rem;
 }
-.training-layout {
-  align-items: center;
+.training {
+  align-items: flex-start;
   display: grid;
   gap: 2rem;
-  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.8fr);
+  grid-template-columns: 170px minmax(0, 1fr);
   margin-top: 2rem;
-}
-.training__timeline {
-  display: grid;
-  gap: 1rem;
-}
-.training__item {
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid var(--line);
-  border-radius: 1rem;
-  padding: 1rem 1.1rem 1.05rem;
-}
-.training__period {
-  color: var(--accent);
-  font-size: 0.73rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin: 0;
-  text-transform: uppercase;
-}
-.training__item h3 {
-  border-left: 0;
-  font: 500 clamp(1.45rem, 2vw, 1.8rem)/1.2 var(--serif);
-  letter-spacing: -0.04em;
-  margin: 0.55rem 0 0.35rem;
-  padding-left: 0;
-}
-.training__item p:last-child {
-  color: var(--muted);
-  margin: 0;
 }
 .training__art {
   align-items: center;
-  background: radial-gradient(circle at center, rgba(109, 160, 153, 0.14), transparent 58%);
-  border: 1px solid var(--line);
-  border-radius: 1.25rem;
   color: var(--accent);
   display: flex;
   justify-content: center;
-  min-height: 22rem;
-  padding: 1rem;
+  min-height: 18rem;
+  opacity: 0.9;
+  padding-top: 0.4rem;
 }
 .training__art svg {
   height: auto;
-  max-height: 24rem;
-  width: min(100%, 18rem);
+  max-height: 18rem;
+  width: 100%;
 }
-.training__helix path {
-  stroke-width: 1.8;
+.training__timeline {
+  display: grid;
+  gap: 0.25rem;
 }
-.training__nodes circle {
-  stroke-linecap: round;
+.training__timeline > h3 {
+  font: 500 clamp(1.25rem, 1.8vw, 1.8rem)/1.2 var(--serif);
+  letter-spacing: -0.04em;
+  margin: 0;
+  padding-left: 0;
+}
+.training__timeline > h3 + p {
+  color: var(--muted);
+  margin: 0.3rem 0 1.5rem;
+  max-width: 42rem;
 }
 .markdown-content h2 + ul {
   display: grid;
@@ -427,17 +390,16 @@ html[data-theme="dark"] .theme-toggle span {
   padding: 0 2rem 5rem;
 }
 .cv-section__inner {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  background: rgba(255, 255, 255, 0.24);
   border: 1px solid var(--line);
-  border-radius: 1.75rem;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
 }
 .cv-section__header {
-  align-items: end;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 .cv-section__header h2 {
   font: 500 clamp(2.2rem, 4vw, 3.4rem)/1 var(--serif);
@@ -447,28 +409,28 @@ html[data-theme="dark"] .theme-toggle span {
 .cv-section__layout {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.8fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.7fr);
 }
 .cv-section__viewer {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
+  border-radius: 0.9rem;
   overflow: hidden;
 }
 .cv-section__embed {
   display: block;
-  min-height: 32rem;
+  min-height: 30rem;
   width: 100%;
 }
 .cv-section__panel {
+  align-self: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 1rem;
 }
 .cv-section__summary {
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   margin: 0;
 }
 .cv-section__actions {
@@ -696,11 +658,12 @@ a.record-card__link:hover {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
-  .training-layout,
+  .training,
   .cv-section__layout,
   .markdown-content h2 + ul,
   .record-grid,
   .record-grid--full { grid-template-columns: 1fr; }
+  .training__art { min-height: 12rem; }
   .record-card__link { min-height: 0; }
   .site-footer { grid-template-columns: 1fr; padding: 2rem 1.25rem; }
 }
