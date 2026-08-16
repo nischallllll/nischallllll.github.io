@@ -1,19 +1,8 @@
 HEADER:
   label: "About me"
 
-PRESENTATION:
-
-  short_presentation: |
-    I am a Computational Biologist at Cold Spring Harbor Laboratory working in Dr. Peter Westcott's Laboratory. My research focuses on understanding the genomic basis of cancer through advanced computational approaches and cutting-edge sequencing technologies.
-  description: |
-    I am a Computational Biologist at Cold Spring Harbor Laboratory working in Dr. Peter Westcott's Laboratory. My research focuses on understanding the genomic basis of cancer through advanced computational approaches and cutting-edge sequencing technologies.
-
-    My work centers on cancer genomics and disease heterogeneity, where I leverage diverse bioinformatics pipelines to dissect the transcriptomic and cellular factors driving disease progression.
-
-    By integrating high-resolution genomic data with robust computational analysis, I aim to uncover the governing principles of human diseases, identify novel therapeutic targets, contribute to precision medicine approaches, and develop computational tools for genomic analysis.
-
 DOING:
-  enabled: true
+  enabled: false
   label: "🧬 Research Focus"
   items:
     - title: "Cancer Genomics Research"
@@ -33,12 +22,12 @@ CURRENT:
   enabled: true
   label: "📍 Current Position"
   items:
-    - title: "Computational Biologist"
+    - title: "PhD Student"
       icon: "config/assets/icons/cshl_logo_alternate-RGB_KO.png"
-      description: "Westcott Laboratory, Cold Spring Harbor Laboratory"
+      description: "Interdisciplinary Quantitative Biology Fellow, University of Colorado Boulder"
 
 TECHNOLOGIES:
-  enabled: true
+  enabled: false
   label: "Tech Experience"
   items:
     - title: "Python"
