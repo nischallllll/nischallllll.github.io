@@ -2191,6 +2191,32 @@ body { letter-spacing: -0.01em; }
 
 .training-layout { grid-template-columns: minmax(0, 1fr); }
 .training-spine, .section-ornament { display: none; }
+
+/* Biology is a quiet visual language here: present, but never competing with copy. */
+.section-block--lab .section-ornament,
+#publications .section-ornament,
+.section-block--training .section-ornament,
+#focus .section-ornament {
+  display: block;
+  opacity: 0.14;
+}
+
+.section-block--lab .section-ornament { color: var(--site-accent); }
+#publications .section-ornament { color: color-mix(in srgb, var(--site-accent) 74%, var(--site-peony)); }
+.section-block--training .section-ornament { opacity: 0.11; }
+#focus .section-ornament { opacity: 0.12; }
+
+@media (min-width: 880px) {
+  .section-block--training .training-layout {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .section-block--training .training-spine {
+    display: block;
+    opacity: 0.24;
+  }
+}
 .training-steps { display: grid; gap: 0; margin-top: 28px; }
 .training-step { border-left: 1px solid var(--site-border); border-radius: 0; padding: 0 0 30px 24px; position: relative; }
 .training-step::before { background: var(--site-accent); border: 4px solid var(--site-bg); border-radius: 50%; content: ""; height: 12px; left: -7px; position: absolute; top: 4px; width: 12px; }
@@ -2237,6 +2263,10 @@ body { letter-spacing: -0.01em; }
   .hero-mountain__cells { right: -10%; width: 46%; }
   .section-block__head--editorial { align-items: start; }
   .lab-card { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .section-block--lab .section-ornament,
+  #publications .section-ornament,
+  .section-block--training .section-ornament,
+  #focus .section-ornament { display: none; }
 }
 
 @media (max-width: 540px) {
@@ -2249,4 +2279,6 @@ body { letter-spacing: -0.01em; }
 
 @media (prefers-reduced-motion: reduce) {
   .button:hover, .blog-card__link:hover, .tools-row li:hover { transform: none; }
+  .section-ornament,
+  .training-spine { animation: none; }
 }
