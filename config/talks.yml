@@ -1,8 +1,0 @@
-HEADER:
-  label: "Talks"
-
-TALKS:
-  - title: "Resolving the Spatial Dynamics of Early Cancer Progression"
-    category: ["Oral Presentation", "Invited"]
-    image: "config/assets/icons/images/NB_spaceclubjuly25.png"
-    url: "https://www.singlecellbio.org/space-club"

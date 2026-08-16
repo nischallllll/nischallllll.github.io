@@ -1,526 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
 <head>
   <script>
-    (function () {
-      try {
-        var t = localStorage.getItem('nb-theme');
-        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
-      } catch (e) { }
-    })();
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (error) {}
   </script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Computational biologist at Cold Spring Harbor Laboratory (Westcott Lab). Cancer genomics, single-cell and spatial analysis">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nischallllll.github.io">
-  <meta property="og:title" content="Nischal Bhandari">
-  <meta property="og:description"
-    content="Computational biologist at Cold Spring Harbor Laboratory. Cancer genomics, single-cell and spatial methods.">
-  <meta property="og:image" content="config/assets/icons/user.svg">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:creator" content="@nischallllll">
-  <link href="https://nischallllll.github.io" rel="canonical">
-  <link rel="shortcut icon" href="./src/images/logo.svg" type="image/x-icon">
-  <link rel="stylesheet" href="./src/css/style.css?v=20260404d">
-  <link rel="stylesheet" href="./src/css/site-v2.css?v=20260816a">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Computational biologist and IQ Bio fellow at CU Boulder. Cancer genomics, single-cell and spatial transcriptomics.">
+  <meta property="og:title" content="Nischal Bhandari · Computational biology">
+  <meta property="og:description" content="Computational biologist and IQ Bio fellow at CU Boulder. Cancer genomics, single-cell and spatial transcriptomics.">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>Nischal Bhandari · Computational biology</title>
+  <link rel="icon" href="src/images/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
-    rel="stylesheet">
-  <title>Nischal Bhandari · Computational biology</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/site.css">
 </head>
 <body>
-
-
-  <a class="skip-link" href="#top">Skip to content</a>
-  <header class="site-header" data-site-header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
     <div class="site-header__inner">
-      <a class="site-brand" href="#top">Nischal Bhandari</a>
-      <nav class="site-nav" aria-label="Page sections">
-        <a href="#about">About</a>
-        <a href="#publications">Publications</a>
-        <a href="#talks">Talks</a>
-        <a href="#training">Training</a>
-        
-        <!--<a href="#cv">CV</a>-->
-        
-        <a href="#blog"
-          >
-          Blog
-        </a>
-        
+      <a class="site-brand" href="index.html">Nischal Bhandari</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="publications.html">Research</a>
+        <a href="talks.html">Talks</a>
+        <a href="work.html">Projects</a>
+        <a href="blog.html">Notes</a>
       </nav>
-      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Use light theme" title="Theme">
-        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"></span>
-        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"></span>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
+        <span aria-hidden="true"></span>
       </button>
     </div>
   </header>
-
-  <main class="site-single" id="top">
-    <section id="about" class="hero-mountain reveal" aria-label="Introduction">
-      <div class="hero-mountain__layer hero-mountain__layer--peony" aria-hidden="true"></div>
-      <div class="hero-mountain__layer hero-mountain__range" aria-hidden="true">
-        <svg class="hero-mountain__svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidMax slice"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill="currentColor" opacity="0.14"
-            d="M0 320 L0 220 L180 80 L340 200 L520 40 L700 180 L880 60 L1040 200 L1200 100 L1200 320 Z" />
-          <path fill="currentColor" opacity="0.22"
-            d="M0 320 L0 260 L220 140 L400 240 L580 120 L760 260 L940 150 L1100 240 L1200 180 L1200 320 Z" />
-        </svg>
-      </div>
-      <div class="hero-mountain__strand" aria-hidden="true">
-        <svg class="strand-hero" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="strand-hero__a" d="M8 160 C 72 168, 96 32, 160 48 S 248 192, 312 88 S 360 24, 392 56"
-            stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
-          <path class="strand-hero__b" d="M8 48 C 80 40, 112 176, 176 152 S 264 40, 328 120 S 368 176, 392 144"
-            stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.42" />
-          <path d="M52 148 Q 120 100 188 130 T 324 90" stroke="currentColor" stroke-width="0.45" opacity="0.2"
-            stroke-dasharray="3 6" />
-        </svg>
-      </div>
-      <div class="hero-mountain__cells" aria-hidden="true">
-        <svg class="cell-cluster" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g class="cell-cluster__links">
-            <path class="cell-cluster__link cell-cluster__link--1" d="M107 106 C 122 94, 132 92, 146 90" />
-            <path class="cell-cluster__link cell-cluster__link--2" d="M193 108 C 214 108, 226 114, 240 121" />
-            <path class="cell-cluster__link cell-cluster__link--3" d="M194 154 C 226 170, 258 174, 288 160" />
-          </g>
-          <g class="cell-cluster__orb cell-cluster__orb--1">
-            <circle cx="74" cy="118" r="38" />
-            <circle cx="74" cy="118" r="10" class="cell-cluster__nucleus" />
-          </g>
-          <g class="cell-cluster__orb cell-cluster__orb--2">
-            <circle cx="154" cy="84" r="26" />
-            <circle cx="154" cy="84" r="7" class="cell-cluster__nucleus" />
-          </g>
-          <g class="cell-cluster__orb cell-cluster__orb--3">
-            <circle cx="168" cy="158" r="48" />
-            <circle cx="168" cy="158" r="13" class="cell-cluster__nucleus" />
-          </g>
-          <g class="cell-cluster__orb cell-cluster__orb--4">
-            <circle cx="254" cy="126" r="34" />
-            <circle cx="254" cy="126" r="9" class="cell-cluster__nucleus" />
-          </g>
-          <g class="cell-cluster__orb cell-cluster__orb--5">
-            <circle cx="310" cy="78" r="18" />
-          </g>
-        </svg>
-      </div>
-      <div class="hero-mountain__content">
-        <p class="hero-mountain__eyebrow">Nepal --> USA</p>
-        <h1 class="hero-mountain__title">Genes, cells, and computational biology</h1>
-        <p class="hero-mountain__lede">Computational biologist at Cold Spring Harbor Laboratory. I study cancer genomics
-          with single-cell and spatial transcriptomics.</p>
-        <div class="hero-mountain__markers" aria-label="Research themes">
-          <span>Disease mechanisms</span>
-          <span>Single-cell states</span>
-          <span>Spatial tissue maps</span>
-        </div>
-        <div class="hero-mountain__actions">
-          <a class="button button--primary" href="#publications">Explore research <span aria-hidden="true">↓</span></a>
-          <a class="button button--quiet" href="config/assets/Nischal_Bhandari_CV.pdf" download>Download CV <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block section-block--lab reveal" aria-labelledby="lab-title">
-      <div class="section-ornament section-ornament--rna" aria-hidden="true">
-        <svg viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="section-ornament__trace section-ornament__trace--a" d="M12 104 C 40 30, 82 176, 116 96 S 184 32, 228 108" />
-          <path class="section-ornament__trace section-ornament__trace--b" d="M20 126 C 60 74, 92 118, 126 78 S 188 66, 222 122" />
-          <line x1="38" y1="86" x2="58" y2="98" />
-          <line x1="78" y1="126" x2="96" y2="114" />
-          <line x1="116" y1="96" x2="134" y2="106" />
-          <line x1="156" y1="76" x2="173" y2="90" />
-          <line x1="194" y1="78" x2="211" y2="92" />
-          <circle class="section-ornament__bead" cx="38" cy="86" r="4" />
-          <circle class="section-ornament__bead" cx="78" cy="126" r="3.5" />
-          <circle class="section-ornament__bead" cx="116" cy="96" r="4" />
-          <circle class="section-ornament__bead" cx="156" cy="76" r="3.5" />
-          <circle class="section-ornament__bead" cx="194" cy="78" r="4" />
-        </svg>
-      </div>
-      <div class="section-block__head section-block__head--editorial">
-        <div>
-          <p class="section-block__kicker">Current appointment</p>
-          <h2 id="lab-title" class="section-block__title">Westcott Lab</h2>
-        </div>
-      </div>
-      <div class="lab-card">
-        <img src="config/assets/icons/cshl_logo_alternate-RGB.png" height="40" alt="" class="lab-card__logo">
-        <div class="lab-card__body">
-          <ul class="lab-card__list">
-            <li>Genomic basis of colon cancer and tumor heterogeneity</li>
-            <li>Transcriptomic and cellular drivers of progression</li>
-            <li>Developing computational tools for spatial analysis</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications" class="section-block reveal" aria-labelledby="pub-title">
-  <div class="section-ornament section-ornament--translation" aria-hidden="true">
-    <svg viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path class="section-ornament__trail" d="M14 92 H140" />
-      <path class="section-ornament__trail" d="M14 108 H140" />
-      <g class="section-ornament__ribosome">
-        <ellipse cx="126" cy="106" rx="34" ry="20" />
-        <ellipse cx="126" cy="90" rx="22" ry="12" />
+  <main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__art" aria-hidden="true">
+    <svg viewBox="0 0 700 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="hero__strand" d="M50 290C138 330 178 74 278 130C374 184 414 358 516 164C566 70 620 74 664 118" />
+      <path class="hero__strand hero__strand--soft" d="M50 100C140 62 182 332 282 280C378 230 418 52 520 256C568 350 622 342 664 302" />
+      <path class="hero__rung" d="M119 180L158 221M203 150L238 244M312 175L346 230M423 182L454 224M538 169L570 226" />
+      <g class="hero__cells">
+        <circle cx="496" cy="306" r="42" /><circle cx="496" cy="306" r="12" />
+        <circle cx="582" cy="278" r="27" /><circle cx="582" cy="278" r="8" />
+        <circle cx="620" cy="344" r="36" /><circle cx="620" cy="344" r="10" />
       </g>
-      <path class="section-ornament__chain" d="M148 96 C 164 80, 180 120, 198 94 S 228 82, 246 106" />
-      <circle class="section-ornament__bead" cx="170" cy="90" r="6" />
-      <circle class="section-ornament__bead" cx="192" cy="104" r="6" />
-      <circle class="section-ornament__bead" cx="214" cy="86" r="6" />
-      <circle class="section-ornament__bead" cx="238" cy="102" r="6" />
     </svg>
   </div>
-  <div class="section-block__head section-block__head--editorial">
-    <div>
-      <p class="section-block__kicker">Research output</p>
-      <h2 id="pub-title" class="section-block__title">Publications</h2>
+  <div class="hero__content">
+    <p class="eyebrow">Nepal → USA</p>
+    <h1 id="hero-title">Genes, cells, and computational biology</h1>
+    <p class="hero__summary">I am an IQ Bio fellow at CU Boulder studying the cellular and molecular mechanisms of cancer progression and drug resistance.</p>
+    <ul class="topic-list" aria-label="Research themes">
+<li>Disease mechanisms</li><li>Single-cell states</li><li>Spatial tissue maps</li>    </ul>
+    <div class="hero__actions">
+      <a class="button button--solid" href="#research">Explore research <span aria-hidden="true">↓</span></a>
+      <a class="button" href="assets/Nischal_Bhandari_CV.pdf" download>Download CV <span aria-hidden="true">↗</span></a>
     </div>
-    <!--<p class="section-block__aside">From tumor progression to spatial structure, each paper is part atlas, part hypothesis.</p>-->
   </div>
-  <section class="publications-section publications-section--landing publications-section--feature">
-    <ul class="publication-list">
-      
-        
-
-
-<li class="publication-item active publication-item--text" data-filter-item data-category="|pre-print||cancer genomics||spatial transcriptomics|">
-  
-  <a class="publication-link publication-link--text" href="https://www.biorxiv.org/content/10.1101/2025.05.30.657122v2.abstract" target="_blank" rel="noopener noreferrer">
-  
-    
-    <div class="publication-content publication-content--text">
-      <h3 class="publication-title">Targeting Neutrophil Extracellular Traps to inhibit Colon Cancer Tumor Necrosis and Metastasis</h3>
-      <p class="publication-authors">E Gazzara, et al.</p>
-      <p class="publication-journal">TBD (2024)</p>
-      <div class="publication-categories">
-        
-          
-            <span class="publication-category">Pre-print</span>
-          
-            <span class="publication-category">Cancer Genomics</span>
-          
-            <span class="publication-category">Spatial Transcriptomics</span>
-          
-        
-      </div>
-    </div>
-  
-  </a>
-  
-</li>
-      
-    </ul>
-    
-  </section>
 </section>
 
-    <section id="talks" class="section-block reveal" aria-labelledby="talks-title">
-  <div class="section-block__head section-block__head--editorial">
-    <div>
-      <p class="section-block__kicker">Speaking</p>
-      <h2 id="talks-title" class="section-block__title">Talks</h2>
-    </div>
-    <!--<p class="section-block__aside">Talks as field reports: what the tissue is doing, what the data suggests, and what still feels unresolved.</p>-->
+<article class="markdown-content home-content">
+  <h2>About</h2>
+<p>I work at the intersection of genomics, statistics, and computation. My goal is to understand how cells change as cancer progresses—and to build useful tools for studying those changes at scale.</p>
+<h2>Training</h2>
+<h3>Aug 2026 — Present · University of Colorado Boulder</h3>
+<p>Interdisciplinary Quantitative Biology Fellow.</p>
+<h3>Jun 2024 — Jun 2026 · Cold Spring Harbor Laboratory</h3>
+<p>Computational biologist in the Westcott Lab, working across cancer genomics, single-cell biology, spatial methods, and integrative modeling.</p>
+<h3>Jun — Aug 2023 · New York Genome Center</h3>
+<p>Bioinformatics intern in computational biology, contributing to analysis pipelines, quality control, and collaborative research.</p>
+<h3>2020 — 2024 · Ramapo College of New Jersey</h3>
+<p>Studied bioinformatics and data science.</p>
+<h2>Research areas</h2>
+<ul>
+<li><strong>Genomics</strong> — Cancer progression and heterogeneity from high-throughput data.</li>
+<li><strong>Single-cell</strong> — RNA-seq and cellular state in disease context.</li>
+<li><strong>Spatial</strong> — Tissue organization and neighborhood-level transcriptomics.</li>
+<li><strong>Tools</strong> — Reproducible pipelines and software for biological analysis.</li>
+</ul>
+</article>
+
+<section class="featured-section" id="research" aria-labelledby="research-title">
+  <div class="section-heading">
+    <p class="eyebrow">Research output</p>
+    <h2 id="research-title">Recent publications</h2>
   </div>
-  <section class="talks talks--landing talks--feature">
-    <ul class="project-list">
-      
-        
-
-
-<li class="project-item active" data-filter-item data-category="|oral presentation||invited|">
-  <a class="project-link" href="https://www.singlecellbio.org/space-club" target="_blank" rel="noopener noreferrer">
-    
-    <figure class="project-img">
-      <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-      <img src="config/assets/icons/images/NB_spaceclubjuly25.png" alt="Resolving the Spatial Dynamics of Early Cancer Progression" loading="lazy">
-    </figure>
-    
-    <h3 class="project-title">Resolving the Spatial Dynamics of Early Cancer Progression</h3>
-    <p class="project-category">Oral Presentation, Invited</p>
-  </a>
-</li>
-      
-    </ul>
-    
-  </section>
+  <div class="record-grid">
+<article class="record-card reveal">
+  <a class="record-card__link" href="https://www.biorxiv.org/content/10.1101/2025.05.30.657122v2.abstract" target="_blank" rel="noopener noreferrer">
+    <div class="record-card__meta">
+<span>bioRxiv preprint</span><time>2025</time>    </div>
+    <h2>Targeting Neutrophil Extracellular Traps to Inhibit Colon Cancer Tumor Necrosis and Metastasis</h2>
+<p class="record-card__authors">E. Gazzara, et al.</p>    <ul class="tag-list" aria-label="Topics">
+<li>Preprint</li><li>Cancer genomics</li><li>Spatial transcriptomics</li>    </ul>
+<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article>  </div>
+  <a class="text-link" href="publications.html">All publications <span aria-hidden="true">→</span></a>
 </section>
 
-    <section id="training" class="section-block section-block--training reveal" aria-labelledby="training-title">
-      <div class="section-ornament section-ornament--mod" aria-hidden="true">
-        <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="section-ornament__chain" d="M30 34 C 70 60, 84 74, 116 112 S 158 150, 192 188" />
-          <circle class="section-ornament__bead" cx="42" cy="42" r="8" />
-          <circle class="section-ornament__bead" cx="80" cy="72" r="8" />
-          <circle class="section-ornament__bead" cx="116" cy="112" r="9" />
-          <circle class="section-ornament__bead" cx="154" cy="150" r="8" />
-          <circle class="section-ornament__bead" cx="188" cy="186" r="8" />
-          <g class="section-ornament__spark section-ornament__spark--1">
-            <path d="M92 54 V70 M84 62 H100 M87 57 L97 67 M97 57 L87 67" />
-          </g>
-          <g class="section-ornament__spark section-ornament__spark--2">
-            <path d="M142 112 V128 M134 120 H150 M137 115 L147 125 M147 115 L137 125" />
-          </g>
-          <g class="section-ornament__spark section-ornament__spark--3">
-            <path d="M174 154 V170 M166 162 H182 M169 157 L179 167 M179 157 L169 167" />
-          </g>
-        </svg>
-      </div>
-      <div class="training-layout">
-        <div class="training-spine" aria-hidden="true">
-          <svg class="strand-wind" viewBox="0 0 120 500" preserveAspectRatio="xMidYMin slice"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="strand-wind__a"
-              d="M58 0 C 108 48 12 112 62 168 C 8 232 104 292 58 352 C 14 416 106 472 60 532 C 6 596 102 652 58 712 C 16 772 98 828 60 888 L 60 920"
-              fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" />
-            <path class="strand-wind__b"
-              d="M62 0 C 12 56 108 120 58 176 C 112 236 16 300 62 360 C 116 420 22 480 62 540 C 114 600 20 660 62 720 C 104 780 24 836 62 896 L 62 920"
-              fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round"
-              opacity="0.36" />
-            <line x1="36" y1="118" x2="84" y2="142" stroke="currentColor" stroke-width="0.55" opacity="0.22" />
-            <line x1="88" y1="268" x2="32" y2="292" stroke="currentColor" stroke-width="0.55" opacity="0.2" />
-            <line x1="34" y1="418" x2="86" y2="444" stroke="currentColor" stroke-width="0.55" opacity="0.18" />
-            <line x1="90" y1="568" x2="30" y2="598" stroke="currentColor" stroke-width="0.55" opacity="0.16" />
-            <line x1="38" y1="718" x2="82" y2="748" stroke="currentColor" stroke-width="0.55" opacity="0.14" />
-          </svg>
-        </div>
-        <div class="training-main">
-          <h2 id="training-title" class="section-block__title">Training</h2>
-          <ol class="training-steps">
-            <li class="training-step reveal">
-              <span class="training-step__meta">Jun 2024 – Present</span>
-              <h3 class="training-step__h">Cold Spring Harbor Laboratory</h3>
-              <p class="training-step__p">Computational biologist, Westcott Lab—cancer genomics, single-cell, spatial,
-                integrative modeling.</p>
-            </li>
-            <li class="training-step reveal">
-              <span class="training-step__meta">Jun – Aug 2023</span>
-              <h3 class="training-step__h">New York Genome Center</h3>
-              <p class="training-step__p">Bioinformatics intern in computational biology—pipelines, QC, collaborative
-                analysis.</p>
-            </li>
-            <li class="training-step reveal">
-              <span class="training-step__meta">2020 – 2024</span>
-              <h3 class="training-step__h">Ramapo College of New Jersey</h3>
-              <p class="training-step__p">Bioinformatics; Data Science</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section id="cv" class="section-block section-block--cv reveal" aria-labelledby="cv-title">
-      <div class="cv-panel">
-        <div>
-          <p class="section-block__kicker">Selected materials</p>
-          <h2 id="cv-title" class="section-block__title">CV</h2>
-        </div>
-        <div class="pdf-cv-button-container pdf-cv-button-container--single">
-          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Download PDF</span>
-          </a>
-          <button type="button" class="pdf-cv-button pdf-view-btn" aria-haspopup="dialog" aria-controls="pdf-modal">
-            <ion-icon name="eye-outline"></ion-icon>
-            <span>View</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section id="focus" class="section-block reveal" aria-labelledby="focus-title">
-      <div class="section-ornament section-ornament--network" aria-hidden="true">
-        <svg viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="section-ornament__trace" d="M34 40 L92 78 L148 50 L204 98 L128 142 L70 118 Z" />
-          <path class="section-ornament__trace section-ornament__trace--b" d="M92 78 L128 142 M92 78 L70 118 M148 50 L128 142" />
-          <circle class="section-ornament__node" cx="34" cy="40" r="7" />
-          <circle class="section-ornament__node" cx="92" cy="78" r="7" />
-          <circle class="section-ornament__node" cx="148" cy="50" r="7" />
-          <circle class="section-ornament__node" cx="204" cy="98" r="7" />
-          <circle class="section-ornament__node" cx="128" cy="142" r="7" />
-          <circle class="section-ornament__node" cx="70" cy="118" r="7" />
-        </svg>
-      </div>
-      <h2 id="focus-title" class="section-block__title">Research threads</h2>
-      <ul class="focus-grid">
-        <li class="focus-item"><span class="focus-item__tag">Genomics</span> Cancer progression and heterogeneity from
-          high-throughput data.</li>
-        <li class="focus-item"><span class="focus-item__tag">Single-cell</span> RNA-seq and cellular state in disease
-          context.</li>
-        <li class="focus-item"><span class="focus-item__tag">Spatial</span> Tissue organization and neighborhood-level
-          transcriptomics.</li>
-        <li class="focus-item"><span class="focus-item__tag">Tools</span> Pipelines and software for reproducible
-          analysis.</li>
-      </ul>
-      <div class="research-toolkit" aria-label="Research toolkit">
-        <p class="research-toolkit__label">Toolkit</p>
-        <ul class="tools-row">
-        <li><img src="config/assets/icons/python.svg" alt="Python" width="44" height="44" loading="lazy"></li>
-        <li><img src="config/assets/icons/pandas.svg" alt="Pandas" width="44" height="44" loading="lazy"></li>
-        <li><img src="config/assets/icons/jupyter.svg" alt="Jupyter" width="44" height="44" loading="lazy"></li>
-        <li><img src="config/assets/icons/git.svg" alt="Git" width="44" height="44" loading="lazy"></li>
-        <li><img src="config/assets/icons/linux.svg" alt="Linux" width="44" height="44" loading="lazy"></li>
-        </ul>
-      </div>
-    </section>
-
-
-
-
-<section id="blog" class="section-block reveal" aria-labelledby="blog-title">
-  <div class="section-ornament section-ornament--notes" aria-hidden="true">
-    <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="28" y="34" width="150" height="92" rx="18" />
-      <path class="section-ornament__trail" d="M54 64 H150" />
-      <path class="section-ornament__trail" d="M54 82 H144" />
-      <path class="section-ornament__trail" d="M54 100 H128" />
-      <path class="section-ornament__trace section-ornament__trace--b" d="M172 116 C 188 96, 202 88, 222 92" />
-      <circle class="section-ornament__node" cx="186" cy="76" r="7" />
-      <circle class="section-ornament__node" cx="208" cy="96" r="9" />
-    </svg>
+<section class="featured-section featured-section--compact" aria-labelledby="talks-title">
+  <div class="section-heading">
+    <p class="eyebrow">Speaking</p>
+    <h2 id="talks-title">Recent talks</h2>
   </div>
-  <h2 id="blog-title" class="section-block__title">Blog</h2>
-
-  <section class="blog-section blog-section--landing">
-    <ul class="blog-list">
-      
-        
-<li class="blog-card reveal">
-  <a class="blog-card__link" href="/posts/books_2026.html"
-    >
-    <div class="blog-card__eyebrow">
-      
-      
-      <time class="blog-card__date" datetime="2026-03-01">Mar 01, 2026</time>
-      
-    </div>
-    <h3 class="blog-card__title">Reading list 2026</h3>
-    
-    <p class="blog-card__description">Reading list 2026</p>
-    
-    <span class="blog-card__cta">Read article</span>
-  </a>
-</li>
-      
-        
-<li class="blog-card reveal">
-  <a class="blog-card__link" href="/posts/Essays_to_read.html"
-    >
-    <div class="blog-card__eyebrow">
-      
-      
-      <time class="blog-card__date" datetime="2026-01-27">Jan 27, 2026</time>
-      
-    </div>
-    <h3 class="blog-card__title">Essays to Read - 2026</h3>
-    
-    <p class="blog-card__description">A curated list of essays</p>
-    
-    <span class="blog-card__cta">Read article</span>
-  </a>
-</li>
-      
-    </ul>
-
-    
-    <p class="section-view-all">
-      <a href="blog.html" class="section-view-all__link">All blog posts →</a>
-    </p>
-    
-  </section>
+  <div class="record-grid">
+<article class="record-card reveal">
+  <a class="record-card__link" href="https://www.singlecellbio.org/space-club" target="_blank" rel="noopener noreferrer">
+    <div class="record-card__meta">
+<span>SPACE Club</span><time>2025</time>    </div>
+    <h2>Resolving the Spatial Dynamics of Early Cancer Progression</h2>
+    <ul class="tag-list" aria-label="Topics">
+<li>Invited</li><li>Oral presentation</li>    </ul>
+<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article>  </div>
+  <a class="text-link" href="talks.html">All talks <span aria-hidden="true">→</span></a>
 </section>
 
-
+<section class="featured-section featured-section--compact" aria-labelledby="notes-title">
+  <div class="section-heading">
+    <p class="eyebrow">Notebook</p>
+    <h2 id="notes-title">Notes</h2>
+  </div>
+  <div class="record-grid">
+<article class="record-card reveal">
+  <a class="record-card__link" href="posts/books_2026.html">
+    <div class="record-card__meta">
+<time>Mar 01, 2026</time>    </div>
+    <h2>Reading list 2026</h2>
+<p class="record-card__summary">Reading list 2026</p>    <ul class="tag-list" aria-label="Topics">
+<li>Reading list</li>    </ul>
+<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article><article class="record-card reveal">
+  <a class="record-card__link" href="posts/Essays_to_read.html">
+    <div class="record-card__meta">
+<time>Jan 27, 2026</time>    </div>
+    <h2>Essays to Read - 2026</h2>
+<p class="record-card__summary">A curated list of essays</p>    <ul class="tag-list" aria-label="Topics">
+<li>Reading list</li>    </ul>
+<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article>  </div>
+  <a class="text-link" href="blog.html">All notes <span aria-hidden="true">→</span></a>
+</section>
   </main>
-
-  <footer class="site-footer reveal">
-    <div class="site-footer__peony" aria-hidden="true"></div>
-    <div class="site-footer__inner">
+  <footer class="site-footer">
+    <div>
       <p class="site-footer__name">Nischal Bhandari</p>
-      <p class="site-footer__meta">New York, USA ·</p>
-      <p class="site-footer__contact">
-        
-        
-        <a href="mailto:name.nameatcshldotedu">name.nameatcshldotedu</a>
-        
-        
-        
-        
-      </p>
-      <ul class="site-footer__social">
-        <li><a href="https://www.linkedin.com/in/nishbh" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://github.com/nischallllll" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google scholar</a></li>
-        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
-      </ul>
-      <p class="site-footer__copy">© <span data-year></span></p>
+      <p>Boulder, CO</p>
     </div>
+    <div class="site-footer__links">
+      <a href="mailto:nischal.bhandari@colorado.edu">Email</a>
+      <a href="https://github.com/nischallllll" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/nishbh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="assets/Nischal_Bhandari_CV.pdf" download>CV</a>
+    </div>
+    <p>© <span data-year></span></p>
   </footer>
-
-  <div id="pdf-modal" class="pdf-modal" role="dialog" aria-modal="true" aria-hidden="true"
-    data-pdf-url="config/assets/Nischal_Bhandari_CV.pdf">
-    <div class="pdf-modal-overlay" data-pdf-overlay></div>
-    <div class="pdf-modal-panel" role="document">
-      <button type="button" class="pdf-modal-close" aria-label="Close CV viewer">&times;</button>
-      <div class="pdf-modal-body">
-        <div class="pdf-modal-mobile-message">
-          <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Download PDF</span>
-          </a>
-          <p class="pdf-cv-mobile-note">On many phones, in-browser PDF is limited—download for the full file.</p>
-        </div>
-        <iframe id="pdf-modal-object" src="" title="CV preview"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      var y = document.querySelector('[data-year]');
-      if (y) y.textContent = new Date().getFullYear();
-    })();
-  </script>
-  <script>
-    (function () {
-      var openBtn = document.querySelector('.pdf-view-btn');
-      var modal = document.getElementById('pdf-modal');
-      if (!modal) return;
-      var overlay = modal.querySelector('[data-pdf-overlay]');
-      var closeBtn = modal.querySelector('.pdf-modal-close');
-      var pdfFrame = modal.querySelector('#pdf-modal-object');
-      var pdfUrl = modal.getAttribute('data-pdf-url');
-      function openModal() {
-        if (pdfFrame && pdfUrl) try { pdfFrame.src = pdfUrl; } catch (e) { }
-        modal.setAttribute('aria-hidden', 'false');
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        if (closeBtn) closeBtn.focus();
-      }
-      function closeModal() {
-        modal.setAttribute('aria-hidden', 'true');
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-        if (pdfFrame) try { pdfFrame.src = ''; } catch (e) { }
-      }
-      function onKey(e) { if (e.key === 'Escape') { e.preventDefault(); closeModal(); } }
-      if (openBtn) openBtn.addEventListener('click', function (e) { e.preventDefault(); openModal(); document.addEventListener('keydown', onKey); });
-      if (overlay) overlay.addEventListener('click', closeModal);
-      if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    })();
-  </script>
-  <script src="./src/js/script.js?v=20260404e"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="src/js/site.js"></script>
 </body>
 </html>

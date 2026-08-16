@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "personal portfolio"
-version = "0.2.0"
-description = "Fully responsive personal portfolio single-page website, responsive for all devices, built using HTML, CSS, JavaScript and Python."
-authors = ["ivansaul <ihuamanis@uni.pe>"]
+name = "nischallllll-github-io"
+version = "0.3.0"
+description = "Markdown-first academic site with a small Jinja static build."
+authors = ["Nischal Bhandari"]
 license = "MIT"
 readme = "README.md"
 package-mode = false
@@ -11,12 +11,10 @@ package-mode = false
 python = "^3.10"
 jinja2 = "^3.1.4"
 pyyaml = "^6.0.2"
+markdown = "^3.7"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6.9"
-python-semantic-release = "^9.10.1"
-pytest = "^8.3.3"
-ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core"]

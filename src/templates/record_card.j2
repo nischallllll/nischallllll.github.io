@@ -1,0 +1,21 @@
+<article class="record-card reveal">
+  {% if item.url %}
+  <a class="record-card__link" href="{{ item.url }}"{% if is_external_url(item.url) %} target="_blank" rel="noopener noreferrer"{% endif %}>
+  {% else %}
+  <div class="record-card__link">
+  {% endif %}
+    <div class="record-card__meta">
+      {% if item.venue %}<span>{{ item.venue }}</span>{% endif %}
+      {% if item.year %}<time>{{ item.year }}</time>{% elif item.date %}<time>{{ item.date | format_date }}</time>{% endif %}
+    </div>
+    <h2>{{ item.title }}</h2>
+    {% if item.authors %}<p class="record-card__authors">{{ item.authors }}</p>{% endif %}
+    {% if item.summary %}<p class="record-card__summary">{{ item.summary }}</p>{% endif %}
+    {% if item.tags %}
+    <ul class="tag-list" aria-label="Topics">
+      {% for tag in item.tags %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% if item.url %}<span class="record-card__action">Open <span aria-hidden="true">↗</span></span>{% endif %}
+  {% if item.url %}</a>{% else %}</div>{% endif %}
+</article>

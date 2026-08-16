@@ -1,0 +1,17 @@
+{% extends "base.j2" %}
+{% block content %}
+<section class="page-hero">
+  <p class="eyebrow">Academic record</p>
+  <h1>{{ page_heading }}</h1>
+  <p>{{ page_description }}</p>
+</section>
+<section class="collection-page" aria-label="{{ page_heading }} list">
+  {% if items %}
+  <div class="record-grid record-grid--full">
+    {% for item in items %}{% include "record_card.j2" %}{% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">This section is ready for its first Markdown entry.</p>
+  {% endif %}
+</section>
+{% endblock %}

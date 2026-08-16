@@ -1,36 +1,59 @@
-<!-- markdownlint-disable MD033 MD036 MD041 MD045 MD046 -->
-<div align="center">
+# Nischal Bhandari — academic site
 
-<h1 style="border-bottom: none">
-    <b><a href="https://nischallllll.github.io/">Personal Portfolio </a></b>
-</h1>
+A lightweight static academic site. The interface is generated from Markdown so routine updates stay out of the codebase.
 
-## Build (generate HTML)
+## Edit content
 
-The live pages **`index.html`**, **`blog.html`**, **`publications.html`**, **`talks.html`**, and **`work.html`** are produced by Jinja from YAML + templates. **Do not hand-edit those files** if you use the generator—your changes will be overwritten.
+Everything you will regularly update lives in `content/`:
 
-1. Python 3.9+ recommended.
-2. `pip install -r requirements.txt` (or use the project `.venv`).
-3. Run:
+| Update | Markdown file |
+| --- | --- |
+| Name, contact details, social links | `content/profile.md` |
+| Hero, bio, training, and research areas | `content/home.md` |
+| A paper or preprint | `content/publications/<slug>.md` |
+| A talk | `content/talks/<slug>.md` |
+| A project or package | `content/projects/<slug>.md` |
+| A note, essay, or reading list | `content/notes/<slug>.md` |
+| CV | `assets/Nischal_Bhandari_CV.pdf` |
 
-```bash
-python main.py
+Create a publication by copying this pattern:
+
+```markdown
+---
+title: Paper title
+authors: Your Name, Collaborator Name
+venue: Journal or preprint server
+year: 2026
+tags:
+  - Cancer genomics
+  - Single-cell
+url: https://doi.org/...
+---
+
+Optional one-paragraph summary for the card.
 ```
 
-### What to edit
+The text beneath the front matter is ordinary Markdown. It is optional for papers, talks, and projects; it becomes the card summary when present.
 
-| Goal | Edit |
-|------|------|
-| Papers list | `config/publications.yml` |
-| Talks list | `config/talks.yml` |
-| Projects / portfolio | `config/projects.yml` |
-| How many items show on the **home** page | `config/site.yml` → `LANDING` (`publications_max`, `talks_max`, `projects_max`). Use **`0`** for “show everything on home” (no “View all” link). |
-| Publications **layout** (HTML) | `src/jinja/site/publications_landing.j2`, `publications_full_block.j2`, `_publication_card.j2` |
-| Talks **layout** | `src/jinja/site/talks_landing.j2`, `talks_full_block.j2`, `_talk_card.j2` |
-| Projects **layout** | `src/jinja/site/projects_landing.j2`, `projects_full_block.j2`, `_project_card.j2` |
-| Whole homepage shell (hero, training, etc.) | `src/jinja/site/index.j2` |
-| Profile / footer email | `config/profile.yml` (footer social links are in `src/jinja/site/footer_block.j2` for now) |
+## Build
 
-Full lists with category filters: **`blog.html`**, **`publications.html`**, **`talks.html`**, **`work.html`**. The home page shows only the first *N* items (per `site.yml`) when *N* &gt; 0 and there are more than *N* entries.
+```bash
+python -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python main.py
+```
 
-**Note:** `src/jinja/index.j2` is an older multi-tab layout and is **not** used by `main.py` anymore.
+The build writes `index.html`, the collection pages, and `posts/*.html`. Do not hand-edit generated HTML.
+
+## Project layout
+
+```text
+content/        Markdown content you edit
+assets/         CV and any future static files
+src/templates/  Shared HTML layouts
+src/css/site.css
+src/js/site.js
+main.py         Static-site builder
+```
+
+GitHub Actions rebuilds the site on every push to `master`.

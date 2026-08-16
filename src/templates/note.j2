@@ -1,0 +1,13 @@
+{% extends "base.j2" %}
+{% block content %}
+<article class="note-page">
+  <a class="back-link" href="../blog.html">← Notes</a>
+  <header>
+    {% if note.tags %}<p class="eyebrow">{{ note.tags | join(' · ') }}</p>{% endif %}
+    <h1>{{ note.title }}</h1>
+    {% if note.date %}<p class="note-page__date">{{ note.date | format_date }}</p>{% endif %}
+    {% if note.summary %}<p class="note-page__summary">{{ note.summary }}</p>{% endif %}
+  </header>
+  <div class="markdown-content note-page__body">{{ note.body_html }}</div>
+</article>
+{% endblock %}

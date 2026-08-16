@@ -1,5 +1,7 @@
 # Custom
 *.ipynb
+.DS_Store
+**/.DS_Store
 # Ignore HTML by default, but keep site entry points and posts
 *.html
 !index.html

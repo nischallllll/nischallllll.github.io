@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (error) {}
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page_description }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>{{ page_title }}</title>
+  <link rel="icon" href="{{ asset_prefix }}src/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset_prefix }}src/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="site-brand" href="{{ asset_prefix }}index.html">{{ profile.name }}</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="{{ asset_prefix }}index.html"{% if nav_current == 'home' %} aria-current="page"{% endif %}>Home</a>
+        <a href="{{ asset_prefix }}publications.html"{% if nav_current == 'publications' %} aria-current="page"{% endif %}>Research</a>
+        <a href="{{ asset_prefix }}talks.html"{% if nav_current == 'talks' %} aria-current="page"{% endif %}>Talks</a>
+        <a href="{{ asset_prefix }}work.html"{% if nav_current == 'projects' %} aria-current="page"{% endif %}>Projects</a>
+        <a href="{{ asset_prefix }}blog.html"{% if nav_current == 'notes' %} aria-current="page"{% endif %}>Notes</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p class="site-footer__name">{{ profile.name }}</p>
+      <p>{{ profile.location }}</p>
+    </div>
+    <div class="site-footer__links">
+      <a href="mailto:{{ profile.email }}">Email</a>
+      {% for link in profile.social | default([]) %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+      {% endfor %}
+      <a href="{{ asset_prefix }}{{ home.cv }}" download>CV</a>
+    </div>
+    <p>© <span data-year></span></p>
+  </footer>
+  <script src="{{ asset_prefix }}src/js/site.js"></script>
+</body>
+</html>
