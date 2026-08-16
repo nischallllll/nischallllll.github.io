@@ -11,7 +11,6 @@ cv: assets/Nischal_Bhandari_CV.pdf
 
 ## Training
 
-=======
 <div class="training-layout">
   <div class="training__timeline">
     <article class="training__item">
