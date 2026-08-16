@@ -60,24 +60,36 @@
   <a class="text-link" href="blog.html">All notes <span aria-hidden="true">→</span></a>
 </section>
 <section class="cv-section" id="cv" aria-labelledby="cv-title">
-  <div class="cv-section__inner">
-    <div class="cv-section__header">
-      <h2 id="cv-title">CV</h2>
-    </div>
-    <div class="cv-section__layout">
-      <div class="cv-section__viewer">
-        <object class="cv-section__embed" data="{{ home.cv }}" type="application/pdf" aria-label="Nischal Bhandari CV">
-          <p>Your browser does not support embedded PDFs. <a href="{{ home.cv }}">Download the CV</a>.</p>
-        </object>
-      </div>
-      <div class="cv-section__panel">
-        <p class="cv-section__summary">Research interests across computational biology, cancer genomics, single-cell analysis, and quantitative methods.</p>
-        <div class="cv-section__actions">
-          <a class="button button--solid" href="{{ home.cv }}" target="_blank" rel="noopener noreferrer">View full CV</a>
-          <a class="button" href="{{ home.cv }}" download>Download PDF</a>
-        </div>
-      </div>
-    </div>
+  <div class="section-heading">
+    <h2 id="cv-title">CV</h2>
+  </div>
+
+  <div class="cv-section__viewer">
+    <object
+      class="cv-section__embed"
+      data="{{ home.cv }}"
+      type="application/pdf"
+      aria-label="Nischal Bhandari CV">
+      <p>
+        Your browser does not support embedded PDFs.
+        <a href="{{ home.cv }}">Download the CV</a>.
+      </p>
+    </object>
+  </div>
+
+  <div class="cv-section__actions">
+    <a class="button button--solid"
+       href="{{ home.cv }}"
+       target="_blank"
+       rel="noopener noreferrer">
+      View full CV
+    </a>
+
+    <a class="button"
+       href="{{ home.cv }}"
+       download>
+      Download PDF
+    </a>
   </div>
 </section>
 {% endif %}

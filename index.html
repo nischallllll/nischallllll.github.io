@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en" data-theme="light">
+
 <head>
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) document.documentElement.dataset.theme = savedTheme;
-    } catch (error) {}
+    } catch (error) { }
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,9 +18,12 @@
   <link rel="icon" href="src/images/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="src/css/site.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" data-header>
@@ -38,122 +42,163 @@
     </div>
   </header>
   <main id="main">
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero__art" aria-hidden="true">
-    <svg viewBox="0 0 700 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path class="hero__strand" d="M50 290C138 330 178 74 278 130C374 184 414 358 516 164C566 70 620 74 664 118" />
-      <path class="hero__strand hero__strand--soft" d="M50 100C140 62 182 332 282 280C378 230 418 52 520 256C568 350 622 342 664 302" />
-      <path class="hero__rung" d="M119 180L158 221M203 150L238 244M312 175L346 230M423 182L454 224M538 169L570 226" />
-      <g class="hero__cells">
-        <circle cx="496" cy="306" r="42" /><circle cx="496" cy="306" r="12" />
-        <circle cx="582" cy="278" r="27" /><circle cx="582" cy="278" r="8" />
-        <circle cx="620" cy="344" r="36" /><circle cx="620" cy="344" r="10" />
-      </g>
-    </svg>
-  </div>
-  <div class="hero__content">
-    <p class="eyebrow">Nepal → USA</p>
-    <h1 id="hero-title">Hi, I am Nischal</h1>
-    <p class="hero__summary">I am an IQ Bio fellow at CU Boulder. I work at the intersection of genomics, statistics, and computation. My goal is to understand how cells change as cancer progresses and to build useful tools for studying those changes at scale.</p>
-    <ul class="topic-list" aria-label="Research themes">
-<li>Disease mechanisms</li><li>Single-cell states</li><li>Spatial tissue maps</li>    </ul>
-  </div>
-</section>
-
-<article class="markdown-content home-content">
-  <h2>Training</h2>
-<h3>Aug 2026 — Present · University of Colorado Boulder</h3>
-<p>Interdisciplinary Quantitative Biology Fellow.</p>
-<h3>Jun 2024 — Jun 2026 · Cold Spring Harbor Laboratory</h3>
-<p>Computational biologist in the Westcott Lab, working across cancer genomics, single-cell biology, spatial methods, and integrative modeling to understand the benign-malignant transition in colorectal cancer.</p>
-<h3>Jun — Aug 2023 · New York Genome Center</h3>
-<p>Bioinformatics intern, contributing to analysis pipelines, quality control, and collaborative research.</p>
-<h3>2020 — 2024 · Ramapo College of New Jersey</h3>
-<p>B.S. in Bioinformatics and Data science.</p>
-<h2>Research areas</h2>
-<ul>
-<li><strong>Genomics</strong> Cancer progression and heterogeneity from high-throughput data.</li>
-<li><strong>Single-cell</strong> RNA-seq and cellular state in disease context.</li>
-<li><strong>Spatial</strong> Tissue organization and neighborhood-level transcriptomics.</li>
-<li><strong>Tools</strong> Reproducible pipelines and software for biological analysis.</li>
-</ul>
-</article>
-
-<section class="featured-section" id="research" aria-labelledby="research-title">
-  <div class="section-heading">
-    <h2 id="research-title">Recent publications</h2>
-  </div>
-  <div class="record-grid">
-<article class="record-card reveal">
-  <a class="record-card__link" href="https://www.biorxiv.org/content/10.1101/2025.05.30.657122v2.abstract" target="_blank" rel="noopener noreferrer">
-    <div class="record-card__meta">
-<span>bioRxiv preprint</span><time>2025</time>    </div>
-    <h2>Targeting Neutrophil Extracellular Traps to Inhibit Colon Cancer Tumor Necrosis and Metastasis</h2>
-<p class="record-card__authors">E. Gazzara, et al.</p>    <ul class="tag-list" aria-label="Topics">
-<li>Preprint</li><li>Cancer genomics</li><li>Spatial transcriptomics</li>    </ul>
-<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article>  </div>
-  <a class="text-link" href="publications.html">All publications <span aria-hidden="true">→</span></a>
-</section>
-
-<section class="featured-section featured-section--compact" aria-labelledby="talks-title">
-  <div class="section-heading">
-    <h2 id="talks-title">Recent talks</h2>
-  </div>
-  <div class="record-grid">
-<article class="record-card reveal">
-  <a class="record-card__link" href="https://www.singlecellbio.org/space-club" target="_blank" rel="noopener noreferrer">
-    <div class="record-card__meta">
-<span>SPACE Club, CSHL</span><time>2025</time>    </div>
-    <h2>Resolving the Spatial Dynamics of Early Cancer Progression</h2>
-    <ul class="tag-list" aria-label="Topics">
-<li>Invited</li><li>Oral presentation</li>    </ul>
-<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article>  </div>
-  <a class="text-link" href="talks.html">All talks <span aria-hidden="true">→</span></a>
-</section>
-
-<section class="featured-section featured-section--compact" aria-labelledby="notes-title">
-  <div class="section-heading">
-    <h2 id="notes-title">Notes</h2>
-  </div>
-  <div class="record-grid">
-<article class="record-card reveal">
-  <a class="record-card__link" href="posts/books_2026.html">
-    <div class="record-card__meta">
-<time>Mar 01, 2026</time>    </div>
-    <h2>Reading list 2026</h2>
-<p class="record-card__summary">Reading list 2026</p>    <ul class="tag-list" aria-label="Topics">
-<li>Reading list</li>    </ul>
-<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article><article class="record-card reveal">
-  <a class="record-card__link" href="posts/Essays_to_read.html">
-    <div class="record-card__meta">
-<time>Jan 27, 2026</time>    </div>
-    <h2>Essays to Read - 2026</h2>
-<p class="record-card__summary">A curated list of essays</p>    <ul class="tag-list" aria-label="Topics">
-<li>Reading list</li>    </ul>
-<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article>  </div>
-  <a class="text-link" href="blog.html">All notes <span aria-hidden="true">→</span></a>
-</section>
-<section class="cv-section" id="cv" aria-labelledby="cv-title">
-  <div class="cv-section__inner">
-    <div class="cv-section__header">
-      <h2 id="cv-title">CV</h2>
-    </div>
-    <div class="cv-section__layout">
-      <div class="cv-section__viewer">
-        <object class="cv-section__embed" data="assets/Nischal_Bhandari_CV.pdf" type="application/pdf" aria-label="Nischal Bhandari CV">
-          <p>Your browser does not support embedded PDFs. <a href="assets/Nischal_Bhandari_CV.pdf">Download the CV</a>.</p>
-        </object>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 700 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="hero__strand" d="M50 290C138 330 178 74 278 130C374 184 414 358 516 164C566 70 620 74 664 118" />
+          <path class="hero__strand hero__strand--soft"
+            d="M50 100C140 62 182 332 282 280C378 230 418 52 520 256C568 350 622 342 664 302" />
+          <path class="hero__rung"
+            d="M119 180L158 221M203 150L238 244M312 175L346 230M423 182L454 224M538 169L570 226" />
+          <g class="hero__cells">
+            <circle cx="496" cy="306" r="42" />
+            <circle cx="496" cy="306" r="12" />
+            <circle cx="582" cy="278" r="27" />
+            <circle cx="582" cy="278" r="8" />
+            <circle cx="620" cy="344" r="36" />
+            <circle cx="620" cy="344" r="10" />
+          </g>
+        </svg>
       </div>
-      <div class="cv-section__panel">
-        <p class="cv-section__summary">Research interests across computational biology, cancer genomics, single-cell analysis, and quantitative methods.</p>
-        <div class="cv-section__actions">
-          <a class="button button--solid" href="assets/Nischal_Bhandari_CV.pdf" target="_blank" rel="noopener noreferrer">View full CV</a>
-          <a class="button" href="assets/Nischal_Bhandari_CV.pdf" download>Download PDF</a>
+      <div class="hero__content">
+        <p class="eyebrow">Nepal → USA</p>
+        <h1 id="hero-title">Hi, I am Nischal</h1>
+        <p class="hero__summary">I am an IQ Bio fellow at CU Boulder. I work at the intersection of genomics,
+          statistics, and computation. My goal is to understand how cells change as cancer progresses and to build
+          useful tools for studying those changes at scale.</p>
+        <ul class="topic-list" aria-label="Research themes">
+          <li>Disease mechanisms</li>
+          <li>Single-cell states</li>
+          <li>Spatial tissue maps</li>
+        </ul>
+      </div>
+    </section>
+
+    <article class="markdown-content home-content">
+      <h2>Training</h2>
+      <h3>Aug 2026 — Present · University of Colorado Boulder</h3>
+      <p>Interdisciplinary Quantitative Biology Fellow.</p>
+      <h3>Jun 2024 — Jun 2026 · Cold Spring Harbor Laboratory</h3>
+      <p>Computational biologist in the Westcott Lab, working across cancer genomics, single-cell biology, spatial
+        methods, and integrative modeling to understand the benign-malignant transition in colorectal cancer.</p>
+      <h3>Jun — Aug 2023 · New York Genome Center</h3>
+      <p>Bioinformatics intern, contributing to analysis pipelines, quality control, and collaborative research.</p>
+      <h3>2020 — 2024 · Ramapo College of New Jersey</h3>
+      <p>B.S. in Bioinformatics and Data science.</p>
+      <h2>Research areas</h2>
+      <ul>
+        <li><strong>Genomics</strong> Cancer progression and heterogeneity from high-throughput data.</li>
+        <li><strong>Single-cell</strong> RNA-seq and cellular state in disease context.</li>
+        <li><strong>Spatial</strong> Tissue organization and neighborhood-level transcriptomics.</li>
+        <li><strong>Tools</strong> Reproducible pipelines and software for biological analysis.</li>
+      </ul>
+    </article>
+
+    <section class="featured-section" id="research" aria-labelledby="research-title">
+      <div class="section-heading">
+        <h2 id="research-title">Recent publications</h2>
+      </div>
+      <div class="record-grid">
+        <article class="record-card reveal">
+          <a class="record-card__link" href="https://www.biorxiv.org/content/10.1101/2025.05.30.657122v2.abstract"
+            target="_blank" rel="noopener noreferrer">
+            <div class="record-card__meta">
+              <span>bioRxiv preprint</span><time>2025</time>
+            </div>
+            <h2>Targeting Neutrophil Extracellular Traps to Inhibit Colon Cancer Tumor Necrosis and Metastasis</h2>
+            <p class="record-card__authors">E. Gazzara, et al.</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Preprint</li>
+              <li>Cancer genomics</li>
+              <li>Spatial transcriptomics</li>
+            </ul>
+            <span class="record-card__action">Open <span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
+      </div>
+      <a class="text-link" href="publications.html">All publications <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="featured-section featured-section--compact" aria-labelledby="talks-title">
+      <div class="section-heading">
+        <h2 id="talks-title">Recent talks</h2>
+      </div>
+      <div class="record-grid">
+        <article class="record-card reveal">
+          <a class="record-card__link" href="https://www.singlecellbio.org/space-club" target="_blank"
+            rel="noopener noreferrer">
+            <div class="record-card__meta">
+              <span>SPACE Club, CSHL</span><time>2025</time>
+            </div>
+            <h2>Resolving the Spatial Dynamics of Early Cancer Progression</h2>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Invited</li>
+              <li>Oral presentation</li>
+            </ul>
+            <span class="record-card__action">Open <span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
+      </div>
+      <a class="text-link" href="talks.html">All talks <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="featured-section featured-section--compact" aria-labelledby="notes-title">
+      <div class="section-heading">
+        <h2 id="notes-title">Notes</h2>
+      </div>
+      <div class="record-grid">
+        <article class="record-card reveal">
+          <a class="record-card__link" href="posts/books_2026.html">
+            <div class="record-card__meta">
+              <time>Mar 01, 2026</time>
+            </div>
+            <h2>Reading list 2026</h2>
+            <p class="record-card__summary">Reading list 2026</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Reading list</li>
+            </ul>
+            <span class="record-card__action">Open <span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
+        <article class="record-card reveal">
+          <a class="record-card__link" href="posts/Essays_to_read.html">
+            <div class="record-card__meta">
+              <time>Jan 27, 2026</time>
+            </div>
+            <h2>Essays to Read - 2026</h2>
+            <p class="record-card__summary">A curated list of essays</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Reading list</li>
+            </ul>
+            <span class="record-card__action">Open <span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
+      </div>
+      <a class="text-link" href="blog.html">All notes <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="cv-section" id="cv" aria-labelledby="cv-title">
+      <div class="cv-section__inner">
+        <div class="cv-section__header">
+          <h2 id="cv-title">CV</h2>
+        </div>
+        <div class="cv-section__layout">
+          <div class="cv-section__viewer">
+            <object class="cv-section__embed" data="assets/Nischal_Bhandari_CV.pdf" type="application/pdf"
+              aria-label="Nischal Bhandari CV">
+              <p>Your browser does not support embedded PDFs. <a href="assets/Nischal_Bhandari_CV.pdf">Download the
+                  CV</a>.</p>
+            </object>
+          </div>
+          <div class="cv-section__panel">
+            <div class="cv-section__actions">
+              <a class="button button--solid" href="assets/Nischal_Bhandari_CV.pdf" target="_blank"
+                rel="noopener noreferrer">View full CV</a>
+              <a class="button" href="assets/Nischal_Bhandari_CV.pdf" download>Download PDF</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
   </main>
   <footer class="site-footer">
     <div>
@@ -170,4 +215,5 @@
   </footer>
   <script src="src/js/site.js"></script>
 </body>
+
 </html>
