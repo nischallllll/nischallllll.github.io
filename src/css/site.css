@@ -333,6 +333,64 @@ html[data-theme="dark"] .theme-toggle span {
   margin: 0.55rem 0 0 1.12rem;
   max-width: 43rem;
 }
+.training-layout {
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.8fr);
+  margin-top: 2rem;
+}
+.training__timeline {
+  display: grid;
+  gap: 1rem;
+}
+.training__item {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1rem 1.1rem 1.05rem;
+}
+.training__period {
+  color: var(--accent);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.training__item h3 {
+  border-left: 0;
+  font: 500 clamp(1.45rem, 2vw, 1.8rem)/1.2 var(--serif);
+  letter-spacing: -0.04em;
+  margin: 0.55rem 0 0.35rem;
+  padding-left: 0;
+}
+.training__item p:last-child {
+  color: var(--muted);
+  margin: 0;
+}
+.training__art {
+  align-items: center;
+  background: radial-gradient(circle at center, rgba(109, 160, 153, 0.14), transparent 58%);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  color: var(--accent);
+  display: flex;
+  justify-content: center;
+  min-height: 22rem;
+  padding: 1rem;
+}
+.training__art svg {
+  height: auto;
+  max-height: 24rem;
+  width: min(100%, 18rem);
+}
+.training__helix path {
+  stroke-width: 1.8;
+}
+.training__nodes circle {
+  stroke-linecap: round;
+}
 .markdown-content h2 + ul {
   display: grid;
   gap: 0.75rem;
@@ -363,6 +421,61 @@ html[data-theme="dark"] .theme-toggle span {
   text-underline-offset: 0.16em;
 }
 
+.cv-section {
+  margin: 0 auto;
+  max-width: 74rem;
+  padding: 0 2rem 5rem;
+}
+.cv-section__inner {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--line);
+  border-radius: 1.75rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+.cv-section__header {
+  align-items: end;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.cv-section__header h2 {
+  font: 500 clamp(2.2rem, 4vw, 3.4rem)/1 var(--serif);
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+.cv-section__layout {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.8fr);
+}
+.cv-section__viewer {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.cv-section__embed {
+  display: block;
+  min-height: 32rem;
+  width: 100%;
+}
+.cv-section__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.cv-section__summary {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+.cv-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
 .featured-section {
   border-top: 1px solid var(--line);
   padding-bottom: 5rem;
@@ -578,10 +691,13 @@ a.record-card__link:hover {
   .featured-section,
   .collection-page,
   .page-hero,
-  .note-page {
+  .note-page,
+  .cv-section {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+  .training-layout,
+  .cv-section__layout,
   .markdown-content h2 + ul,
   .record-grid,
   .record-grid--full { grid-template-columns: 1fr; }
