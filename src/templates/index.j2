@@ -23,6 +23,21 @@
     <p class="eyebrow">{{ home.eyebrow }}</p>
     <h1 id="hero-title">{{ home.title }}</h1>
     <p class="hero__summary">{{ home.summary }}</p>
+    <div class="hero__actions">
+      <a class="button button--solid" href="#research">View research</a>
+      <a class="button" href="{{ home.cv }}" download>Download CV</a>
+    </div>
+    <div class="hero__terminal" aria-label="Research focus terminal">
+      <div class="terminal__header" aria-hidden="true">
+        <span class="terminal__dot"></span>
+        <span class="terminal__dot"></span>
+        <span class="terminal__dot"></span>
+      </div>
+      <div class="terminal__body">
+        <span class="terminal__label">focus</span>
+        <code>cell_state ∩ statistics ∩ computation</code>
+      </div>
+    </div>
     <ul class="topic-list" aria-label="Research themes">
       {% for theme in home.themes | default([]) %}<li>{{ theme }}</li>{% endfor %}
     </ul>
