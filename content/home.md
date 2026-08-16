@@ -52,7 +52,6 @@ B.S. in Bioinformatics and Data science.
     </article>
   </div>
 </div>
->>>>>>> agents/stylish-themed-readability-enhancements
 
 ## Research areas
 
