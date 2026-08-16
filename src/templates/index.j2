@@ -19,7 +19,6 @@
     <p class="hero__summary">{{ home.summary }}</p>
     
     <div class="hero__actions">
-      <!-- Fixed the broken div and added a placeholder CTA to match the structure -->
       <a class="button button--primary" href="#research">View My Work</a>
     </div>
   </div>
@@ -75,11 +74,10 @@
   </div>
 
   <div class="cv-section__actions">
-    <a class="button button--solid" href="{{ home.cv }}" target="_blank" rel="noopener noreferrer">
-      View full CV
+    <a class="button button--primary" href="{{ home.cv }}" target="_blank" rel="noopener noreferrer">
+      View Full CV
     </a>
-    <!-- Added an outline modifier class to visually separate the primary and secondary button -->
-    <a class="button button--outline" href="{{ home.cv }}" download>
+    <a class="button" href="{{ home.cv }}" download>
       Download PDF
     </a>
   </div>
