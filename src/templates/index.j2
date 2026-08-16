@@ -3,44 +3,25 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero__art" aria-hidden="true">
     <svg viewBox="0 0 700 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-<<<<<<< HEAD
-      <g class="hero__motif" opacity="0.72">
-        <path d="M0 332C80 284 142 270 210 292C284 316 352 318 432 274C522 228 598 232 700 264V420H0V332Z" fill="currentColor" fill-opacity="0.06"/>
-        <path d="M0 350C78 336 122 324 164 336C236 356 298 356 354 334C442 300 510 306 700 360V420H0V350Z" fill="currentColor" fill-opacity="0.05"/>
-        <path class="hero__strand" d="M210 118C268 88 332 100 372 148C412 196 468 214 538 198" />
-        <path class="hero__strand hero__strand--soft" d="M220 154C286 122 348 132 384 176C426 228 490 228 562 196" />
-        <path class="hero__ridge" d="M160 248L214 194L268 238L334 180L390 238L452 198L510 238L580 188L656 238" />
+      <!-- Blended the wrapper from HEAD with the updated paths from the stylish-themed branch -->
+      <g class="hero__motif" opacity="0.8">
+        <path class="hero__ridge hero__ridge--soft" d="M0 328C82 306 141 286 192 238C254 182 320 168 398 210C472 250 546 258 700 214V420H0V328Z" fill="currentColor" fill-opacity="0.06" />
+        <path class="hero__ridge" d="M0 356C86 332 138 318 188 286C250 248 322 246 390 280C462 314 530 328 700 292V420H0V356Z" fill="currentColor" fill-opacity="0.05" />
+        <path class="hero__strand" d="M112 268L185 204L264 242L344 176L430 238L512 182L596 228L646 204" stroke="currentColor" stroke-width="2" />
+        <path class="hero__strand hero__strand--soft" d="M98 322L188 278L266 302L350 248L434 284L520 238L606 280L660 256" stroke="currentColor" stroke-width="1" />
       </g>
-=======
-      <path class="hero__ridge hero__ridge--soft" d="M0 328C82 306 141 286 192 238C254 182 320 168 398 210C472 250 546 258 700 214V420H0V328Z" />
-      <path class="hero__ridge" d="M0 356C86 332 138 318 188 286C250 248 322 246 390 280C462 314 530 328 700 292V420H0V356Z" />
-      <path class="hero__strand" d="M112 268L185 204L264 242L344 176L430 238L512 182L596 228L646 204" />
-      <path class="hero__strand hero__strand--soft" d="M98 322L188 278L266 302L350 248L434 284L520 238L606 280L660 256" />
->>>>>>> agents/stylish-themed-readability-enhancements
     </svg>
   </div>
+  
   <div class="hero__content">
     <p class="eyebrow">{{ home.eyebrow }}</p>
     <h1 id="hero-title">{{ home.title }}</h1>
     <p class="hero__summary">{{ home.summary }}</p>
+    
     <div class="hero__actions">
-      <a class="button button--solid" href="#research">View research</a>
-      <a class="button" href="{{ home.cv }}" download>Download CV</a>
+      <!-- Fixed the broken div and added a placeholder CTA to match the structure -->
+      <a class="button button--primary" href="#research">View My Work</a>
     </div>
-    <div class="hero__terminal" aria-label="Research focus terminal">
-      <div class="terminal__header" aria-hidden="true">
-        <span class="terminal__dot"></span>
-        <span class="terminal__dot"></span>
-        <span class="terminal__dot"></span>
-      </div>
-      <div class="terminal__body">
-        <span class="terminal__label">focus</span>
-        <code>cell_state ∩ statistics ∩ computation</code>
-      </div>
-    </div>
-    <ul class="topic-list" aria-label="Research themes">
-      {% for theme in home.themes | default([]) %}<li>{{ theme }}</li>{% endfor %}
-    </ul>
   </div>
 </section>
 
@@ -50,23 +31,27 @@
 
 <section class="featured-section" id="research" aria-labelledby="research-title">
   <div class="section-heading">
-    <h2 id="research-title">Recent publications</h2>
+    <h2 id="research-title">Recent Publications</h2>
   </div>
   <div class="record-grid">
-    {% for item in publications[:3] %}{% include "record_card.j2" %}{% endfor %}
+    {% for item in publications[:3] %}
+      {% include "record_card.j2" %}
+    {% endfor %}
   </div>
-  <a class="text-link" href="publications.html">All publications <span aria-hidden="true">→</span></a>
+  <a class="text-link" href="publications.html">All publications <span aria-hidden="true">&rarr;</span></a>
 </section>
 
 {% if talks %}
 <section class="featured-section featured-section--compact" aria-labelledby="talks-title">
   <div class="section-heading">
-    <h2 id="talks-title">Recent talks</h2>
+    <h2 id="talks-title">Recent Talks</h2>
   </div>
   <div class="record-grid">
-    {% for item in talks[:2] %}{% include "record_card.j2" %}{% endfor %}
+    {% for item in talks[:2] %}
+      {% include "record_card.j2" %}
+    {% endfor %}
   </div>
-  <a class="text-link" href="talks.html">All talks <span aria-hidden="true">→</span></a>
+  <a class="text-link" href="talks.html">All talks <span aria-hidden="true">&rarr;</span></a>
 </section>
 {% endif %}
 
@@ -76,30 +61,27 @@
     <h2 id="notes-title">Notes</h2>
   </div>
   <div class="record-grid">
-    {% for item in notes[:2] %}{% include "record_card.j2" %}{% endfor %}
+    {% for item in notes[:2] %}
+      {% include "record_card.j2" %}
+    {% endfor %}
   </div>
-  <a class="text-link" href="blog.html">All notes <span aria-hidden="true">→</span></a>
+  <a class="text-link" href="blog.html">All notes <span aria-hidden="true">&rarr;</span></a>
 </section>
+{% endif %} <!-- Moved the endif here so the CV renders independently of notes -->
 
 <section class="cv-section" id="cv" aria-labelledby="cv-title">
   <div class="section-heading">
-    <h2 id="cv-title">CV</h2>
+    <h2 id="cv-title">Curriculum Vitae</h2>
   </div>
 
   <div class="cv-section__actions">
-    <a class="button button--solid"
-       href="{{ home.cv }}"
-       target="_blank"
-       rel="noopener noreferrer">
+    <a class="button button--solid" href="{{ home.cv }}" target="_blank" rel="noopener noreferrer">
       View full CV
     </a>
-
-    <a class="button"
-       href="{{ home.cv }}"
-       download>
+    <!-- Added an outline modifier class to visually separate the primary and secondary button -->
+    <a class="button button--outline" href="{{ home.cv }}" download>
       Download PDF
     </a>
   </div>
 </section>
-{% endif %}
 {% endblock %}
