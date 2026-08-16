@@ -165,7 +165,7 @@ html[data-theme="dark"] .theme-toggle span {
   right: 0;
   z-index: -1;
 }
-.hero__content { max-width: 43rem; }
+.hero__content { max-width: 100%; }
 .eyebrow {
   color: var(--accent);
   font-size: 0.72rem;
@@ -184,10 +184,11 @@ html[data-theme="dark"] .theme-toggle span {
   max-width: 11ch;
 }
 .hero__summary {
-  color: var(--muted);
-  font-size: clamp(1.05rem, 1.7vw, 1.18rem);
+  color: #7a8a8d;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.7;
   margin: 1.7rem 0 0;
-  max-width: 42rem;
+  max-width: 100%;
 }
 .topic-list {
   display: flex;
@@ -301,58 +302,26 @@ html[data-theme="dark"] .theme-toggle span {
   padding-top: clamp(3.5rem, 7vw, 6rem);
 }
 .markdown-content h2 + p {
-  color: var(--muted);
+  color: #7a8a8d;
   font-size: 1.08rem;
+  line-height: 1.8;
   margin-top: 1.15rem;
-  max-width: 48rem;
+  max-width: 100%;
 }
 .markdown-content h3 {
-  border-left: 2px solid var(--accent);
+  border-left: 1px solid var(--line);
+  color: var(--text);
   font: 500 1.28rem/1.2 var(--serif);
   letter-spacing: -0.025em;
   margin: 2rem 0 0;
-  padding-left: 1rem;
+  padding-left: 0.9rem;
 }
 .markdown-content h3 + p {
-  color: var(--muted);
-  margin: 0.55rem 0 0 1.12rem;
-  max-width: 43rem;
-}
-.training {
-  align-items: flex-start;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 170px minmax(0, 1fr);
-  margin-top: 2rem;
-}
-.training__art {
-  align-items: center;
-  color: var(--accent);
-  display: flex;
-  justify-content: center;
-  min-height: 18rem;
-  opacity: 0.9;
-  padding-top: 0.4rem;
-}
-.training__art svg {
-  height: auto;
-  max-height: 18rem;
-  width: 100%;
-}
-.training__timeline {
-  display: grid;
-  gap: 0.25rem;
-}
-.training__timeline > h3 {
-  font: 500 clamp(1.25rem, 1.8vw, 1.8rem)/1.2 var(--serif);
-  letter-spacing: -0.04em;
-  margin: 0;
-  padding-left: 0;
-}
-.training__timeline > h3 + p {
-  color: var(--muted);
-  margin: 0.3rem 0 1.5rem;
-  max-width: 42rem;
+  color: #7a8a8d;
+  font-size: 1.04rem;
+  line-height: 1.8;
+  margin: 0.55rem 0 0 0.9rem;
+  max-width: 100%;
 }
 .markdown-content h2 + ul {
   display: grid;
@@ -658,12 +627,10 @@ a.record-card__link:hover {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
-  .training,
   .cv-section__layout,
   .markdown-content h2 + ul,
   .record-grid,
   .record-grid--full { grid-template-columns: 1fr; }
-  .training__art { min-height: 12rem; }
   .record-card__link { min-height: 0; }
   .site-footer { grid-template-columns: 1fr; padding: 2rem 1.25rem; }
 }

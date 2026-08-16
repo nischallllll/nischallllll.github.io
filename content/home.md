@@ -10,17 +10,22 @@ cv: assets/Nischal_Bhandari_CV.pdf
 ---
 
 ## Training
-    <h3>Aug 2026 — Present · University of Colorado Boulder</h3>
-    <p>Interdisciplinary Quantitative Biology Fellow.</p>
 
-    <h3>Jun 2024 — Jun 2026 · Cold Spring Harbor Laboratory</h3>
-    <p>Computational biologist in the Westcott Lab, working across cancer genomics, single-cell biology, spatial methods, and integrative modeling to understand the benign-malignant transition in colorectal cancer.</p>
+### Aug 2026 — Present · University of Colorado Boulder
 
-    <h3>Jun — Aug 2023 · New York Genome Center</h3>
-    <p>Bioinformatics intern, contributing to analysis pipelines, quality control, and collaborative research.</p>
+Interdisciplinary Quantitative Biology Fellow.
 
-    <h3>2020 — 2024 · Ramapo College of New Jersey</h3>
-    <p>B.S. in Bioinformatics and Data science.</p>
+### Jun 2024 — Jun 2026 · Cold Spring Harbor Laboratory
+
+Computational biologist in the Westcott Lab, working across cancer genomics, single-cell biology, spatial methods, and integrative modeling to understand the benign-malignant transition in colorectal cancer.
+
+### Jun — Aug 2023 · New York Genome Center
+
+Bioinformatics intern, contributing to analysis pipelines, quality control, and collaborative research.
+
+### 2020 — 2024 · Ramapo College of New Jersey
+
+B.S. in Bioinformatics and Data science.
 
 ## Research areas
 
