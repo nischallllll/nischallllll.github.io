@@ -1,6 +1,6 @@
 ---
 eyebrow: Nepal → USA
-title: Hello, I am Nischal.
+title: Hi, I am Nischal
 summary: I am an IQ Bio fellow at CU Boulder. I work at the intersection of genomics, statistics, and computation. My goal is to understand how cells change as cancer progresses and to build useful tools for studying those changes at scale.
 themes:
   - Disease mechanisms
