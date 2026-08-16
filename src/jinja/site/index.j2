@@ -91,12 +91,15 @@
           <circle class="section-ornament__bead" cx="194" cy="78" r="4" />
         </svg>
       </div>
-      <h2 id="lab-title" class="section-block__title">Current</h2>
-      <p class="section-block__deck">Westcott Lab · Cold Spring Harbor Laboratory</p>
+      <div class="section-block__head section-block__head--editorial">
+        <div>
+          <p class="section-block__kicker">Current appointment</p>
+          <h2 id="lab-title" class="section-block__title">Westcott Lab</h2>
+        </div>
+      </div>
       <div class="lab-card">
         <img src="config/assets/icons/cshl_logo_alternate-RGB.png" height="40" alt="" class="lab-card__logo">
         <div class="lab-card__body">
-          <p class="lab-card__role">Computational Biologist</p>
           <ul class="lab-card__list">
             <li>Genomic basis of colon cancer and tumor heterogeneity</li>
             <li>Transcriptomic and cellular drivers of progression</li>
@@ -109,7 +112,6 @@
     {% include 'site/publications_landing.j2' %}
 
     {% include 'site/talks_landing.j2' %}
-    
 
     <section id="training" class="section-block section-block--training reveal" aria-labelledby="training-title">
       <div class="section-ornament section-ornament--mod" aria-hidden="true">
@@ -174,8 +176,12 @@
       </div>
     </section>
 
-    <section id="cv" class="section-block reveal" aria-labelledby="cv-title">
-        <h2 id="cv-title" class="section-block__title">Curriculum vitae</h2>
+    <section id="cv" class="section-block section-block--cv reveal" aria-labelledby="cv-title">
+      <div class="cv-panel">
+        <div>
+          <p class="section-block__kicker">Selected materials</p>
+          <h2 id="cv-title" class="section-block__title">CV</h2>
+        </div>
         <div class="pdf-cv-button-container pdf-cv-button-container--single">
           <a href="config/assets/Nischal_Bhandari_CV.pdf" class="pdf-cv-button" download>
             <ion-icon name="download-outline"></ion-icon>
@@ -186,7 +192,8 @@
             <span>View</span>
           </button>
         </div>
-      </section>
+      </div>
+    </section>
 
     <section id="focus" class="section-block reveal" aria-labelledby="focus-title">
       <div class="section-ornament section-ornament--network" aria-hidden="true">
@@ -212,29 +219,25 @@
         <li class="focus-item"><span class="focus-item__tag">Tools</span> Pipelines and software for reproducible
           analysis.</li>
       </ul>
-    </section>
-
-    {% if show_portfolio_on_home %}
-    {% include 'site/projects_landing.j2' %}
-    {% endif %}
-
-    <section id="tools" class="section-block reveal" aria-labelledby="tools-title">
-      <h2 id="tools-title" class="section-block__title">Stack</h2>
-      <ul class="tools-row">
+      <div class="research-toolkit" aria-label="Research toolkit">
+        <p class="research-toolkit__label">Toolkit</p>
+        <ul class="tools-row">
         <li><img src="config/assets/icons/python.svg" alt="Python" width="44" height="44" loading="lazy"></li>
         <li><img src="config/assets/icons/pandas.svg" alt="Pandas" width="44" height="44" loading="lazy"></li>
         <li><img src="config/assets/icons/jupyter.svg" alt="Jupyter" width="44" height="44" loading="lazy"></li>
         <li><img src="config/assets/icons/git.svg" alt="Git" width="44" height="44" loading="lazy"></li>
         <li><img src="config/assets/icons/linux.svg" alt="Linux" width="44" height="44" loading="lazy"></li>
-      </ul>
+        </ul>
+      </div>
     </section>
 
-    {% if show_blog_on_home %}
-    {% include 'site/blog_landing.j2' %}
-    {% endif %}
-    
+{% if show_portfolio_on_home %}
+{% include 'site/projects_landing.j2' %}
+{% endif %}
 
-    
+{% if show_blog_on_home %}
+{% include 'site/blog_landing.j2' %}
+{% endif %}
 
   </main>
 

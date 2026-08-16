@@ -2226,6 +2226,8 @@ body { letter-spacing: -0.01em; }
 .focus-item { background: color-mix(in srgb, var(--site-surface) 88%, transparent); border: 1px solid var(--site-border); border-radius: 2px; padding: 23px; }
 .focus-item:hover { border-color: var(--site-accent); transform: none; }
 .focus-item__tag { color: var(--site-accent); font-size: 0.72rem; letter-spacing: 0.09em; }
+.research-toolkit { align-items: center; border-top: 1px solid var(--site-border); display: flex; flex-wrap: wrap; gap: 18px 28px; margin-top: 32px; padding-top: 24px; }
+.research-toolkit__label { color: var(--site-muted); font-family: "DM Sans", system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; margin: 0; text-transform: uppercase; }
 .tools-row { gap: 12px; }
 .tools-row li { background: color-mix(in srgb, var(--site-surface) 82%, transparent); border: 1px solid var(--site-border); border-radius: 50%; height: 60px; width: 60px; }
 .tools-row li:hover { border-color: var(--site-accent); transform: translateY(-2px); }
@@ -2241,6 +2243,10 @@ body { letter-spacing: -0.01em; }
 .site-single--subpage { padding-top: clamp(52px, 8vw, 96px); }
 .subpage-section { border-top: 0; padding-top: 0; }
 .subpage-back a { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; }
+.section-block--cv { padding: clamp(44px, 6vw, 68px) 0; }
+.cv-panel { align-items: center; background: color-mix(in srgb, var(--site-surface) 70%, transparent); border: 1px solid var(--site-border); display: flex; flex-wrap: wrap; gap: 22px 36px; justify-content: space-between; padding: clamp(24px, 4vw, 36px); }
+.cv-panel .section-block__kicker { margin-bottom: 7px; }
+.cv-panel .section-block__title { margin: 0; }
 .site-single .filter-list { gap: 7px; }
 .site-single .filter-item button { border-radius: 999px; font-size: 0.74rem; padding: 8px 12px; }
 .blog-card__link { border-radius: 2px; min-height: 100%; }
@@ -2263,6 +2269,7 @@ body { letter-spacing: -0.01em; }
   .hero-mountain__cells { right: -10%; width: 46%; }
   .section-block__head--editorial { align-items: start; }
   .lab-card { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .research-toolkit { align-items: flex-start; flex-direction: column; gap: 14px; }
   .section-block--lab .section-ornament,
   #publications .section-ornament,
   .section-block--training .section-ornament,
