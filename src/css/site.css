@@ -206,7 +206,7 @@ button {
   margin: 0 auto;
   max-width: 74rem;
   min-height: min(44rem, calc(100svh - 4.5rem));
-  overflow: hidden;
+  overflow: visible;
   padding: clamp(5.5rem, 12vw, 9.5rem) clamp(2rem, 8vw, 7rem);
   position: relative;
 }
@@ -234,9 +234,9 @@ button {
 }
 
 .hero__content {
-  max-width: 43rem;
+  max-width: none;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .eyebrow {
@@ -255,7 +255,7 @@ button {
   font: 700 clamp(3.3rem, 7vw, 6.8rem)/0.92 var(--sans);
   letter-spacing: -0.065em;
   margin: 0;
-  max-width: 11ch;
+  max-width: none;
 }
 
 .hero__summary {
@@ -808,6 +808,94 @@ a.record-card__link:hover {
   50% {
     transform: translate3d(8px, -6px, 0);
   }
+}
+
+@keyframes float-left {
+
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(-20px) translateY(-10px);
+  }
+
+  50% {
+    transform: translateX(0) translateY(20px);
+  }
+
+  75% {
+    transform: translateX(15px) translateY(-15px);
+  }
+}
+
+@keyframes float-right {
+
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(25px) translateY(15px);
+  }
+
+  50% {
+    transform: translateX(0) translateY(-20px);
+  }
+
+  75% {
+    transform: translateX(-20px) translateY(10px);
+  }
+}
+
+/* Floating DNA/RNA elements */
+.dna-strand {
+  position: fixed;
+  pointer-events: none;
+  font-size: clamp(2rem, 5vw, 4rem);
+  opacity: 0.06;
+  font-weight: 300;
+  color: var(--accent);
+  z-index: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.dna-strand:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  animation: float-left 20s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.dna-strand:nth-child(2) {
+  top: 20%;
+  right: 8%;
+  animation: float-right 24s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.dna-strand:nth-child(3) {
+  top: 60%;
+  left: 10%;
+  animation: float-left 22s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.dna-strand:nth-child(4) {
+  top: 70%;
+  right: 5%;
+  animation: float-right 26s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.dna-strand:nth-child(5) {
+  top: 35%;
+  left: 50%;
+  animation: float-left 25s ease-in-out infinite;
+  animation-delay: 3s;
 }
 
 @media (max-width: 760px) {
