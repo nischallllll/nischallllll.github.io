@@ -1,6 +1,6 @@
 ---
 title: Resolving the Spatial Dynamics of Early Cancer Progression
-venue: SPACE Club
+venue: SPACE Club, CSHL
 year: 2025
 tags:
   - Invited
