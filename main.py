@@ -25,7 +25,10 @@ def is_external_url(url: Any) -> bool:
         return False
 
     parsed = urlparse(raw)
-    return parsed.scheme in {"http", "https"} and parsed.netloc.lower() not in INTERNAL_HOSTS
+    return (
+        parsed.scheme in {"http", "https"}
+        and parsed.netloc.lower() not in INTERNAL_HOSTS
+    )
 
 
 def parse_markdown(source: str) -> tuple[dict[str, Any], str]:
@@ -62,7 +65,9 @@ def read_document(path: Path) -> dict[str, Any]:
         "source": path,
         "slug": path.stem,
         "body_html": body_html,
-        "summary": metadata.get("summary") or metadata.get("description") or plain_text(body_html),
+        "summary": metadata.get("summary")
+        or metadata.get("description")
+        or plain_text(body_html),
     }
 
 
@@ -77,12 +82,22 @@ def collection(name: str) -> list[dict[str, Any]]:
         if item.get("draft"):
             continue
         tags = item.get("tags", item.get("category", item.get("tag", [])))
-        item["tags"] = [str(tag) for tag in tags] if isinstance(tags, list) else [str(tags)] if tags else []
+        item["tags"] = (
+            [str(tag) for tag in tags]
+            if isinstance(tags, list)
+            else [str(tags)]
+            if tags
+            else []
+        )
         item["year"] = str(item.get("year", ""))
         item["date"] = str(item.get("date", ""))
         items.append(item)
 
-    return sorted(items, key=lambda item: item.get("date") or item.get("year") or item["slug"], reverse=True)
+    return sorted(
+        items,
+        key=lambda item: item.get("date") or item.get("year") or item["slug"],
+        reverse=True,
+    )
 
 
 def format_date(value: Any) -> str:
@@ -104,9 +119,13 @@ class Site:
         self.env.filters["format_date"] = format_date
         self.env.globals["is_external_url"] = is_external_url
 
-    def render(self, template_name: str, output_path: Path, context: dict[str, Any]) -> None:
+    def render(
+        self, template_name: str, output_path: Path, context: dict[str, Any]
+    ) -> None:
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text(self.env.get_template(template_name).render(context), encoding="utf-8")
+        output_path.write_text(
+            self.env.get_template(template_name).render(context), encoding="utf-8"
+        )
 
 
 def main() -> None:
@@ -137,10 +156,28 @@ def main() -> None:
     site.render("index.j2", Path("index.html"), context)
 
     pages = (
-        ("Publications", "publications.html", publications, "Papers, preprints, and research output.", "publications"),
+        (
+            "Publications",
+            "publications.html",
+            publications,
+            "Papers, preprints, and research output.",
+            "publications",
+        ),
         ("Talks", "talks.html", talks, "Invited talks and presentations.", "talks"),
-        ("Projects", "work.html", projects, "Open-source tools and selected projects.", "projects"),
-        ("Notes", "blog.html", notes, "Research notes, reading lists, and essays.", "notes"),
+        (
+            "Projects",
+            "work.html",
+            projects,
+            "Open-source tools and selected projects.",
+            "projects",
+        ),
+        (
+            "Notes",
+            "blog.html",
+            notes,
+            "Research notes, reading lists, and essays.",
+            "notes",
+        ),
     )
     for label, filename, items, description, nav_current in pages:
         site.render(
