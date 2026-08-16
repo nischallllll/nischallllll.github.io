@@ -6,9 +6,6 @@
     </div>
     <!--<p class="section-block__aside">Talks as field reports: what the tissue is doing, what the data suggests, and what still feels unresolved.</p>-->
   </div>
-  {% if talks_has_more %}
-  <p class="section-block__deck section-block__deck--landing-note">Showing {{ talks_landing | length }} of {{ talks.TALKS | length }}.</p>
-  {% endif %}
   <section class="talks talks--landing talks--feature">
     <ul class="project-list">
       {% for item in talks_landing %}

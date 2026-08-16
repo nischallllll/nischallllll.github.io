@@ -1,4 +1,4 @@
-<section id="blog" class="section-block section-block--ornamented section-block--ornamented-notes reveal" aria-labelledby="blog-title">
+<section id="blog" class="section-block reveal" aria-labelledby="blog-title">
   <div class="section-ornament section-ornament--notes" aria-hidden="true">
     <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="28" y="34" width="150" height="92" rx="18" />
@@ -11,12 +11,6 @@
     </svg>
   </div>
   <h2 id="blog-title" class="section-block__title">{{ blog.HEADER.label | default('Blog') }}</h2>
-
-  {% if blog_has_more %}
-  <p class="section-block__deck section-block__deck--landing-note">
-    Showing {{ posts_landing | length }} of {{ posts_all | length }} — see the full list for filters.
-  </p>
-  {% endif %}
 
   <section class="blog-section blog-section--landing">
     <ul class="blog-list">

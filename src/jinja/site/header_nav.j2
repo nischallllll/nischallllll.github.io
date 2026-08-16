@@ -1,5 +1,6 @@
 {# is_subpage, nav_current, profile #}
 {% set hp = 'index.html' if is_subpage else '' %}
+  <a class="skip-link" href="#top">Skip to content</a>
   <header class="site-header" data-site-header>
     <div class="site-header__inner">
       <a class="site-brand" href="{{ hp }}#top">{{ profile.USER.name }}</a>

@@ -26,7 +26,7 @@
   <link href="https://nischallllll.github.io" rel="canonical">
   <link rel="shortcut icon" href="./src/images/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="./src/css/style.css?v=20260404d">
-  <link rel="stylesheet" href="./src/css/site-v2.css?v=20260404d">
+  <link rel="stylesheet" href="./src/css/site-v2.css?v=20260816a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -37,6 +37,7 @@
 <body>
 
 
+  <a class="skip-link" href="#top">Skip to content</a>
   <header class="site-header" data-site-header>
     <div class="site-header__inner">
       <a class="site-brand" href="#top">Nischal Bhandari</a>
@@ -121,24 +122,14 @@
           <span>Single-cell states</span>
           <span>Spatial tissue maps</span>
         </div>
-        <div class="hero-mountain__tableau" aria-hidden="true">
-          <div class="hero-mountain__panel hero-mountain__panel--ridge">
-            <small>Cellular dynamics</small>
-            <strong>steep gradients</strong>
-          </div>
-          <div class="hero-mountain__panel hero-mountain__panel--cell">
-            <small>Networks</small>
-            <strong>cell-cell, gene-gene ...</strong>
-          </div>
-          <div class="hero-mountain__panel hero-mountain__panel--signal">
-            <small>Method</small>
-            <strong>interdisciplinary</strong>
-          </div>
+        <div class="hero-mountain__actions">
+          <a class="button button--primary" href="#publications">Explore research <span aria-hidden="true">↓</span></a>
+          <a class="button button--quiet" href="config/assets/Nischal_Bhandari_CV.pdf" download>Download CV <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="section-block section-block--lab section-block--ornamented section-block--ornamented-rna reveal" aria-labelledby="lab-title">
+    <section class="section-block section-block--lab reveal" aria-labelledby="lab-title">
       <div class="section-ornament section-ornament--rna" aria-hidden="true">
         <svg viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="section-ornament__trace section-ornament__trace--a" d="M12 104 C 40 30, 82 176, 116 96 S 184 32, 228 108" />
@@ -170,7 +161,7 @@
       </div>
     </section>
 
-    <section id="publications" class="section-block section-block--ornamented section-block--ornamented-translation reveal" aria-labelledby="pub-title">
+    <section id="publications" class="section-block reveal" aria-labelledby="pub-title">
   <div class="section-ornament section-ornament--translation" aria-hidden="true">
     <svg viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path class="section-ornament__trail" d="M14 92 H140" />
@@ -193,14 +184,13 @@
     </div>
     <!--<p class="section-block__aside">From tumor progression to spatial structure, each paper is part atlas, part hypothesis.</p>-->
   </div>
-  
   <section class="publications-section publications-section--landing publications-section--feature">
     <ul class="publication-list">
       
         
 
 
-<li class="publication-item active publication-item--text" data-filter-item data-category="pre-print cancer genomics spatial transcriptomics">
+<li class="publication-item active publication-item--text" data-filter-item data-category="|pre-print||cancer genomics||spatial transcriptomics|">
   
   <a class="publication-link publication-link--text" href="https://www.biorxiv.org/content/10.1101/2025.05.30.657122v2.abstract" target="_blank" rel="noopener noreferrer">
   
@@ -239,14 +229,13 @@
     </div>
     <!--<p class="section-block__aside">Talks as field reports: what the tissue is doing, what the data suggests, and what still feels unresolved.</p>-->
   </div>
-  
   <section class="talks talks--landing talks--feature">
     <ul class="project-list">
       
         
 
 
-<li class="project-item active" data-filter-item data-category="oral presentation invited">
+<li class="project-item active" data-filter-item data-category="|oral presentation||invited|">
   <a class="project-link" href="https://www.singlecellbio.org/space-club" target="_blank" rel="noopener noreferrer">
     
     <figure class="project-img">
@@ -265,7 +254,7 @@
 </section>
     
 
-    <section id="training" class="section-block section-block--training section-block--ornamented section-block--ornamented-mod reveal" aria-labelledby="training-title">
+    <section id="training" class="section-block section-block--training reveal" aria-labelledby="training-title">
       <div class="section-ornament section-ornament--mod" aria-hidden="true">
         <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="section-ornament__chain" d="M30 34 C 70 60, 84 74, 116 112 S 158 150, 192 188" />
@@ -342,7 +331,7 @@
         </div>
       </section>
 
-    <section id="focus" class="section-block section-block--ornamented section-block--ornamented-network reveal" aria-labelledby="focus-title">
+    <section id="focus" class="section-block reveal" aria-labelledby="focus-title">
       <div class="section-ornament section-ornament--network" aria-hidden="true">
         <svg viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="section-ornament__trace" d="M34 40 L92 78 L148 50 L204 98 L128 142 L70 118 Z" />
@@ -382,7 +371,7 @@
     </section>
 
     
-    <section id="blog" class="section-block section-block--ornamented section-block--ornamented-notes reveal" aria-labelledby="blog-title">
+    <section id="blog" class="section-block reveal" aria-labelledby="blog-title">
   <div class="section-ornament section-ornament--notes" aria-hidden="true">
     <svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="28" y="34" width="150" height="92" rx="18" />
@@ -395,12 +384,6 @@
     </svg>
   </div>
   <h2 id="blog-title" class="section-block__title">Blog</h2>
-
-  
-  <p class="section-block__deck section-block__deck--landing-note">
-    Showing 2 of 3 — see the full list for filters.
-  </p>
-  
 
   <section class="blog-section blog-section--landing">
     <ul class="blog-list">

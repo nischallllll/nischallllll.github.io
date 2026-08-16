@@ -38,10 +38,10 @@ const sectionsWithFilters = document.querySelectorAll(
 
 const applyFilter = function (selectedValue, items) {
   items.forEach(function (it) {
-    const itemCategories = it.dataset.category;
+    const itemCategories = it.dataset.category || '';
     if (selectedValue === 'all') {
       it.classList.add('active');
-    } else if (itemCategories && itemCategories.includes(selectedValue)) {
+    } else if (itemCategories.includes('|' + selectedValue + '|')) {
       it.classList.add('active');
     } else {
       it.classList.remove('active');
@@ -57,8 +57,10 @@ sectionsWithFilters.forEach(function (section) {
   const filterItems = section.querySelectorAll('[data-filter-item]');
 
   if (select) {
+    select.setAttribute('aria-expanded', 'false');
     select.addEventListener('click', function () {
       elementToggleFunc(this);
+      this.setAttribute('aria-expanded', this.classList.contains('active') ? 'true' : 'false');
     });
 
     selectItems.forEach(function (si) {
@@ -66,6 +68,7 @@ sectionsWithFilters.forEach(function (section) {
         const selectedValue = this.innerText.toLowerCase();
         if (selectValue) selectValue.innerText = this.innerText;
         elementToggleFunc(select);
+        select.setAttribute('aria-expanded', 'false');
         applyFilter(selectedValue, filterItems);
       });
     });
@@ -74,17 +77,29 @@ sectionsWithFilters.forEach(function (section) {
   if (filterBtn.length) {
     let lastClickedBtn = filterBtn[0];
     filterBtn.forEach(function (fb) {
+      fb.setAttribute('aria-pressed', fb.classList.contains('active') ? 'true' : 'false');
       fb.addEventListener('click', function () {
         const selectedValue = this.innerText.toLowerCase();
         if (selectValue) selectValue.innerText = this.innerText;
         applyFilter(selectedValue, filterItems);
 
-        if (lastClickedBtn) lastClickedBtn.classList.remove('active');
+        if (lastClickedBtn) {
+          lastClickedBtn.classList.remove('active');
+          lastClickedBtn.setAttribute('aria-pressed', 'false');
+        }
         this.classList.add('active');
+        this.setAttribute('aria-pressed', 'true');
         lastClickedBtn = this;
       });
     });
   }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape' || !select || !select.classList.contains('active')) return;
+    select.classList.remove('active');
+    select.setAttribute('aria-expanded', 'false');
+    select.focus();
+  });
 });
 
 /* Scroll reveals */

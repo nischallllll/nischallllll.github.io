@@ -1,4 +1,4 @@
-<section id="publications" class="section-block section-block--ornamented section-block--ornamented-translation reveal" aria-labelledby="pub-title">
+<section id="publications" class="section-block reveal" aria-labelledby="pub-title">
   <div class="section-ornament section-ornament--translation" aria-hidden="true">
     <svg viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path class="section-ornament__trail" d="M14 92 H140" />
@@ -21,9 +21,6 @@
     </div>
     <!--<p class="section-block__aside">From tumor progression to spatial structure, each paper is part atlas, part hypothesis.</p>-->
   </div>
-  {% if publications_has_more %}
-  <p class="section-block__deck section-block__deck--landing-note">Showing {{ pubs_landing | length }} of {{ publications.PUBLICATIONS | length }} — see the full list for filters.</p>
-  {% endif %}
   <section class="publications-section publications-section--landing publications-section--feature">
     <ul class="publication-list">
       {% for item in pubs_landing %}
