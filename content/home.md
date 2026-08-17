@@ -1,7 +1,7 @@
 ---
 eyebrow: Nepal → USA
 title: Hi, I am Nischal (NISS-CHULL)
-summary: I am an ([Interdisciplinary Quantitative Biology fellow](https://www.colorado.edu/certificate/iqbiology/people)) at CU Boulder. I work at the intersection of genomics, statistics, and computation. My goal is to understand how cells change as cancer progresses and to build useful tools for studying those changes at scale.
+summary: I am an [Interdisciplinary Quantitative Biology fellow](https://www.colorado.edu/certificate/iqbiology/people) at CU Boulder. I work at the intersection of genomics, statistics, and computation. My goal is to understand how cells change as cancer progresses and to build useful tools for studying those changes at scale.
 themes:
   - Disease mechanisms
   - Single-cell states
