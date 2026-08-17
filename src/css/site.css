@@ -252,7 +252,7 @@ button {
 .page-hero h1,
 .note-page h1 {
   font-size: clamp(4.2rem, 8vw, 8.5rem);
-  line-height: 0.88;
+  line-height: 0.5;
   max-width: none;
   width: 100%;
 }
