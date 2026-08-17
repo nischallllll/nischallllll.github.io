@@ -65,9 +65,9 @@ body {
 /* Subtle biological background pattern - cellular/organic */
 body::before {
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(74, 222, 128, 0.03) 1px, transparent 1px),
-    radial-gradient(circle at 80% 80%, rgba(217, 119, 6, 0.02) 1px, transparent 1px),
-    radial-gradient(circle at 40% 20%, rgba(74, 222, 128, 0.02) 1px, transparent 1px);
+    radial-gradient(circle at 20% 50%, rgba(190, 20, 20, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(217, 6, 196, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 40% 20%, rgba(217, 207, 17, 0.02) 1px, transparent 1px);
   background-size: 60px 60px, 80px 80px, 100px 100px;
   content: "";
   inset: 0;
