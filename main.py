@@ -6,6 +6,7 @@ from urllib.parse import urlparse
 
 import markdown  # type: ignore
 import yaml  # type: ignore
+from bs4 import BeautifulSoup
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
 
@@ -57,6 +58,18 @@ def plain_text(html: Markup) -> str:
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", str(html))).strip()
 
 
+def render_inline_markdown(text: str) -> Markup:
+    html = markdown.markdown(text, extensions=["extra", "sane_lists", "smarty"])
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    for link in soup.find_all("a"):
+        link["target"] = "_blank"
+        link["rel"] = "noopener noreferrer"
+
+    return Markup(str(soup))
+
+
 def read_document(path: Path) -> dict[str, Any]:
     metadata, body = parse_markdown(path.read_text(encoding="utf-8"))
     body_html = render_markdown(body)
@@ -65,9 +78,11 @@ def read_document(path: Path) -> dict[str, Any]:
         "source": path,
         "slug": path.stem,
         "body_html": body_html,
-        "summary": metadata.get("summary")
-        or metadata.get("description")
-        or plain_text(body_html),
+        "summary": render_inline_markdown(
+            metadata.get("summary")
+            or metadata.get("description")
+            or plain_text(body_html)
+        ),
     }
 
 

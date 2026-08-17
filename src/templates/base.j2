@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) document.documentElement.dataset.theme = savedTheme;
-      else document.documentElement.dataset.theme = 'dark';
+      else document.documentElement.dataset.theme = 'light';
     } catch (error) {
       document.documentElement.dataset.theme = 'dark';
     }
