@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+      else document.documentElement.dataset.theme = 'dark';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'dark';
+    }
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Invited talks and presentations.">
+  <meta property="og:title" content="Talks · Nischal Bhandari">
+  <meta property="og:description" content="Invited talks and presentations.">
+  <meta name="theme-color" content="#0a1f18">
+  <title>Talks · Nischal Bhandari</title>
+  <link rel="icon" href="src/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="dna-strands-container" aria-hidden="true">
+    <div class="dna-strand">∿〰∿</div>
+    <div class="dna-strand">〰∿〰</div>
+    <div class="dna-strand">∿∿〰</div>
+    <div class="dna-strand">〰〰∿</div>
+    <div class="dna-strand">∿〰∿</div>
+  </div>
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="site-brand" href="index.html">Nischal Bhandari</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Research</a>
+        <a href="talks.html" aria-current="page">Talks</a>
+        <a href="work.html">Projects</a>
+        <a href="blog.html">Notes</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+  <main id="main">
+<section class="page-hero">
+  <h1>Talks</h1>
+  <p>Invited talks and presentations.</p>
+</section>
+<section class="collection-page" aria-label="Talks list">
+  <div class="record-grid record-grid--full">
+<article class="record-card reveal">
+  <a class="record-card__link" href="https://www.singlecellbio.org/space-club" target="_blank" rel="noopener noreferrer">
+    <div class="record-card__meta">
+<span>SPACE Club, CSHL</span><time>2025</time>    </div>
+    <h2>Resolving the Spatial Dynamics of Early Cancer Progression</h2>
+    <ul class="tag-list" aria-label="Topics">
+<li>Invited</li><li>Oral presentation</li>    </ul>
+<span class="record-card__action">Open <span aria-hidden="true">↗</span></span></a></article>  </div>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p class="site-footer__name">Nischal Bhandari</p>
+      <p>Boulder, CO</p>
+    </div>
+    <div class="site-footer__links">
+      <a href="mailto:nischal.bhandari@colorado.edu">Email</a>
+      <a href="https://github.com/nischallllll" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/nishbh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="assets/Nischal_Bhandari_CV.pdf" download>CV</a>
+    </div>
+    <p>© <span data-year></span></p>
+  </footer>
+  <script src="src/js/site.js"></script>
+</body>
+</html>

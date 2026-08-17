@@ -251,7 +251,7 @@ button {
 .hero h1,
 .page-hero h1,
 .note-page h1 {
-  font: 500 clamp(3rem, 5vw, 6rem)/0.92 var(--sans);
+  font: 600 clamp(3rem, 4vw, 6rem)/0.92 var(--sans);
   width: 100%;
 }
 
