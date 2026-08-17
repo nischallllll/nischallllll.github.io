@@ -39,7 +39,9 @@ cv: assets/Nischal_Bhandari_CV.pdf
 
 ## Research areas
 
-- **Genomics** Cancer progression and heterogeneity from high-throughput data.
-- **Single-cell** RNA-seq and cellular state in disease context.
-- **Spatial** Tissue organization and neighborhood-level transcriptomics.
-- **Tools** Reproducible pipelines and software for biological analysis.
+<ul class="feature-list">
+  <li><strong>Genomics</strong> Cancer progression and heterogeneity from high-throughput data.</li>
+  <li><strong>Single-cell</strong> RNA-seq and cellular state in disease context.</li>
+  <li><strong>Spatial</strong> Tissue organization and neighborhood-level transcriptomics.</li>
+  <li><strong>Tools</strong> Reproducible pipelines and software for biological analysis.</li>
+</ul>

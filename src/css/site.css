@@ -66,7 +66,7 @@ html[data-theme="light"] {
 
   /* Typography */
   --text: #1a2420;
-  --text-muted: #5a7169;
+  --text-muted: #1b66bc;
 
   /* Borders */
   --border: rgba(45, 106, 62, 0.15);
@@ -389,7 +389,7 @@ a {
 
 .eyebrow {
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   margin: 0 0 1rem;
@@ -407,7 +407,7 @@ a {
 }
 
 .hero__summary {
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-size: clamp(8rem, 10vw, 12rem);
   line-height: 1.65;
   margin: 1.2rem 0 0;
   max-width: 58rem;
